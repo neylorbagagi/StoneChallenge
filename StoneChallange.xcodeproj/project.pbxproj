@@ -135,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F08EAFE92922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallange" */;
 			buildPhases = (
+				F08EAFFB2922BFFF00DB049F /* ShellScript */,
 				F08EAFBB2922B3D800DB049F /* Sources */,
 				F08EAFBC2922B3D800DB049F /* Frameworks */,
 				F08EAFBD2922B3D800DB049F /* Resources */,
@@ -252,6 +253,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F08EAFFB2922BFFF00DB049F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F08EAFBB2922B3D800DB049F /* Sources */ = {
