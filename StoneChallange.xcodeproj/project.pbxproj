@@ -15,6 +15,8 @@
 		F08EAFCF2922B3DA00DB049F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08EAFCD2922B3DA00DB049F /* LaunchScreen.storyboard */; };
 		F08EAFDA2922B3DB00DB049F /* StoneChallangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFD92922B3DB00DB049F /* StoneChallangeTests.swift */; };
 		F08EAFE52922B3DB00DB049F /* StoneChallangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFE42922B3DB00DB049F /* StoneChallangeUITests.swift */; };
+		F08EB00C2922CAC700DB049F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EB00B2922CAC700DB049F /* Character.swift */; };
+		F08EB0112922CBD900DB049F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EB0102922CBD900DB049F /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F08EAFE02922B3DB00DB049F /* StoneChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneChallangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFE42922B3DB00DB049F /* StoneChallangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneChallangeUITests.swift; sourceTree = "<group>"; };
 		F08EAFE62922B3DB00DB049F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F08EB00B2922CAC700DB049F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		F08EB0102922CBD900DB049F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		F08EAFC12922B3D800DB049F /* StoneChallange */ = {
 			isa = PBXGroup;
 			children = (
+				F08EB0072922C7D200DB049F /* Domains */,
+				F08EB0052922C79600DB049F /* Features */,
 				F08EAFC22922B3D800DB049F /* AppDelegate.swift */,
 				F08EAFC42922B3D800DB049F /* SceneDelegate.swift */,
 				F08EAFC62922B3D800DB049F /* ViewController.swift */,
@@ -126,6 +132,54 @@
 				F08EAFE62922B3DB00DB049F /* Info.plist */,
 			);
 			path = StoneChallangeUITests;
+			sourceTree = "<group>";
+		};
+		F08EB0052922C79600DB049F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F08EB0062922C7A100DB049F /* Characters */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F08EB0062922C7A100DB049F /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		F08EB0072922C7D200DB049F /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				F08EB0082922C7DD00DB049F /* Characters */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		F08EB0082922C7DD00DB049F /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				F08EB00A2922C7F200DB049F /* WebServices */,
+				F08EB0092922C7E900DB049F /* Model */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		F08EB0092922C7E900DB049F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F08EB00B2922CAC700DB049F /* Character.swift */,
+				F08EB0102922CBD900DB049F /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F08EB00A2922C7F200DB049F /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +335,9 @@
 			files = (
 				F08EAFC72922B3D800DB049F /* ViewController.swift in Sources */,
 				F08EAFC32922B3D800DB049F /* AppDelegate.swift in Sources */,
+				F08EB0112922CBD900DB049F /* Location.swift in Sources */,
 				F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */,
+				F08EB00C2922CAC700DB049F /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
