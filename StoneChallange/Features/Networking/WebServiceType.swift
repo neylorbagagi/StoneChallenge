@@ -7,16 +7,16 @@
 
 import Foundation
 
-protocol WebServiceType {
+public protocol WebServiceType {
     associatedtype Element: Codable
     func execute(request: URLRequest, completion: @escaping (Result<Element, Error>) -> Void)
 }
 
-class WebService<Element: Codable>: WebServiceType {
+public class WebService<Element: Codable>: WebServiceType {
 
     let timeoutInterval: TimeInterval = 20
 
-    func execute(request: URLRequest, completion: @escaping (Result<Element, Error>) -> Void) {
+    public func execute(request: URLRequest, completion: @escaping (Result<Element, Error>) -> Void) {
         URLSession.shared.dataTask(with: request) { data, _, error in
             guard
                 error == nil,

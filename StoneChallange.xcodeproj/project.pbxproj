@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F019FEFA2922D2D00077BD42 /* WebServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FEF92922D2D00077BD42 /* WebServiceType.swift */; };
 		F019FEFF2922D4190077BD42 /* CharacterWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FEFE2922D4190077BD42 /* CharacterWebService.swift */; };
+		F019FF042923F84B0077BD42 /* CharactersWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF032923F84A0077BD42 /* CharactersWebService.swift */; };
+		F019FF0C2923F9DE0077BD42 /* Data+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF0B2923F9DE0077BD42 /* Data+Info.swift */; };
+		F019FF112923FABB0077BD42 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF102923FABB0077BD42 /* Info.swift */; };
 		F08EAFC32922B3D800DB049F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC22922B3D800DB049F /* AppDelegate.swift */; };
 		F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC42922B3D800DB049F /* SceneDelegate.swift */; };
 		F08EAFC72922B3D800DB049F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC62922B3D800DB049F /* ViewController.swift */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		F019FEF92922D2D00077BD42 /* WebServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceType.swift; sourceTree = "<group>"; };
 		F019FEFE2922D4190077BD42 /* CharacterWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterWebService.swift; sourceTree = "<group>"; };
+		F019FF032923F84A0077BD42 /* CharactersWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersWebService.swift; sourceTree = "<group>"; };
+		F019FF0B2923F9DE0077BD42 /* Data+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Info.swift"; sourceTree = "<group>"; };
+		F019FF102923FABB0077BD42 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		F08EAFBF2922B3D800DB049F /* StoneChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoneChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFC22922B3D800DB049F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08EAFC42922B3D800DB049F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +90,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F019FF182923FC3F0077BD42 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F019FEF92922D2D00077BD42 /* WebServiceType.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F019FF1C2923FC900077BD42 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F019FF1D2923FC9D0077BD42 /* Models */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F019FF1D2923FC9D0077BD42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F019FF102923FABB0077BD42 /* Info.swift */,
+				F019FF0B2923F9DE0077BD42 /* Data+Info.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F08EAFB62922B3D800DB049F = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +147,6 @@
 				F08EAFCB2922B3DA00DB049F /* Assets.xcassets */,
 				F08EAFCD2922B3DA00DB049F /* LaunchScreen.storyboard */,
 				F08EAFD02922B3DA00DB049F /* Info.plist */,
-				F019FEF92922D2D00077BD42 /* WebServiceType.swift */,
 			);
 			path = StoneChallange;
 			sourceTree = "<group>";
@@ -143,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				F08EB0062922C7A100DB049F /* Characters */,
+				F019FF182923FC3F0077BD42 /* Networking */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -158,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				F08EB0082922C7DD00DB049F /* Characters */,
+				F019FF1C2923FC900077BD42 /* Networking */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -166,24 +198,25 @@
 			isa = PBXGroup;
 			children = (
 				F08EB00A2922C7F200DB049F /* WebServices */,
-				F08EB0092922C7E900DB049F /* Model */,
+				F08EB0092922C7E900DB049F /* Models */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
 		};
-		F08EB0092922C7E900DB049F /* Model */ = {
+		F08EB0092922C7E900DB049F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F08EB00B2922CAC700DB049F /* Character.swift */,
 				F08EB0102922CBD900DB049F /* Location.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F08EB00A2922C7F200DB049F /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
 				F019FEFE2922D4190077BD42 /* CharacterWebService.swift */,
+				F019FF032923F84A0077BD42 /* CharactersWebService.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -341,8 +374,11 @@
 			files = (
 				F08EAFC72922B3D800DB049F /* ViewController.swift in Sources */,
 				F08EAFC32922B3D800DB049F /* AppDelegate.swift in Sources */,
+				F019FF0C2923F9DE0077BD42 /* Data+Info.swift in Sources */,
+				F019FF112923FABB0077BD42 /* Info.swift in Sources */,
 				F08EB0112922CBD900DB049F /* Location.swift in Sources */,
 				F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */,
+				F019FF042923F84B0077BD42 /* CharactersWebService.swift in Sources */,
 				F019FEFA2922D2D00077BD42 /* WebServiceType.swift in Sources */,
 				F08EB00C2922CAC700DB049F /* Character.swift in Sources */,
 				F019FEFF2922D4190077BD42 /* CharacterWebService.swift in Sources */,
