@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F019FEFA2922D2D00077BD42 /* WebServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FEF92922D2D00077BD42 /* WebServiceType.swift */; };
+		F019FEFF2922D4190077BD42 /* CharacterWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FEFE2922D4190077BD42 /* CharacterWebService.swift */; };
 		F08EAFC32922B3D800DB049F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC22922B3D800DB049F /* AppDelegate.swift */; };
 		F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC42922B3D800DB049F /* SceneDelegate.swift */; };
 		F08EAFC72922B3D800DB049F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC62922B3D800DB049F /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F019FEF92922D2D00077BD42 /* WebServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceType.swift; sourceTree = "<group>"; };
+		F019FEFE2922D4190077BD42 /* CharacterWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterWebService.swift; sourceTree = "<group>"; };
 		F08EAFBF2922B3D800DB049F /* StoneChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoneChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFC22922B3D800DB049F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08EAFC42922B3D800DB049F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				F08EAFCB2922B3DA00DB049F /* Assets.xcassets */,
 				F08EAFCD2922B3DA00DB049F /* LaunchScreen.storyboard */,
 				F08EAFD02922B3DA00DB049F /* Info.plist */,
+				F019FEF92922D2D00077BD42 /* WebServiceType.swift */,
 			);
 			path = StoneChallange;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 		F08EB00A2922C7F200DB049F /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				F019FEFE2922D4190077BD42 /* CharacterWebService.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -337,7 +343,9 @@
 				F08EAFC32922B3D800DB049F /* AppDelegate.swift in Sources */,
 				F08EB0112922CBD900DB049F /* Location.swift in Sources */,
 				F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */,
+				F019FEFA2922D2D00077BD42 /* WebServiceType.swift in Sources */,
 				F08EB00C2922CAC700DB049F /* Character.swift in Sources */,
+				F019FEFF2922D4190077BD42 /* CharacterWebService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
