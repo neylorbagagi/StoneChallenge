@@ -12,6 +12,8 @@
 		F019FF042923F84B0077BD42 /* CharactersWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF032923F84A0077BD42 /* CharactersWebService.swift */; };
 		F019FF0C2923F9DE0077BD42 /* Data+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF0B2923F9DE0077BD42 /* Data+Info.swift */; };
 		F019FF112923FABB0077BD42 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF102923FABB0077BD42 /* Info.swift */; };
+		F019FF482924196E0077BD42 /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF472924196E0077BD42 /* ViewControllerPreview.swift */; };
+		F019FF5329241C440077BD42 /* ViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF5229241C440077BD42 /* ViewPreview.swift */; };
 		F08EAFC32922B3D800DB049F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC22922B3D800DB049F /* AppDelegate.swift */; };
 		F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC42922B3D800DB049F /* SceneDelegate.swift */; };
 		F08EAFC72922B3D800DB049F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC62922B3D800DB049F /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		F019FF032923F84A0077BD42 /* CharactersWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersWebService.swift; sourceTree = "<group>"; };
 		F019FF0B2923F9DE0077BD42 /* Data+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Info.swift"; sourceTree = "<group>"; };
 		F019FF102923FABB0077BD42 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		F019FF472924196E0077BD42 /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
+		F019FF5229241C440077BD42 /* ViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPreview.swift; sourceTree = "<group>"; };
 		F08EAFBF2922B3D800DB049F /* StoneChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoneChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFC22922B3D800DB049F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08EAFC42922B3D800DB049F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		F08EAFC12922B3D800DB049F /* StoneChallange */ = {
 			isa = PBXGroup;
 			children = (
+				F019FF46292419010077BD42 /* Previews */,
 				F08EB0072922C7D200DB049F /* Domains */,
 				F08EB0052922C79600DB049F /* Features */,
 				F08EAFC22922B3D800DB049F /* AppDelegate.swift */,
@@ -377,11 +382,13 @@
 				F019FF0C2923F9DE0077BD42 /* Data+Info.swift in Sources */,
 				F019FF112923FABB0077BD42 /* Info.swift in Sources */,
 				F08EB0112922CBD900DB049F /* Location.swift in Sources */,
+				F019FF482924196E0077BD42 /* ViewControllerPreview.swift in Sources */,
 				F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */,
 				F019FF042923F84B0077BD42 /* CharactersWebService.swift in Sources */,
 				F019FEFA2922D2D00077BD42 /* WebServiceType.swift in Sources */,
 				F08EB00C2922CAC700DB049F /* Character.swift in Sources */,
 				F019FEFF2922D4190077BD42 /* CharacterWebService.swift in Sources */,
+				F019FF5329241C440077BD42 /* ViewPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
