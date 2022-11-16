@@ -18,8 +18,8 @@ class CharactersViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints  = false
         collectionView.backgroundColor = .white
         collectionView.register(
-            UICollectionViewCell.self,
-            forCellWithReuseIdentifier: "collectionCell"
+            CharacterCollectionViewCell.self,
+            forCellWithReuseIdentifier: CharacterCollectionViewCell.reuseIdentifier
         )
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -65,13 +65,20 @@ class CharactersViewController: UIViewController {
 extension CharactersViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 25
+        return viewModel.cellViewModels.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath)
-        cell.backgroundColor = .green
+        guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CharacterCollectionViewCell.reuseIdentifier,
+                for: indexPath) as? CharacterCollectionViewCell
+        else {
+            return UICollectionViewCell()
+        }
+
+        cell.configure(viewModel: viewModel.cellViewModels[indexPath.row])
+//        cell.backgroundColor = .green
         return cell
     }
 }

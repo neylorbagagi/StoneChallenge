@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class CharactersPresenter: CharactersViewModelProvider {
 
@@ -28,6 +29,10 @@ class CharactersPresenter: CharactersViewModelProvider {
     }
 
     func cellViewModels() -> [CharacterCollectionViewModel] {
-        return []
+        return [.init(name: "Gabriela", image: UIImage()),
+                .init(name: "Gabriela", image: UIImage()),
+                .init(name: "Gabriela", image: UIImage()),
+                .init(name: "Gabriela", image: UIImage()),
+                .init(name: "Gabriela", image: UIImage())]
     }
 }
