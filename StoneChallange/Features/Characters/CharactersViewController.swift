@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CharactersViewController: UIViewController {
+
+    let disposeBag = DisposeBag()
 
     // MARK: - VIEWS
     private lazy var collectionView: UICollectionView = {
@@ -22,8 +26,6 @@ class CharactersViewController: UIViewController {
             forCellWithReuseIdentifier: CharacterCollectionViewCell.reuseIdentifier
         )
         collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.layer.cornerRadius = 6
         return collectionView
     }()
 
@@ -34,6 +36,7 @@ class CharactersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewModel.viewDidLoad.accept(())
     }
 
     // MARK: - CONSTRUCTORS
@@ -42,6 +45,7 @@ class CharactersViewController: UIViewController {
         self.viewModel = viewModelProvider.viewModel
         super.init(nibName: nil, bundle: nil)
 
+        bind()
         configure()
     }
 
@@ -59,33 +63,34 @@ class CharactersViewController: UIViewController {
             self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
     }
+
+    // MARK: - BIND
+    private func bind() {
+        viewModel.cellViewModels
+            .bind(to: collectionView.rx.items(
+                    cellIdentifier: CharacterCollectionViewCell.reuseIdentifier,
+                    cellType: CharacterCollectionViewCell.self)) { _, viewModel, cell in
+                cell.configure(viewModel: viewModel)
+            }.disposed(by: disposeBag)
+
+        // TODO: melhorar isso que tá triste
+        collectionView.rx.willDisplayCell
+            .subscribe { [self] cell, indexPath in
+                if viewModel.cellViewModels.value.count - 1 == indexPath.row {
+                    self.viewModel.collectionViewDidHitBottom.accept(())
+                }
+            }.disposed(by: disposeBag)
+    }
 }
 
-// MARK: - UICollectionViewDataSource
-extension CharactersViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
-        return viewModel.cellViewModels.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: CharacterCollectionViewCell.reuseIdentifier,
-                for: indexPath) as? CharacterCollectionViewCell
-        else {
-            return UICollectionViewCell()
-        }
-
-        cell.configure(viewModel: viewModel.cellViewModels[indexPath.row])
-//        cell.backgroundColor = .green
-        return cell
+extension UIScrollView {
+    func  isNearBottomEdge(edgeOffset: CGFloat = 20.0) -> Bool {
+        self.contentOffset.y + self.frame.size.height + edgeOffset > self.contentSize.height
     }
 }
 
 // MARK: - UICollectionViewDelegate
 extension CharactersViewController: UICollectionViewDelegate {
-
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -97,10 +102,6 @@ extension CharactersViewController: UICollectionViewDelegateFlowLayout {
 
     private var itemsPerRow: CGFloat {
        return 3
-    }
-
-    private var itemsPerColumn: CGFloat {
-        return 4
     }
 
    private var itemsOriginalWidth: CGFloat { return 300 } /// Using the original size of the poster
@@ -151,8 +152,12 @@ struct ProfileViewController_Previews: PreviewProvider {
         ViewControllerPreview {
             CharactersViewController(
                 viewModelProvider: CharactersPresenter(
-                    interactor: CharactersInteractor(),
-                    router: CharactersRouter(),
+                    interactor: CharactersInteractor(
+                        webService: CharactersWebService()
+                    ),
+                    router: CharactersRouter(
+                        navigationController: UINavigationController()
+                    ),
                     characterList: []
                 )
             )

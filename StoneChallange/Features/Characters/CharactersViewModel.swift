@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+import RxRelay
 
 protocol CharactersViewModelProvider {
     var viewModel: CharactersViewModel { get }
@@ -14,9 +14,15 @@ protocol CharactersViewModelProvider {
 
 class CharactersViewModel {
 
-    var cellViewModels: [CharacterCollectionViewModel]
+    // MARK: - PUBLIC PROPERTIES
+    var cellViewModels: BehaviorRelay<[CharacterCollectionViewModel]>
 
-    internal init(cellViewModels: [CharacterCollectionViewModel]) {
-        self.cellViewModels = cellViewModels
+    // MARK: - EVENTS
+    let viewDidLoad = PublishRelay<Void>()
+    let collectionViewDidHitBottom = PublishRelay<Void>()
+
+    // MARK: - COSNTRUCTORS
+    init(cellViewModels: [CharacterCollectionViewModel]) {
+        self.cellViewModels = BehaviorRelay<[CharacterCollectionViewModel]>.init(value: cellViewModels)
     }
 }
