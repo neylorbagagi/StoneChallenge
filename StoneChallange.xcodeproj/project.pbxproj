@@ -37,12 +37,13 @@
 		F0C35BAC29251C1A00F85183 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BAB29251C1A00F85183 /* RxRelay */; };
 		F0C35BAE29251C1A00F85183 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BAD29251C1A00F85183 /* RxCocoa */; };
 		F0C35BB029251C1A00F85183 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BAF29251C1A00F85183 /* RxBlocking */; };
-		F0C35BCC2927FFBC00F85183 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BCB2927FFBC00F85183 /* CharacterViewModel.swift */; };
 		F0C35BD7292801F300F85183 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BD6292801F300F85183 /* CharacterViewController.swift */; };
 		F0C35BDC292803F400F85183 /* CharacterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BDB292803F400F85183 /* CharacterInteractor.swift */; };
 		F0C35BE12928041B00F85183 /* CharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BE02928041B00F85183 /* CharacterPresenter.swift */; };
 		F0C35BE9292806A300F85183 /* CharacterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BE8292806A300F85183 /* CharacterRouter.swift */; };
 		F0C35BEE292806C200F85183 /* CharacterViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BED292806C200F85183 /* CharacterViewControllerFactory.swift */; };
+		F0C35BFB29282F8000F85183 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BCB2927FFBC00F85183 /* CharacterViewModel.swift */; };
+		F0C35C012928345C00F85183 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35C002928345C00F85183 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		F0C35BE02928041B00F85183 /* CharacterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPresenter.swift; sourceTree = "<group>"; };
 		F0C35BE8292806A300F85183 /* CharacterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRouter.swift; sourceTree = "<group>"; };
 		F0C35BED292806C200F85183 /* CharacterViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewControllerFactory.swift; sourceTree = "<group>"; };
+		F0C35C002928345C00F85183 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F019FEF92922D2D00077BD42 /* WebServiceType.swift */,
+				F0C35C002928345C00F85183 /* ImageCache.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -481,9 +484,9 @@
 				F0C35BDC292803F400F85183 /* CharacterInteractor.swift in Sources */,
 				F019FF7129243E7A0077BD42 /* CharactersInteractor.swift in Sources */,
 				F019FF0C2923F9DE0077BD42 /* Data+Info.swift in Sources */,
-				F0C35BCC2927FFBC00F85183 /* CharacterViewModel.swift in Sources */,
 				F019FF112923FABB0077BD42 /* Info.swift in Sources */,
 				F0C35BD7292801F300F85183 /* CharacterViewController.swift in Sources */,
+				F0C35BFB29282F8000F85183 /* CharacterViewModel.swift in Sources */,
 				F0C35B7F29245CE100F85183 /* DependencyContainer.swift in Sources */,
 				F0C35BE9292806A300F85183 /* CharacterRouter.swift in Sources */,
 				F08EB0112922CBD900DB049F /* Location.swift in Sources */,
@@ -499,6 +502,7 @@
 				F019FF64292433C90077BD42 /* CharacterCollectionViewPresenter.swift in Sources */,
 				F019FEFF2922D4190077BD42 /* CharacterWebService.swift in Sources */,
 				F019FF5329241C440077BD42 /* ViewPreview.swift in Sources */,
+				F0C35C012928345C00F85183 /* ImageCache.swift in Sources */,
 				F0C35BEE292806C200F85183 /* CharacterViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

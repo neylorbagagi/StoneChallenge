@@ -15,7 +15,7 @@ protocol CharactersViewControllerFactoryProtocol {
 extension UserDependencyContainer: CharactersViewControllerFactoryProtocol {
     func charactersViewControllerFactory(characterList: [Character]) -> UIViewController {
 
-        let router = CharactersRouter(navigationController: navigationController)
+        let router = CharactersRouter(viewControllerFactory: self)
         let interactor = CharactersInteractor(webService: CharactersWebService())
         let presenter = CharactersPresenter(
             interactor: interactor,

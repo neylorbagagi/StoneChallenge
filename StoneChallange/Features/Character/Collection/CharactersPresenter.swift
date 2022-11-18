@@ -84,5 +84,10 @@ class CharactersPresenter: CharactersViewModelProvider {
             .compactMap { [self] in pagination.next }
             .bind(to: interactor.requestPageData)
             .disposed(by: disposeBag)
+
+        viewModel.collectionViewDidSelectItem
+            .map { [self] in characterList[$0] }
+            .bind(to: router.showDetail)
+            .disposed(by: disposeBag)
     }
 }

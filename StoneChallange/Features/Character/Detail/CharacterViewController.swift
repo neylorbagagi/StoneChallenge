@@ -16,7 +16,6 @@ class CharacterViewController: UIViewController {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = viewModel.image
         return imageView
     }()
 
@@ -35,6 +34,7 @@ class CharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewModel.viewDidLoad.accept(())
     }
 
     // MARK: - CONSTRUCTORS
@@ -43,24 +43,34 @@ class CharacterViewController: UIViewController {
         self.viewModel = viewModelProvider.viewModel
         super.init(nibName: nil, bundle: nil)
 
-//        bind()
+        bind()
         configure()
     }
 
     required init?(coder: NSCoder) { return nil }
 
+    // MARK: - BIND
+    func bind() {
+        viewModel.image
+            .bind(to: imageView.rx.image)
+            .disposed(by: disposeBag)
+    }
+
     // MARK: - PRIVATE FUNCTIONS
     private func configure() {
-        self.view.addSubview(imageView)
-        self.view.addSubview(textView)
+        view.backgroundColor = viewModel.backgroundColor
+        title = viewModel.title
+
+        view.addSubview(imageView)
+        view.addSubview(textView)
 
         NSLayoutConstraint.activate([
-            self.imageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            self.imageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.textView.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 16),
-            self.textView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
-            self.textView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
-            self.textView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            textView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
+            textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
@@ -72,7 +82,9 @@ struct CharacterViewController_Previews: PreviewProvider {
         ViewControllerPreview {
             CharacterViewController(
                 viewModelProvider: CharacterPresenter(
-                    interactor: CharacterInteractor(),
+                    interactor: CharacterInteractor(
+                        cache: ImageCache()
+                    ),
                     router: CharacterRouter(navigationController: UINavigationController()),
                     character: Character(
                         id: 2,

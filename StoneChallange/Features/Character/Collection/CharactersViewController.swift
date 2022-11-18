@@ -74,11 +74,16 @@ class CharactersViewController: UIViewController {
 
         // TODO: melhorar isso que tá triste
         collectionView.rx.willDisplayCell
-            .subscribe { [self] cell, indexPath in
+            .subscribe { [self] _, indexPath in
                 if viewModel.cellViewModels.value.count - 1 == indexPath.row {
                     self.viewModel.collectionViewDidHitBottom.accept(())
                 }
             }.disposed(by: disposeBag)
+
+        collectionView.rx.itemSelected
+            .map { $0.row }
+            .bind(to: viewModel.collectionViewDidSelectItem)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -86,10 +91,6 @@ extension UIScrollView {
     func  isNearBottomEdge(edgeOffset: CGFloat = 20.0) -> Bool {
         self.contentOffset.y + self.frame.size.height + edgeOffset > self.contentSize.height
     }
-}
-
-// MARK: - UICollectionViewDelegate
-extension CharactersViewController: UICollectionViewDelegate {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -143,6 +144,7 @@ extension CharactersViewController: UICollectionViewDelegateFlowLayout {
        return CGSize(width: collectionView.frame.width, height: self.footerInSectionSize)
    }
 }
+// TODO: da pra trazer isso do presenter
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
@@ -155,7 +157,7 @@ struct ProfileViewController_Previews: PreviewProvider {
                         webService: CharactersWebService()
                     ),
                     router: CharactersRouter(
-                        navigationController: UINavigationController()
+                        viewControllerFactory: UserDependencyContainer()
                     ),
                     characterList: []
                 )

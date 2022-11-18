@@ -20,6 +20,7 @@ class CharactersViewModel {
     // MARK: - EVENTS
     let viewDidLoad = PublishRelay<Void>()
     let collectionViewDidHitBottom = PublishRelay<Void>()
+    let collectionViewDidSelectItem = PublishRelay<Int>()
 
     // MARK: - COSNTRUCTORS
     init(cellViewModels: [CharacterCollectionViewModel]) {

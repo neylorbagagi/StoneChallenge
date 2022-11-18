@@ -17,8 +17,10 @@ class CharacterPresenter: CharacterViewModelProvider {
     // MARK: - VIEW MODELS
     lazy var viewModel: CharacterViewModel = {
         var viewModel = CharacterViewModel(
+            title: character.name,
+            backgroundColor: .white,
             description: description(character),
-            image: image(character)
+            image: UIImage()
         )
         return viewModel
     }()
@@ -58,12 +60,15 @@ class CharacterPresenter: CharacterViewModelProvider {
             """
     }
 
-    private func image(_ character: Character) -> UIImage {
-        return UIImage(named: "test")!
-    }
-
     // MARK: - BIND
     private func bind() {
+        interactor.responseImageData
+            .bind(to: viewModel.image)
+            .disposed(by: disposeBag)
 
+        viewModel.viewDidLoad
+            .map { [self] in character.image }
+            .bind(to: interactor.requestImageData)
+            .disposed(by: disposeBag)
     }
 }
