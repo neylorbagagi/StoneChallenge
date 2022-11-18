@@ -53,7 +53,6 @@ class CharactersViewController: UIViewController {
 
     // MARK: - PRIVATE FUNCTIONS
     private func configure() {
-        view.backgroundColor = .green
         self.view.addSubview(self.collectionView)
 
         NSLayoutConstraint.activate([
