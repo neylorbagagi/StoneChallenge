@@ -1,5 +1,5 @@
 //
-//  CharactersFactory.swift
+//  CharactersViewController.swift
 //  StoneChallange
 //
 //  Created by Neylor Bagagi on 15/11/22.
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-protocol CharactersFactoryProtocol {
-    func charactersFactory(characterList: [Character]) -> UIViewController
+protocol CharactersViewControllerFactoryProtocol {
+    func charactersViewControllerFactory(characterList: [Character]) -> UIViewController
 }
 
-extension UserDependencyContainer: CharactersFactoryProtocol {
-    func charactersFactory(characterList: [Character]) -> UIViewController {
+extension UserDependencyContainer: CharactersViewControllerFactoryProtocol {
+    func charactersViewControllerFactory(characterList: [Character]) -> UIViewController {
 
         let router = CharactersRouter(navigationController: navigationController)
         let interactor = CharactersInteractor(webService: CharactersWebService())

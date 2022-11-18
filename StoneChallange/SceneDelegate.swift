@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        let viewController = UserDependencyContainer.shared.charactersFactory(characterList: [])
+        let viewController = UserDependencyContainer.shared.charactersViewControllerFactory(characterList: [])
         let navigationController = UserDependencyContainer.shared.navigationController
 
         navigationController.setViewControllers([viewController], animated: true)
