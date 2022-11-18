@@ -6,7 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 class CharactersRouter {
-    
+
+    let navigationController: UINavigationController
+
+     init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
 }
