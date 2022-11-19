@@ -20,9 +20,9 @@ public class ImageCache {
     // TODO: da pra melhorrar isso ?
     final func load(url: NSURL, completion: @escaping (UIImage?) -> Void) {
         if let cachedImage = image(url: url) {
-//            DispatchQueue.main.async {
+            DispatchQueue.main.async {
                 completion(cachedImage)
-//            }
+            }
             return
         }
 
@@ -31,9 +31,9 @@ public class ImageCache {
                 let responseData = data,
                 let image = UIImage(data: responseData),
                 error == nil else {
-//                DispatchQueue.main.async {
+                DispatchQueue.main.async {
                     completion(nil)
-//                }
+                }
                 return
             }
 

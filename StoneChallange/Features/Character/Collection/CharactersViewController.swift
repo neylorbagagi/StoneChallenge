@@ -20,13 +20,19 @@ class CharactersViewController: UIViewController {
 
         let collectionView = UICollectionView(frame: .infinite, collectionViewLayout: collectionLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints  = false
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = viewModel.backgroundColor
         collectionView.register(
             CharacterCollectionViewCell.self,
             forCellWithReuseIdentifier: CharacterCollectionViewCell.reuseIdentifier
         )
         collectionView.delegate = self
         return collectionView
+    }()
+
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
 
     // MARK: - INJECTED PROPERTIES
@@ -37,6 +43,8 @@ class CharactersViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         viewModel.viewDidLoad.accept(())
+
+        configureNavigation()
     }
 
     // MARK: - CONSTRUCTORS
@@ -63,13 +71,19 @@ class CharactersViewController: UIViewController {
         ])
     }
 
+    private func configureNavigation() {
+        imageView.image = viewModel.navigationLogoImage
+        self.navigationItem.titleView = imageView
+    }
+
     // MARK: - BIND
     private func bind() {
         viewModel.cellViewModels
             .bind(to: collectionView.rx.items(
                     cellIdentifier: CharacterCollectionViewCell.reuseIdentifier,
-                    cellType: CharacterCollectionViewCell.self)) { _, viewModel, cell in
-                cell.configure(viewModel: viewModel)
+                    cellType: CharacterCollectionViewCell.self)) { row, viewModel, cell in
+                self.viewModel.requestImage.accept(row) // TODO: arrumar isso nome deve ser algo como cellwillconfigure
+                return cell.configure(viewModel: viewModel)
             }.disposed(by: disposeBag)
 
         // TODO: melhorar isso que tá triste
@@ -84,12 +98,6 @@ class CharactersViewController: UIViewController {
             .map { $0.row }
             .bind(to: viewModel.collectionViewDidSelectItem)
             .disposed(by: disposeBag)
-    }
-}
-
-extension UIScrollView {
-    func  isNearBottomEdge(edgeOffset: CGFloat = 20.0) -> Bool {
-        self.contentOffset.y + self.frame.size.height + edgeOffset > self.contentSize.height
     }
 }
 
@@ -154,7 +162,8 @@ struct ProfileViewController_Previews: PreviewProvider {
             CharactersViewController(
                 viewModelProvider: CharactersPresenter(
                     interactor: CharactersInteractor(
-                        webService: CharactersWebService()
+                        webService: CharactersWebService(),
+                        cache: ImageCache()
                     ),
                     router: CharactersRouter(
                         viewControllerFactory: UserDependencyContainer()

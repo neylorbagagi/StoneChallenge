@@ -7,6 +7,7 @@
 
 import Foundation
 import RxRelay
+import UIKit
 
 protocol CharactersViewModelProvider {
     var viewModel: CharactersViewModel { get }
@@ -16,14 +17,23 @@ class CharactersViewModel {
 
     // MARK: - PUBLIC PROPERTIES
     var cellViewModels: BehaviorRelay<[CharacterCollectionViewModel]>
+    let navigationLogoImage: UIImage
+    let backgroundColor: UIColor
 
     // MARK: - EVENTS
     let viewDidLoad = PublishRelay<Void>()
     let collectionViewDidHitBottom = PublishRelay<Void>()
     let collectionViewDidSelectItem = PublishRelay<Int>()
 
+    // TEST RIDUCILO
+    let requestImage = PublishRelay<Int>()
+
     // MARK: - COSNTRUCTORS
-    init(cellViewModels: [CharacterCollectionViewModel]) {
+    init(cellViewModels: [CharacterCollectionViewModel],
+         navigationLogoImage: UIImage,
+         backgroundColor: UIColor) {
         self.cellViewModels = BehaviorRelay<[CharacterCollectionViewModel]>.init(value: cellViewModels)
+        self.navigationLogoImage = navigationLogoImage
+        self.backgroundColor = backgroundColor
     }
 }

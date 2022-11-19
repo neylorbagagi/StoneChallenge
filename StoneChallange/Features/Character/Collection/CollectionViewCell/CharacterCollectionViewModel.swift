@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import RxRelay
 
 protocol CharacterCollectionViewModelProvider {
     var viewModel: CharacterCollectionViewModel { get }
@@ -15,10 +16,10 @@ protocol CharacterCollectionViewModelProvider {
 final class CharacterCollectionViewModel {
 
     let name: String
-    let image: UIImage
+    let image: BehaviorRelay<UIImage>
 
     init(name: String, image: UIImage) {
         self.name = name
-        self.image = image
+        self.image = BehaviorRelay<UIImage>.init(value: image)
     }
 }

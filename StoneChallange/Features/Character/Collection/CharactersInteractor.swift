@@ -8,6 +8,7 @@
 import Foundation
 import RxRelay
 import RxSwift
+import UIKit
 
 class CharactersInteractor {
 
@@ -18,14 +19,23 @@ class CharactersInteractor {
     let requestPageData = PublishRelay<PageURL>()
     let responsePageData = PublishSubject<DataInfo<Character>>()
 
-    let webService: CharactersWebService
 
-    init(webService: CharactersWebService) {
+    let getImage = PublishRelay<(Int, PageURL)>()
+    let responseImage = PublishRelay<(Int, UIImage)>()
+
+
+
+    let webService: CharactersWebService
+    let cache: ImageCache
+
+    init(webService: CharactersWebService,
+         cache: ImageCache) {
         self.webService = webService
+        self.cache = cache
         bind()
     }
 
-    func fetchPageData(byString urlString: String) {
+    private func fetchPageData(byString urlString: String) {
 
         webService.getCharacters(byPage: urlString) { [self] result in
             switch result {
@@ -37,10 +47,27 @@ class CharactersInteractor {
         }
     }
 
+    private func fetchImage(byString urlString: String, index: Int) {
+
+        guard let url = NSURL(string: urlString) else { return }
+        cache.load(url: url) { [self] image in
+            if let image = image {
+                return responseImage.accept((index, image))
+            } else {
+                return responseImage.accept((index, cache.placeholderImage))
+            }
+        }
+    }
+
     func bind() {
         requestPageData
             .subscribe { [self] urlString in
                 fetchPageData(byString: urlString)
+            }.disposed(by: disposeBag)
+
+        getImage
+            .subscribe { [self] position, urlString in
+                fetchImage(byString: urlString, index: position)
             }.disposed(by: disposeBag)
     }
 }

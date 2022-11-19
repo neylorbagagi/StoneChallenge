@@ -11,6 +11,5 @@ import UIKit
 class UserDependencyContainer {
     var navigationController = UINavigationController()
     let imageCache = ImageCache()
-    
     static var shared = UserDependencyContainer()
 }

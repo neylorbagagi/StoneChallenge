@@ -19,7 +19,9 @@ class CharactersPresenter: CharactersViewModelProvider {
     // MARK: - VIEW MODELS
     lazy var viewModel: CharactersViewModel = {
         var viewModel = CharactersViewModel(
-            cellViewModels: cellViewModels(characterList)
+            cellViewModels: cellViewModels(characterList),
+            navigationLogoImage: navigationLogoImage(),
+            backgroundColor: .white
         )
         return viewModel
     }()
@@ -43,20 +45,24 @@ class CharactersPresenter: CharactersViewModelProvider {
 
     // MARK: - PRIVATE FUNCTIONS
     private func cellViewModels(_ characterList: [Character]) -> [CharacterCollectionViewModel] {
-        return characterList.map { CharacterCollectionViewModel(name: $0.name, image: UIImage()) }
+        characterList.map { CharacterCollectionViewModel(name: $0.name, image: UIImage()) }
     }
 
-    // TODO: Change names for this intire func
     private func updateViewModel(_ characters: [Character]) {
-        #warning ("Do I have to Create again all cellViewModels?")
-        // appending characterList with the new characters
-        characterList.append(contentsOf: characters)
 
-        // creating new viewModels for then
+        characterList.append(contentsOf: characters)
         let viewModelList = cellViewModels(characters)
 
-        // adding them to cellViewModels
         viewModel.cellViewModels.accept(viewModel.cellViewModels.value + viewModelList)
+    }
+
+    func updateCharacterCollectionViewModel(row: Int, with: UIImage) {
+        let test = viewModel.cellViewModels.value[row]
+        test.image.accept(with)
+    }
+
+    func navigationLogoImage() -> UIImage {
+        UIImage(named: "logo") ?? UIImage()
     }
 
     // MARK: - BIND
@@ -89,5 +95,15 @@ class CharactersPresenter: CharactersViewModelProvider {
             .map { [self] in characterList[$0] }
             .bind(to: router.showDetail)
             .disposed(by: disposeBag)
+
+        viewModel.requestImage
+            .map { [self] in ($0, characterList[$0].image) }
+            .bind(to: interactor.getImage)
+            .disposed(by: disposeBag)
+
+        interactor.responseImage
+            .subscribe { [self] index, image in
+                updateCharacterCollectionViewModel(row: index, with: image)
+            }.disposed(by: disposeBag)
     }
 }

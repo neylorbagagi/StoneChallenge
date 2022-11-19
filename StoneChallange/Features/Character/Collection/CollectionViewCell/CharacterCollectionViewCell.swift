@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class CharacterCollectionViewCell: UICollectionViewCell {
+
+    var disposeBag = DisposeBag()
 
     // MARK: - VIEWS
     private lazy var imageView: UIImageView = {
@@ -16,16 +19,16 @@ class CharacterCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
 
-    private lazy var title: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.lineBreakMode = .byWordWrapping
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 0
         label.font = UIFont(name: "SFProText-Thin", size: 14)
-        label.textColor = #colorLiteral(red: 0.1764705882, green: 0.1882352941, blue: 0.2784313725, alpha: 1)
-        label.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.8078431373, blue: 0.3568627451, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.03137254902, green: 0.03137254902, blue: 0.03137254902, alpha: 1)
+        label.backgroundColor = #colorLiteral(red: 0.7412293553, green: 1, blue: 0.631372549, alpha: 1)
         label.text = viewModel?.name
         return label
     }()
@@ -41,88 +44,50 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.contentView.addSubview(self.title)
         self.contentView.addSubview(self.imageView)
+        self.contentView.addSubview(self.nameLabel)
 
         NSLayoutConstraint.activate([
+            self.nameLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
+            self.nameLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -6),
+            self.nameLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -6),
             self.imageView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             self.imageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             self.imageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-            self.imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-
-            self.title.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-            self.title.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-            self.title.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-            self.title.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
+            self.imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
         ])
     }
-
-//    init(viewModelProvider: CharacterCollectionViewModelProvider) {
-//        self.viewModelProvider = viewModelProvider
-//        self.viewModel = viewModelProvider.viewModel
-//        super.init(frame: .zero)
-//
-//        configure()
-//    }
 
     required init?(coder: NSCoder) { return nil }
 
     // MARK: - OVERRIDES
     override func prepareForReuse() {
         super.prepareForReuse()
-        //hide or reset anything you want hereafter, for example
-        title.text = ""
+        nameLabel.text = ""
+        imageView.image = nil
+        disposeBag = DisposeBag()
     }
 
-    // MARK: - PRIVATE FUNCTIONS
-//    private func configure() {
-//        self.contentView.addSubview(self.title)
-//        self.contentView.addSubview(self.imageView)
-//
-//        NSLayoutConstraint.activate([
-//            self.imageView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-//            self.imageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-//            self.imageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-//            self.imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-//
-//            self.title.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-//            self.title.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-//            self.title.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-//            self.title.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
-//        ])
-//    }
+    // MARK: - BIND
+    func bind() {
+        viewModel?.image
+            .bind(to: imageView.rx.image)
+            .disposed(by: disposeBag)
+    }
 
     // MARK: - PUBLIC FUNCTIONS
-    public func configure(viewModel: CharacterCollectionViewModel) { // MUST TO CHENGE THIS NAME
-        title.text = viewModel.name
+    public func configure(viewModel: CharacterCollectionViewModel) {
+        self.viewModel = viewModel
+        nameLabel.text = viewModel.name
+        bind()
     }
 }
 
-//#if canImport(SwiftUI) && DEBUG
-//import SwiftUI
-//struct CharacterCollectionViewCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ViewPreview {
-//            CharacterCollectionViewCell(
-//                viewModelProvider: CharacterCollectionViewPresenter(
-//                    character: Character(
-//                        id: 1006,
-//                        name: "Gabriela",
-//                        status: "Gabriela",
-//                        species: "Gabriela",
-//                        type: "Gabriela",
-//                        gender: "Gabriela",
-//                        origin: Character.Location(name: "Gabriela", url: "Gabriela"),
-//                        location: Character.Location(name: "Gabriela", url: "Gabriela"),
-//                        image: "Gabriela",
-//                        episode: ["Gabriela"],
-//                        url: "Gabriela",
-//                        created: "Gabriela"
-//                    )
-//                )
-//            )
-//        }
-//        .frame(width: 300, height: 300)
-//    }
-//}
-//#endif
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+struct CharacterCollectionViewCell_Previews: PreviewProvider {
+    static var previews: some View {
+        Text("Hello, World!")
+    }
+}
+#endif

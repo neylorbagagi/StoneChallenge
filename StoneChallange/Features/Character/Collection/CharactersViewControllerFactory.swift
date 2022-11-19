@@ -16,7 +16,12 @@ extension UserDependencyContainer: CharactersViewControllerFactoryProtocol {
     func charactersViewControllerFactory(characterList: [Character]) -> UIViewController {
 
         let router = CharactersRouter(viewControllerFactory: self)
-        let interactor = CharactersInteractor(webService: CharactersWebService())
+
+        let interactor = CharactersInteractor(
+            webService: CharactersWebService(),
+            cache: imageCache
+        )
+
         let presenter = CharactersPresenter(
             interactor: interactor,
             router: router,
