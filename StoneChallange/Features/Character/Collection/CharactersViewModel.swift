@@ -9,6 +9,7 @@ import Foundation
 import RxRelay
 import UIKit
 
+// TODO: FAZER UMA SPLASH SCREEN LEGAL COM O LOGO DA STONE
 protocol CharactersViewModelProvider {
     var viewModel: CharactersViewModel { get }
 }

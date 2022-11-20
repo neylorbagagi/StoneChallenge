@@ -142,10 +142,6 @@ class FilterViewController: UIViewController {
 
     // MARK: - BIND
     private func bind() {
-        segmentedControl.rx.selectedSegmentIndex
-            .subscribe {
-                print($0)
-            }.disposed(by: disposeBag)
 
         applyFilterButton.rx.tap
             .subscribe { [self] _ in

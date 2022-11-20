@@ -129,9 +129,6 @@ class CharactersPresenter: CharactersViewModelProvider {
                 pagination = response.data.info
                 filterParams = response.parameters
                 updateWithFilterData(response.data.results)
-            }, onError: { error in
-                // TODO: present some error dialog
-                print(error)
             }).disposed(by: disposeBag)
     }
 }

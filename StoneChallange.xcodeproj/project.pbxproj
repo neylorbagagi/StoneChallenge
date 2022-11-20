@@ -26,6 +26,7 @@
 		F07737542929CD7F00A6D0F7 /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07737532929CD7F00A6D0F7 /* APIParameters.swift */; };
 		F07737592929D4DF00A6D0F7 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07737582929D4DF00A6D0F7 /* Status.swift */; };
 		F077375E2929D4F000A6D0F7 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077375D2929D4F000A6D0F7 /* Gender.swift */; };
+		F077376C292AC68100A6D0F7 /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077376B292AC68100A6D0F7 /* CharactersViewModelTests.swift */; };
 		F08A1D12292980B8008EF437 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D11292980B8008EF437 /* FilterViewModel.swift */; };
 		F08A1D172929835F008EF437 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D162929835F008EF437 /* FilterViewController.swift */; };
 		F08A1D1C29298606008EF437 /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D1B29298606008EF437 /* FilterPresenter.swift */; };
@@ -37,15 +38,14 @@
 		F08EAFC72922B3D800DB049F /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC62922B3D800DB049F /* CharactersViewController.swift */; };
 		F08EAFCC2922B3DA00DB049F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08EAFCB2922B3DA00DB049F /* Assets.xcassets */; };
 		F08EAFCF2922B3DA00DB049F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08EAFCD2922B3DA00DB049F /* LaunchScreen.storyboard */; };
-		F08EAFDA2922B3DB00DB049F /* StoneChallangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFD92922B3DB00DB049F /* StoneChallangeTests.swift */; };
 		F08EAFE52922B3DB00DB049F /* StoneChallangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFE42922B3DB00DB049F /* StoneChallangeUITests.swift */; };
 		F08EB00C2922CAC700DB049F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EB00B2922CAC700DB049F /* Character.swift */; };
 		F08EB0112922CBD900DB049F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EB0102922CBD900DB049F /* Location.swift */; };
 		F0C35B7F29245CE100F85183 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35B7E29245CE100F85183 /* DependencyContainer.swift */; };
-		F0C35BA829251C1A00F85183 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BA729251C1A00F85183 /* RxSwift */; };
+		F0C35BA829251C1A00F85183 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BA729251C1A00F85183 /* RxSwift */; settings = {ATTRIBUTES = (Required, ); }; };
 		F0C35BAA29251C1A00F85183 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BA929251C1A00F85183 /* RxTest */; };
-		F0C35BAC29251C1A00F85183 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BAB29251C1A00F85183 /* RxRelay */; };
-		F0C35BAE29251C1A00F85183 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BAD29251C1A00F85183 /* RxCocoa */; };
+		F0C35BAC29251C1A00F85183 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BAB29251C1A00F85183 /* RxRelay */; settings = {ATTRIBUTES = (Required, ); }; };
+		F0C35BAE29251C1A00F85183 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BAD29251C1A00F85183 /* RxCocoa */; settings = {ATTRIBUTES = (Required, ); }; };
 		F0C35BB029251C1A00F85183 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F0C35BAF29251C1A00F85183 /* RxBlocking */; };
 		F0C35BD7292801F300F85183 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BD6292801F300F85183 /* CharacterViewController.swift */; };
 		F0C35BDC292803F400F85183 /* CharacterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BDB292803F400F85183 /* CharacterInteractor.swift */; };
@@ -93,6 +93,7 @@
 		F07737532929CD7F00A6D0F7 /* APIParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
 		F07737582929D4DF00A6D0F7 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		F077375D2929D4F000A6D0F7 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		F077376B292AC68100A6D0F7 /* CharactersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelTests.swift; sourceTree = "<group>"; };
 		F08A1D11292980B8008EF437 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		F08A1D162929835F008EF437 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		F08A1D1B29298606008EF437 /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 		F08EAFCE2922B3DA00DB049F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F08EAFD02922B3DA00DB049F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F08EAFD52922B3DB00DB049F /* StoneChallangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneChallangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F08EAFD92922B3DB00DB049F /* StoneChallangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneChallangeTests.swift; sourceTree = "<group>"; };
 		F08EAFDB2922B3DB00DB049F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F08EAFE02922B3DB00DB049F /* StoneChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneChallangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFE42922B3DB00DB049F /* StoneChallangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneChallangeUITests.swift; sourceTree = "<group>"; };
@@ -209,6 +209,37 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F0773768292AC63200A6D0F7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F0773769292AC63C00A6D0F7 /* Character */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F0773769292AC63C00A6D0F7 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				F077376A292AC64D00A6D0F7 /* Collection */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		F077376A292AC64D00A6D0F7 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F077376B292AC68100A6D0F7 /* CharactersViewModelTests.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		F0773776292ACCBC00A6D0F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F08A1D1029298003008EF437 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +260,7 @@
 				F08EAFD82922B3DB00DB049F /* StoneChallangeTests */,
 				F08EAFE32922B3DB00DB049F /* StoneChallangeUITests */,
 				F08EAFC02922B3D800DB049F /* Products */,
+				F0773776292ACCBC00A6D0F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,7 +294,7 @@
 		F08EAFD82922B3DB00DB049F /* StoneChallangeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F08EAFD92922B3DB00DB049F /* StoneChallangeTests.swift */,
+				F0773768292AC63200A6D0F7 /* Features */,
 				F08EAFDB2922B3DB00DB049F /* Info.plist */,
 			);
 			path = StoneChallangeTests;
@@ -567,7 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08EAFDA2922B3DB00DB049F /* StoneChallangeTests.swift in Sources */,
+				F077376C292AC68100A6D0F7 /* CharactersViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
