@@ -16,6 +16,7 @@ class CharactersWebService: WebService<DataInfo<Character>> {
             cachePolicy: .returnCacheDataElseLoad,
             timeoutInterval: timeoutInterval)
 
+        // TODO: o next tem que poder ser null tambe;
         execute(request: request) { result in
             completion(result)
         }
@@ -23,33 +24,16 @@ class CharactersWebService: WebService<DataInfo<Character>> {
 
     func getCharacters(parameters params: [APIParameters], completion: @escaping (Result<DataInfo<Character>, Error>) -> Void) {
 
-        guard let url = URL(string: "https://rickandmortyapi.com/api/character") else {
-            return // TODO: botar um erro aqui
-        }
+        guard var urlComponents = URLComponents(string: "https://rickandmortyapi.com/api/character") else { return }
+        urlComponents.queryItems = params.map { URLQueryItem(name: $0.describe(), value: $0.getValue()) }
+
+        // TODO: botar um erro aqui
+        guard let url = urlComponents.url else { return }
 
         var request = URLRequest.init(
             url: url,
             cachePolicy: .returnCacheDataElseLoad,
             timeoutInterval: timeoutInterval)
-
-        for param in params {
-            request.addValue(param.describe(), forHTTPHeaderField: param.getValue())
-        }
-
-        execute(request: request) { result in
-            completion(result)
-        }
-    }
-
-    @available(*, deprecated, message: "Use getCharacters(byPage stringUrl: String, completion:)")
-    func getCharacters(byPage id: Int, completion: @escaping (Result<DataInfo<Character>, Error>) -> Void) {
-
-        var request = URLRequest.init(
-            url: URL(string: "https://rickandmortyapi.com/api/character")!,
-            cachePolicy: .returnCacheDataElseLoad,
-            timeoutInterval: timeoutInterval)
-
-        request.addValue(String(id), forHTTPHeaderField: "page")
 
         execute(request: request) { result in
             completion(result)

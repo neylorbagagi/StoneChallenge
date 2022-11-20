@@ -15,8 +15,7 @@ class CharactersPresenter: CharactersViewModelProvider {
     let disposeBag = DisposeBag()
 
     public let nextPageTrigger = PublishRelay<Void>()
-//    public let filterTrigger = PublishRelay<Void>()
-    public let filterParams = PublishRelay<[APIParameters]>()
+    public let filterCallBack = PublishSubject<DataInfo<Character>>()
 
     // MARK: - VIEW MODELS
     lazy var viewModel: CharactersViewModel = {
@@ -51,11 +50,19 @@ class CharactersPresenter: CharactersViewModelProvider {
     }
 
     private func updateViewModel(_ characters: [Character]) {
-
         characterList.append(contentsOf: characters)
         let viewModelList = cellViewModels(characters)
 
         viewModel.cellViewModels.accept(viewModel.cellViewModels.value + viewModelList)
+    }
+
+    // TODO: esse metodo e o updateViewModel(_ characters:) podem ser um só,
+    // ou podem ser duas onde uma trabalha com nextPageData e uma traz inicia a Data
+    private func updateWithFilterData(_ characters: [Character]) {
+        characterList = characters
+        let viewModelList = cellViewModels(characters)
+
+        viewModel.cellViewModels.accept(viewModelList)
     }
 
     func updateCharacterCollectionViewModel(row: Int, with: UIImage) {
@@ -109,11 +116,17 @@ class CharactersPresenter: CharactersViewModelProvider {
             }.disposed(by: disposeBag)
 
         viewModel.rightBarButtonItemTap
+            .map { [self] in filterCallBack }
             .bind(to: router.showFilter)
             .disposed(by: disposeBag)
 
-        filterParams
-            .bind(to: interactor.requestFilterData)
-            .disposed(by: disposeBag)
+        filterCallBack
+            .subscribe(onNext: { [self] dataInfo in
+                pagination = dataInfo.info
+                updateWithFilterData(dataInfo.results)
+            }, onError: { error in
+                // TODO: present some error dialog
+                print(error)
+            }).disposed(by: disposeBag)
     }
 }

@@ -7,10 +7,13 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class FilterPresenter: FilterViewModelProvider {
 
     let disposeBag = DisposeBag()
+
+    public let filterParams = PublishRelay<[APIParameters]>()
 
     // MARK: - VIEW MODELS
     lazy var viewModel: FilterViewModel = {
@@ -26,12 +29,15 @@ class FilterPresenter: FilterViewModelProvider {
 
     let interactor: FilterInteractor
     let router: FilterRouter
+    let filterCallBack: PublishSubject<DataInfo<Character>>
 
     init(interactor: FilterInteractor,
-         router: FilterRouter) {
+         router: FilterRouter,
+         filterCallBack: PublishSubject<DataInfo<Character>>) {
 
         self.interactor = interactor
         self.router = router
+        self.filterCallBack = filterCallBack
 
         bind()
     }
@@ -44,8 +50,16 @@ class FilterPresenter: FilterViewModelProvider {
     // MARK: - BIND
     private func bind() {
         viewModel.applyFilterButtonTap
-            .bind(to: router.pop)
+            .bind(to: interactor.requestFilterData)
             .disposed(by: disposeBag)
 
+        interactor.responseFilterData
+            .bind(to: filterCallBack)
+            .disposed(by: disposeBag)
+
+//        interactor.responseFilterData
+//            .map { _ in }
+//            .bind(to: router.pop)
+//            .disposed(by: disposeBag)
     }
 }

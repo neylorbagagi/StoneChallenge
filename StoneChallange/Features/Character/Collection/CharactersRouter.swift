@@ -17,7 +17,7 @@ class CharactersRouter {
     let disposeBag = DisposeBag()
 
     public let showDetail = PublishRelay<Character>()
-    public let showFilter = PublishRelay<Void>()
+    public let showFilter = PublishRelay<PublishSubject<DataInfo<Character>>>()
 
     let viewControllerFactory: UserDependencyContainer
     let navigationController: UINavigationController
@@ -35,8 +35,8 @@ class CharactersRouter {
             }.disposed(by: disposeBag)
 
         showFilter
-            .subscribe { [self] _ in
-                showFilter(as: "asa") // TODO: corrigir isso
+            .subscribe { [self] observable in
+                showFilter(filterCallBack: observable)
             }.disposed(by: disposeBag)
     }
 
@@ -45,8 +45,8 @@ class CharactersRouter {
         navigationController.pushViewController(viewController, animated: true)
     }
 
-    func showFilter(as: String) {
-        let viewController = viewControllerFactory.filterViewControllerFactory()
+    func showFilter(filterCallBack: PublishSubject<DataInfo<Character>>) {
+        let viewController = viewControllerFactory.filterViewControllerFactory(filterCallBack: filterCallBack)
         navigationController.pushViewController(viewController, animated: true)
     }
 }

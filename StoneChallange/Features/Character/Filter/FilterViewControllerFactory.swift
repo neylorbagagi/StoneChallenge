@@ -7,21 +7,23 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 protocol FilterViewControllerFactoryProtocol {
-    func filterViewControllerFactory() -> UIViewController
+    func filterViewControllerFactory(filterCallBack: PublishSubject<DataInfo<Character>>) -> UIViewController
 }
 
 extension UserDependencyContainer: FilterViewControllerFactoryProtocol {
-    func filterViewControllerFactory() -> UIViewController {
+    func filterViewControllerFactory(filterCallBack: PublishSubject<DataInfo<Character>>) -> UIViewController {
 
         let router = FilterRouter(viewControllerFactory: self)
 
-        let interactor = FilterInteractor()
+        let interactor = FilterInteractor(webService: CharactersWebService())
 
         let presenter = FilterPresenter(
             interactor: interactor,
-            router: router
+            router: router,
+            filterCallBack: filterCallBack
         )
 
         return FilterViewController(viewModelProvider: presenter)

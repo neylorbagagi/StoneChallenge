@@ -39,15 +39,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C00959D5-45F2-481D-9C11-3EFCF307E1DE"
+            uuid = "E39BD97E-3BD7-44D5-9FB3-F63976297910"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StoneChallange/Features/Character/Collection/CharactersInteractor.swift"
+            filePath = "StoneChallange/Features/Character/Filter/FilterInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "fetchFilterData(parameters:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -55,16 +55,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8137C837-251F-4077-93D9-E6E4CFD0E85B"
+            uuid = "D3648AB3-ADF8-4D97-8613-0B24DF8D14D4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StoneChallange/Features/Character/Collection/CharactersInteractor.swift"
+            filePath = "StoneChallange/Features/Character/Filter/FilterInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "fetchFilterData(parameters:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "448B7838-C9BB-412A-9F95-E8AAEA1865C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StoneChallange/Domains/Characters/WebServices/CharactersWebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getCharacters(byPage:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "448B7838-C9BB-412A-9F95-E8AAEA1865C1 - c07b658d9986006"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StoneChallange.CharactersWebService.getCharacters(byPage: Swift.String, completion: (Swift.Result&lt;StoneChallange.DataInfo&lt;StoneChallange.Character&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "StoneChallange"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neylorbagagi/Developer/Swift/StoneChallange/StoneChallange/Domains/Characters/WebServices/CharactersWebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "448B7838-C9BB-412A-9F95-E8AAEA1865C1 - 71d9373174be33b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;StoneChallange.DataInfo&lt;StoneChallange.Character&gt;, Swift.Error&gt;) -&gt; () in StoneChallange.CharactersWebService.getCharacters(byPage: Swift.String, completion: (Swift.Result&lt;StoneChallange.DataInfo&lt;StoneChallange.Character&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "StoneChallange"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neylorbagagi/Developer/Swift/StoneChallange/StoneChallange/Domains/Characters/WebServices/CharactersWebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B88A4E7-F63F-4D30-8490-D045BE553D8A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StoneChallange/Domains/Characters/WebServices/CharactersWebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getCharacters(byPage:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -31,6 +31,7 @@ class FilterViewController: UIViewController {
         return textField
     }()
 
+    // TODO: usar para zerar myUISegmentedControl.selectedSegmentIndex = -1; //turn off the current selection
     private lazy var segmentedControlPrompt: UILabel = {
         let label = UILabel()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -146,6 +147,8 @@ class FilterViewController: UIViewController {
             }.disposed(by: disposeBag)
 
         applyFilterButton.rx.tap
+            .map { [APIParameters.name("Morty"), // TODO: dinamico
+                    APIParameters.status(.alive)] }
             .bind(to: viewModel.applyFilterButtonTap)
             .disposed(by: disposeBag)
     }
@@ -158,10 +161,13 @@ struct FilterViewController_Previews: PreviewProvider {
         ViewControllerPreview {
             FilterViewController(
                 viewModelProvider: FilterPresenter(
-                    interactor: FilterInteractor(),
+                    interactor: FilterInteractor(
+                        webService: CharactersWebService()
+                    ),
                     router: FilterRouter(
                         viewControllerFactory: UserDependencyContainer()
-                    )
+                    ),
+                    filterCallBack: PublishSubject<DataInfo<Character>>()
                 )
             )
         }
