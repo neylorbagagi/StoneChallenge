@@ -10,11 +10,17 @@ import UIKit
 import RxSwift
 
 protocol FilterViewControllerFactoryProtocol {
-    func filterViewControllerFactory(filterCallBack: PublishSubject<DataInfo<Character>>) -> UIViewController
+    func filterViewControllerFactory(
+        filterCallBack: PublishSubject<FilterCallBack>,
+        filterParameters: [APIParameters]?
+    ) -> UIViewController
 }
 
 extension UserDependencyContainer: FilterViewControllerFactoryProtocol {
-    func filterViewControllerFactory(filterCallBack: PublishSubject<DataInfo<Character>>) -> UIViewController {
+    func filterViewControllerFactory(
+        filterCallBack: PublishSubject<FilterCallBack>,
+        filterParameters: [APIParameters]?
+    ) -> UIViewController {
 
         let router = FilterRouter(viewControllerFactory: self)
 
@@ -23,7 +29,8 @@ extension UserDependencyContainer: FilterViewControllerFactoryProtocol {
         let presenter = FilterPresenter(
             interactor: interactor,
             router: router,
-            filterCallBack: filterCallBack
+            filterCallBack: filterCallBack,
+            filterParameters: filterParameters
         )
 
         return FilterViewController(viewModelProvider: presenter)

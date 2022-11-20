@@ -27,14 +27,10 @@ class FilterRouter {
 
     // MARK - BIND
     private func bind() {
-        pop.subscribe { [self] _ in // TODO: put it on a superclass
-            /* Main Thread Checker: UI API called on a background thread: -[UINavigationController popViewControllerAnimated:]
-             PID: 5214, TID: 261261, Thread name: (none), Queue name: com.apple.NSURLSession-delegate, QoS: 0
-             Backtrace:
-
-             usar um subject que só chama na main thread
-             */
-            navigationController.popViewController(animated: true)
+        pop
+            .observe(on: MainScheduler.instance)
+            .subscribe { [self] _ in // TODO: put it on a superclass
+                navigationController.popViewController(animated: true)
         }.disposed(by: disposeBag)
     }
 }

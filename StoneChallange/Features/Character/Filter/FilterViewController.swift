@@ -147,9 +147,31 @@ class FilterViewController: UIViewController {
             }.disposed(by: disposeBag)
 
         applyFilterButton.rx.tap
-            .map { [APIParameters.name("Morty"), // TODO: dinamico
-                    APIParameters.status(.alive)] }
-            .bind(to: viewModel.applyFilterButtonTap)
+            .subscribe { [self] _ in
+                // TODO: ISSO AQUI TA ASSUSTADOR
+                var param: [APIParameters] = []
+
+                if let text = textField.text {
+                    param.append(APIParameters.name(text))
+                }
+
+                if segmentedControl.selectedSegmentIndex != -1 {
+                    guard let statusName = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)
+                    else { return }
+
+                    guard let statusOption = APIParameters.Status.init(rawValue: statusName) else { return }
+
+                    param.append(APIParameters.status(statusOption))
+                }
+                viewModel.applyFilterButtonTap.accept(param)
+            }.disposed(by: disposeBag)
+
+        resetFilterButton.rx.tap
+            .subscribe { [self] _ in
+                textField.text = ""
+                segmentedControl.selectedSegmentIndex = -1
+                viewModel.resetFilterButtonTap.accept([])
+            }
             .disposed(by: disposeBag)
     }
 }
@@ -167,7 +189,8 @@ struct FilterViewController_Previews: PreviewProvider {
                     router: FilterRouter(
                         viewControllerFactory: UserDependencyContainer()
                     ),
-                    filterCallBack: PublishSubject<DataInfo<Character>>()
+                    filterCallBack: PublishSubject<FilterCallBack>(),
+                    filterParameters: []
                 )
             )
         }

@@ -17,7 +17,11 @@ class CharactersRouter {
     let disposeBag = DisposeBag()
 
     public let showDetail = PublishRelay<Character>()
-    public let showFilter = PublishRelay<PublishSubject<DataInfo<Character>>>()
+//    public let showFilter = PublishRelay<PublishSubject<DataInfo<Character>>>()
+
+//    public let showFilter = PublishRelay<PublishSubject<(DataInfo<Character>, [APIParameters]?)>>()
+    public let showFilter = PublishRelay<(callback: PublishSubject<FilterCallBack>,
+                                          params: [APIParameters]?)>()
 
     let viewControllerFactory: UserDependencyContainer
     let navigationController: UINavigationController
@@ -35,18 +39,23 @@ class CharactersRouter {
             }.disposed(by: disposeBag)
 
         showFilter
-            .subscribe { [self] observable in
-                showFilter(filterCallBack: observable)
+            .subscribe { [self] tuple in
+                guard let (callback, params) = tuple.element else { return } // TODO: fazer do modo RX
+                showFilter(using: callback, with: params)
             }.disposed(by: disposeBag)
     }
 
-    func showDetail(character: Character) {
+    private func showDetail(character: Character) {
         let viewController = viewControllerFactory.characterViewControllerFactory(character: character)
         navigationController.pushViewController(viewController, animated: true)
     }
 
-    func showFilter(filterCallBack: PublishSubject<DataInfo<Character>>) {
-        let viewController = viewControllerFactory.filterViewControllerFactory(filterCallBack: filterCallBack)
+    private func showFilter(using callBack: PublishSubject<FilterCallBack>,
+                            with parameters: [APIParameters]?) {
+        let viewController = viewControllerFactory.filterViewControllerFactory(
+            filterCallBack: callBack,
+            filterParameters: parameters
+        )
         navigationController.pushViewController(viewController, animated: true)
     }
 }

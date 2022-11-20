@@ -7,7 +7,7 @@
 */
 
 "filter_presenter_title" = "Filter";
-"filter_presenter_textField_prompt_text" = "Insert character's name that you are looking for";
+"filter_presenter_textField_prompt_text" = "Insert ther character's name that you are looking for";
 "filter_presenter_nameLabel_text" = "character's name";
 "filter_presenter_segmentedControl_prompt_text" = "Character's Status";
 "filter_view_controller_applyFilter_button" = "APPLY FILTER";

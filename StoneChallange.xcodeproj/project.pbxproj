@@ -290,9 +290,9 @@
 		F08EB0062922C7A100DB049F /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				F08A1D1029298003008EF437 /* Filter */,
 				F0C35BBD2927DAB700F85183 /* Collection */,
 				F0C35BCA2927DAD600F85183 /* Detail */,
+				F08A1D1029298003008EF437 /* Filter */,
 			);
 			path = Character;
 			sourceTree = "<group>";

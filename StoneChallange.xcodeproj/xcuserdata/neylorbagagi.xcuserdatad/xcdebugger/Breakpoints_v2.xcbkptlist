@@ -71,64 +71,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "448B7838-C9BB-412A-9F95-E8AAEA1865C1"
+            uuid = "A996CB9F-3803-4565-95AC-E44EB85043F5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StoneChallange/Domains/Characters/WebServices/CharactersWebService.swift"
+            filePath = "StoneChallange/Features/Character/Collection/CharactersRouter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "getCharacters(byPage:completion:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "showFilter(using:with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "448B7838-C9BB-412A-9F95-E8AAEA1865C1 - c07b658d9986006"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "StoneChallange.CharactersWebService.getCharacters(byPage: Swift.String, completion: (Swift.Result&lt;StoneChallange.DataInfo&lt;StoneChallange.Character&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "StoneChallange"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/neylorbagagi/Developer/Swift/StoneChallange/StoneChallange/Domains/Characters/WebServices/CharactersWebService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "472">
-               </Location>
-               <Location
-                  uuid = "448B7838-C9BB-412A-9F95-E8AAEA1865C1 - 71d9373174be33b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;StoneChallange.DataInfo&lt;StoneChallange.Character&gt;, Swift.Error&gt;) -&gt; () in StoneChallange.CharactersWebService.getCharacters(byPage: Swift.String, completion: (Swift.Result&lt;StoneChallange.DataInfo&lt;StoneChallange.Character&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "StoneChallange"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/neylorbagagi/Developer/Swift/StoneChallange/StoneChallange/Domains/Characters/WebServices/CharactersWebService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "41">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2B88A4E7-F63F-4D30-8490-D045BE553D8A"
+            uuid = "A2D4D3B2-EFD2-4309-9A81-CFE3930C1EFB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StoneChallange/Domains/Characters/WebServices/CharactersWebService.swift"
+            filePath = "StoneChallange/Features/Character/Collection/CharactersRouter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "getCharacters(byPage:completion:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "showFilter(using:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

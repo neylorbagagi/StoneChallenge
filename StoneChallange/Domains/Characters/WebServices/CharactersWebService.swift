@@ -16,7 +16,6 @@ class CharactersWebService: WebService<DataInfo<Character>> {
             cachePolicy: .returnCacheDataElseLoad,
             timeoutInterval: timeoutInterval)
 
-        // TODO: o next tem que poder ser null tambe;
         execute(request: request) { result in
             completion(result)
         }
@@ -30,7 +29,7 @@ class CharactersWebService: WebService<DataInfo<Character>> {
         // TODO: botar um erro aqui
         guard let url = urlComponents.url else { return }
 
-        var request = URLRequest.init(
+        let request = URLRequest.init(
             url: url,
             cachePolicy: .returnCacheDataElseLoad,
             timeoutInterval: timeoutInterval)

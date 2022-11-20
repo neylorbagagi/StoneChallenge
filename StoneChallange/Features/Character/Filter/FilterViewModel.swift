@@ -26,6 +26,7 @@ class FilterViewModel {
     // MARK: - EVENTS
     let viewDidLoad = PublishRelay<Void>()
     let applyFilterButtonTap = PublishRelay<[APIParameters]>()
+    let resetFilterButtonTap = PublishRelay<[APIParameters]>()
 
     // TODO: TEST RIDUCILO mudar esse nome
     let requestImage = PublishRelay<Int>()

@@ -10,12 +10,18 @@ import UIKit
 import RxSwift
 import RxRelay
 
+public struct FilterCallBack {
+    var data: DataInfo<Character>
+    var parameters: [APIParameters]?
+}
+
 class CharactersPresenter: CharactersViewModelProvider {
 
     let disposeBag = DisposeBag()
 
     public let nextPageTrigger = PublishRelay<Void>()
-    public let filterCallBack = PublishSubject<DataInfo<Character>>()
+//    public let filterCallBack = PublishSubject<DataInfo<Character>>()
+    public let filterCallBack = PublishSubject<FilterCallBack>()
 
     // MARK: - VIEW MODELS
     lazy var viewModel: CharactersViewModel = {
@@ -28,6 +34,7 @@ class CharactersPresenter: CharactersViewModelProvider {
     }()
 
     private var pagination = DataInfo<Character>.Info()
+    private var filterParams: [APIParameters]?
 
     let interactor: CharactersInteractor
     let router: CharactersRouter
@@ -82,9 +89,6 @@ class CharactersPresenter: CharactersViewModelProvider {
             .subscribe(onNext: { [self] dataInfo in
                 pagination = dataInfo.info
                 updateViewModel(dataInfo.results)
-            }, onError: { error in
-                // TODO: present some error dialog
-                print(error)
             }).disposed(by: disposeBag)
 
         viewModel.viewDidLoad
@@ -116,14 +120,15 @@ class CharactersPresenter: CharactersViewModelProvider {
             }.disposed(by: disposeBag)
 
         viewModel.rightBarButtonItemTap
-            .map { [self] in filterCallBack }
+            .map { [self] in (filterCallBack, filterParams) }
             .bind(to: router.showFilter)
             .disposed(by: disposeBag)
 
         filterCallBack
-            .subscribe(onNext: { [self] dataInfo in
-                pagination = dataInfo.info
-                updateWithFilterData(dataInfo.results)
+            .subscribe(onNext: { [self] response in
+                pagination = response.data.info
+                filterParams = response.parameters
+                updateWithFilterData(response.data.results)
             }, onError: { error in
                 // TODO: present some error dialog
                 print(error)
