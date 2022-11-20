@@ -28,11 +28,11 @@ class FilterViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.borderStyle = .roundedRect
         textField.placeholder = viewModel.placeholderText
+        textField.text = viewModel.textFieldText ?? ""
         return textField
     }()
 
-    // TODO: usar para zerar myUISegmentedControl.selectedSegmentIndex = -1; //turn off the current selection
-    private lazy var segmentedControlPrompt: UILabel = {
+   private lazy var segmentedControlPrompt: UILabel = {
         let label = UILabel()
         textField.translatesAutoresizingMaskIntoConstraints = false
         label.text = viewModel.segmentedControlPrompt
@@ -41,6 +41,7 @@ class FilterViewController: UIViewController {
 
     private lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: viewModel.segmentedControlItemsText)
+        segmentedControl.selectedSegmentIndex = viewModel.segmentSelectedIndex
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         segmentedControl.selectedSegmentTintColor = #colorLiteral(red: 0.7412293553, green: 1, blue: 0.631372549, alpha: 1)
         return segmentedControl

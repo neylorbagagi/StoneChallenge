@@ -8,7 +8,7 @@
 import Foundation
 
 class CharactersWebService: WebService<DataInfo<Character>> {
-
+// TODO: corrigir erro que estoura ao pesquisar nome invalido
     func getCharacters(byPage urlString: String, completion: @escaping (Result<DataInfo<Character>, Error>) -> Void) {
 
         let request = URLRequest.init(

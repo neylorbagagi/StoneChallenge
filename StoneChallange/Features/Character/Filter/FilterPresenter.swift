@@ -21,9 +21,11 @@ class FilterPresenter: FilterViewModelProvider {
             title: NSLocalizedString("filter_presenter_title", comment: ""),
             backgroundColor: .white,
             textFieldPromptText: NSLocalizedString("filter_presenter_textField_prompt_text", comment: ""),
-            nameLabelText: NSLocalizedString("filter_presenter_nameLabel_text", comment: ""),
+            placeholderText: NSLocalizedString("filter_presenter_nameLabel_text", comment: ""),
+            textFieldText: textFieldText(),
             segmentedControlPrompt: NSLocalizedString("filter_presenter_segmentedControl_prompt_text", comment: ""),
-            segmentOptionListText: segmentOptionListText()
+            segmentOptionListText: segmentOptionListText(),
+            segmentSelectedIndex: segmentSelectedIndex()
         )
     }()
 
@@ -48,6 +50,43 @@ class FilterPresenter: FilterViewModelProvider {
     // MARK: - PRIVATE FUNCTIONS
     func segmentOptionListText() -> [String] {
         APIParameters.Status.allCases.map { $0.rawValue }
+    }
+
+    // TODO: ISSO AQUI TA MUITO RUIM
+    func textFieldText() -> String? {
+        guard let params = filterParameters else { return nil }
+        let param = params.first {
+            $0.describe() == "name"
+        }
+        if param != nil {
+            return param?.getValue()
+        } else {
+            return nil
+        }
+    }
+
+    // TODO: ISSO AQUI TA MUITO RUIM
+    func segmentSelectedIndex() -> Int {
+        guard let params = filterParameters else { return -1 }
+        let param = params.first {
+            $0.describe() == "status"
+        }
+        if param != nil {
+            switch param?.getValue() {
+            case "alive":
+                return 0
+            case "dead":
+                return 1
+            case "unknown":
+                return 2
+            case .none:
+                return -1
+            case .some(_):
+                return -1
+            }
+        } else {
+            return -1
+        }
     }
 
     // MARK: - BIND

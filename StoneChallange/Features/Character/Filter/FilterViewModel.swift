@@ -20,8 +20,10 @@ class FilterViewModel {
     let backgroundColor: UIColor
     let textFieldPromptText: String
     let placeholderText: String
+    let textFieldText: String?
     let segmentedControlPrompt: String
     let segmentedControlItemsText: [String]
+    let segmentSelectedIndex: Int
 
     // MARK: - EVENTS
     let viewDidLoad = PublishRelay<Void>()
@@ -35,14 +37,18 @@ class FilterViewModel {
     init(title: String,
          backgroundColor: UIColor,
          textFieldPromptText: String,
-         nameLabelText: String,
+         placeholderText: String,
+         textFieldText: String?,
          segmentedControlPrompt: String,
-         segmentOptionListText: [String]) {
+         segmentOptionListText: [String],
+         segmentSelectedIndex: Int) {
         self.title = title
         self.backgroundColor = backgroundColor
         self.textFieldPromptText = textFieldPromptText
-        self.placeholderText = nameLabelText
+        self.placeholderText = placeholderText
+        self.textFieldText = textFieldText
         self.segmentedControlPrompt = segmentedControlPrompt
         self.segmentedControlItemsText = segmentOptionListText
+        self.segmentSelectedIndex = segmentSelectedIndex
     }
 }

@@ -17,9 +17,6 @@ class CharactersRouter {
     let disposeBag = DisposeBag()
 
     public let showDetail = PublishRelay<Character>()
-//    public let showFilter = PublishRelay<PublishSubject<DataInfo<Character>>>()
-
-//    public let showFilter = PublishRelay<PublishSubject<(DataInfo<Character>, [APIParameters]?)>>()
     public let showFilter = PublishRelay<(callback: PublishSubject<FilterCallBack>,
                                           params: [APIParameters]?)>()
 
@@ -39,8 +36,8 @@ class CharactersRouter {
             }.disposed(by: disposeBag)
 
         showFilter
-            .subscribe { [self] tuple in
-                guard let (callback, params) = tuple.element else { return } // TODO: fazer do modo RX
+            .subscribe { [self] tuple in // TODO: fazer do modo RX usar onNext
+                guard let (callback, params) = tuple.element else { return }
                 showFilter(using: callback, with: params)
             }.disposed(by: disposeBag)
     }
