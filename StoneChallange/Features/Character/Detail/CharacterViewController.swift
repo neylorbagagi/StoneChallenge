@@ -8,6 +8,8 @@
 import UIKit
 import RxSwift
 
+// TODO: re orientar a tela quando rotacionado
+
 class CharacterViewController: UIViewController {
 
     let disposeBag = DisposeBag()

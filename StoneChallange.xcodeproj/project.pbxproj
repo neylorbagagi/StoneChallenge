@@ -21,6 +21,17 @@
 		F019FF7129243E7A0077BD42 /* CharactersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF7029243E7A0077BD42 /* CharactersInteractor.swift */; };
 		F019FF7629243EAF0077BD42 /* CharactersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF7529243EAF0077BD42 /* CharactersRouter.swift */; };
 		F019FF7E29243ECA0077BD42 /* CharactersViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019FF7D29243ECA0077BD42 /* CharactersViewControllerFactory.swift */; };
+		F07737472929B11300A6D0F7 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07737462929B11300A6D0F7 /* UIStackView+Extensions.swift */; };
+		F077374F2929BE3C00A6D0F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F077374E2929BE3C00A6D0F7 /* Localizable.strings */; };
+		F07737542929CD7F00A6D0F7 /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07737532929CD7F00A6D0F7 /* APIParameters.swift */; };
+		F07737592929D4DF00A6D0F7 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07737582929D4DF00A6D0F7 /* Status.swift */; };
+		F077375E2929D4F000A6D0F7 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077375D2929D4F000A6D0F7 /* Gender.swift */; };
+		F08A1D12292980B8008EF437 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D11292980B8008EF437 /* FilterViewModel.swift */; };
+		F08A1D172929835F008EF437 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D162929835F008EF437 /* FilterViewController.swift */; };
+		F08A1D1C29298606008EF437 /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D1B29298606008EF437 /* FilterPresenter.swift */; };
+		F08A1D21292987B8008EF437 /* FilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D20292987B8008EF437 /* FilterInteractor.swift */; };
+		F08A1D26292987DB008EF437 /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D25292987DB008EF437 /* FilterRouter.swift */; };
+		F08A1D2B29298841008EF437 /* FilterViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D2A29298841008EF437 /* FilterViewControllerFactory.swift */; };
 		F08EAFC32922B3D800DB049F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC22922B3D800DB049F /* AppDelegate.swift */; };
 		F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC42922B3D800DB049F /* SceneDelegate.swift */; };
 		F08EAFC72922B3D800DB049F /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08EAFC62922B3D800DB049F /* CharactersViewController.swift */; };
@@ -77,6 +88,17 @@
 		F019FF7029243E7A0077BD42 /* CharactersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersInteractor.swift; sourceTree = "<group>"; };
 		F019FF7529243EAF0077BD42 /* CharactersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRouter.swift; sourceTree = "<group>"; };
 		F019FF7D29243ECA0077BD42 /* CharactersViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewControllerFactory.swift; sourceTree = "<group>"; };
+		F07737462929B11300A6D0F7 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		F077374E2929BE3C00A6D0F7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F07737532929CD7F00A6D0F7 /* APIParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
+		F07737582929D4DF00A6D0F7 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		F077375D2929D4F000A6D0F7 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		F08A1D11292980B8008EF437 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		F08A1D162929835F008EF437 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		F08A1D1B29298606008EF437 /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
+		F08A1D20292987B8008EF437 /* FilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractor.swift; sourceTree = "<group>"; };
+		F08A1D25292987DB008EF437 /* FilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
+		F08A1D2A29298841008EF437 /* FilterViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewControllerFactory.swift; sourceTree = "<group>"; };
 		F08EAFBF2922B3D800DB049F /* StoneChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoneChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFC22922B3D800DB049F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08EAFC42922B3D800DB049F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +176,9 @@
 			children = (
 				F019FF102923FABB0077BD42 /* Info.swift */,
 				F019FF0B2923F9DE0077BD42 /* Data+Info.swift */,
+				F07737532929CD7F00A6D0F7 /* APIParameters.swift */,
+				F07737582929D4DF00A6D0F7 /* Status.swift */,
+				F077375D2929D4F000A6D0F7 /* Gender.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +199,27 @@
 				F019FF5229241C440077BD42 /* ViewPreview.swift */,
 			);
 			path = Previews;
+			sourceTree = "<group>";
+		};
+		F07737452929B0F800A6D0F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F07737462929B11300A6D0F7 /* UIStackView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F08A1D1029298003008EF437 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				F08A1D11292980B8008EF437 /* FilterViewModel.swift */,
+				F08A1D162929835F008EF437 /* FilterViewController.swift */,
+				F08A1D1B29298606008EF437 /* FilterPresenter.swift */,
+				F08A1D20292987B8008EF437 /* FilterInteractor.swift */,
+				F08A1D25292987DB008EF437 /* FilterRouter.swift */,
+				F08A1D2A29298841008EF437 /* FilterViewControllerFactory.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		F08EAFB62922B3D800DB049F = {
@@ -199,6 +245,7 @@
 		F08EAFC12922B3D800DB049F /* StoneChallange */ = {
 			isa = PBXGroup;
 			children = (
+				F07737452929B0F800A6D0F7 /* Extensions */,
 				F019FF46292419010077BD42 /* Previews */,
 				F08EB0072922C7D200DB049F /* Domains */,
 				F08EB0052922C79600DB049F /* Features */,
@@ -207,6 +254,7 @@
 				F08EAFCB2922B3DA00DB049F /* Assets.xcassets */,
 				F08EAFCD2922B3DA00DB049F /* LaunchScreen.storyboard */,
 				F08EAFD02922B3DA00DB049F /* Info.plist */,
+				F077374E2929BE3C00A6D0F7 /* Localizable.strings */,
 			);
 			path = StoneChallange;
 			sourceTree = "<group>";
@@ -242,6 +290,7 @@
 		F08EB0062922C7A100DB049F /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				F08A1D1029298003008EF437 /* Filter */,
 				F0C35BBD2927DAB700F85183 /* Collection */,
 				F0C35BCA2927DAD600F85183 /* Detail */,
 			);
@@ -428,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08EAFCF2922B3DA00DB049F /* LaunchScreen.storyboard in Resources */,
+				F077374F2929BE3C00A6D0F7 /* Localizable.strings in Resources */,
 				F08EAFCC2922B3DA00DB049F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +530,8 @@
 				F08EAFC32922B3D800DB049F /* AppDelegate.swift in Sources */,
 				F0C35BDC292803F400F85183 /* CharacterInteractor.swift in Sources */,
 				F019FF7129243E7A0077BD42 /* CharactersInteractor.swift in Sources */,
+				F07737472929B11300A6D0F7 /* UIStackView+Extensions.swift in Sources */,
+				F07737542929CD7F00A6D0F7 /* APIParameters.swift in Sources */,
 				F019FF0C2923F9DE0077BD42 /* Data+Info.swift in Sources */,
 				F019FF112923FABB0077BD42 /* Info.swift in Sources */,
 				F0C35BD7292801F300F85183 /* CharacterViewController.swift in Sources */,
@@ -487,13 +539,21 @@
 				F0C35B7F29245CE100F85183 /* DependencyContainer.swift in Sources */,
 				F0C35BE9292806A300F85183 /* CharacterRouter.swift in Sources */,
 				F08EB0112922CBD900DB049F /* Location.swift in Sources */,
+				F08A1D12292980B8008EF437 /* FilterViewModel.swift in Sources */,
 				F019FF6929243B040077BD42 /* CharactersPresenter.swift in Sources */,
+				F08A1D172929835F008EF437 /* FilterViewController.swift in Sources */,
 				F019FF482924196E0077BD42 /* ViewControllerPreview.swift in Sources */,
+				F08A1D1C29298606008EF437 /* FilterPresenter.swift in Sources */,
 				F08EAFC52922B3D800DB049F /* SceneDelegate.swift in Sources */,
+				F08A1D26292987DB008EF437 /* FilterRouter.swift in Sources */,
+				F077375E2929D4F000A6D0F7 /* Gender.swift in Sources */,
+				F07737592929D4DF00A6D0F7 /* Status.swift in Sources */,
 				F019FF3F29240F6B0077BD42 /* CharacterCollectionViewModel.swift in Sources */,
 				F019FF042923F84B0077BD42 /* CharactersWebService.swift in Sources */,
+				F08A1D21292987B8008EF437 /* FilterInteractor.swift in Sources */,
 				F019FEFA2922D2D00077BD42 /* WebServiceType.swift in Sources */,
 				F019FF7E29243ECA0077BD42 /* CharactersViewControllerFactory.swift in Sources */,
+				F08A1D2B29298841008EF437 /* FilterViewControllerFactory.swift in Sources */,
 				F019FF7629243EAF0077BD42 /* CharactersRouter.swift in Sources */,
 				F08EB00C2922CAC700DB049F /* Character.swift in Sources */,
 				F019FEFF2922D4190077BD42 /* CharacterWebService.swift in Sources */,

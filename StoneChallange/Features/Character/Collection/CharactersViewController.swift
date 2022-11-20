@@ -35,6 +35,17 @@ class CharactersViewController: UIViewController {
         return imageView
     }()
 
+    private lazy var rightBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(
+            title: "filter",
+            style: UIBarButtonItem.Style.plain,
+            target: nil,
+            action: nil
+        )
+        return barButtonItem
+    }()
+
+
     // MARK: - INJECTED PROPERTIES
     let viewModelProvider: CharactersViewModelProvider
     let viewModel: CharactersViewModel
@@ -73,7 +84,10 @@ class CharactersViewController: UIViewController {
 
     private func configureNavigation() {
         imageView.image = viewModel.navigationLogoImage
-        self.navigationItem.titleView = imageView
+        navigationItem.titleView = imageView
+
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+
     }
 
     // MARK: - BIND
@@ -98,6 +112,10 @@ class CharactersViewController: UIViewController {
             .map { $0.row }
             .bind(to: viewModel.collectionViewDidSelectItem)
             .disposed(by: disposeBag)
+
+        rightBarButtonItem.rx.tap
+            .bind(to: viewModel.rightBarButtonItemTap)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -105,52 +123,52 @@ class CharactersViewController: UIViewController {
 extension CharactersViewController: UICollectionViewDelegateFlowLayout {
 
     private var sectionInsets: UIEdgeInsets {
-       UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
 
     private var itemsPerRow: CGFloat {
-       return 3
+        return 3
     }
 
-   private var itemsOriginalWidth: CGFloat { return 300 } /// Using the original size of the poster
-   private var itemsOriginalHeight: CGFloat { return 300 } /// Using the original size of the poster
-   private var footerInSectionSize: CGFloat { return 59 }
+    private var itemsOriginalWidth: CGFloat { return 300 } /// Using the original size of the poster
+    private var itemsOriginalHeight: CGFloat { return 300 } /// Using the original size of the poster
+    private var footerInSectionSize: CGFloat { return 59 }
 
-   func collectionView(_ collectionView: UICollectionView,
-                       layout collectionViewLayout: UICollectionViewLayout,
-                       sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-       /// ??? find out origin of this value:4
-       let collectionWidth = collectionView.frame.width - 4
+        /// ??? find out origin of this value:4
+        let collectionWidth = collectionView.frame.width - 4
 
-       /// Calculate width
-       let widthPaddingSpace = self.sectionInsets.left * (self.itemsPerRow + 1)
-       let widthAvailable = collectionWidth - widthPaddingSpace
-       let widthForItem = widthAvailable/self.itemsPerRow
+        /// Calculate width
+        let widthPaddingSpace = self.sectionInsets.left * (self.itemsPerRow + 1)
+        let widthAvailable = collectionWidth - widthPaddingSpace
+        let widthForItem = widthAvailable/self.itemsPerRow
 
-       /// Calculate height proportion by its width
-       /// Formula (original height / original width) x new width = new height
-       let heightForItem = (self.itemsOriginalHeight/self.itemsOriginalWidth)*widthForItem
-       return CGSize(width: widthForItem, height: heightForItem)
-   }
+        /// Calculate height proportion by its width
+        /// Formula (original height / original width) x new width = new height
+        let heightForItem = (self.itemsOriginalHeight/self.itemsOriginalWidth)*widthForItem
+        return CGSize(width: widthForItem, height: heightForItem)
+    }
 
-   func collectionView(_ collectionView: UICollectionView,
-                       layout collectionViewLayout: UICollectionViewLayout,
-                       insetForSectionAt section: Int) -> UIEdgeInsets {
-       return self.sectionInsets
-   }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return self.sectionInsets
+    }
 
-   func collectionView(_ collectionView: UICollectionView,
-                       layout collectionViewLayout: UICollectionViewLayout,
-                       minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-       return self.sectionInsets.top
-   }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return self.sectionInsets.top
+    }
 
-   func collectionView(_ collectionView: UICollectionView,
-                       layout collectionViewLayout: UICollectionViewLayout,
-                       referenceSizeForFooterInSection section: Int) -> CGSize {
-       return CGSize(width: collectionView.frame.width, height: self.footerInSectionSize)
-   }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: self.footerInSectionSize)
+    }
 }
 // TODO: da pra trazer isso do presenter
 

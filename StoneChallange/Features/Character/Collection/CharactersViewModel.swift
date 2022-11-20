@@ -24,8 +24,9 @@ class CharactersViewModel {
     let viewDidLoad = PublishRelay<Void>()
     let collectionViewDidHitBottom = PublishRelay<Void>()
     let collectionViewDidSelectItem = PublishRelay<Int>()
+    let rightBarButtonItemTap = PublishRelay<Void>()
 
-    // TEST RIDUCILO
+    // TODO: TEST RIDUCILO mudar esse nome
     let requestImage = PublishRelay<Int>()
 
     // MARK: - COSNTRUCTORS

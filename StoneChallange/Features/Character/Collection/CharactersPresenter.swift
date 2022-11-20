@@ -15,6 +15,8 @@ class CharactersPresenter: CharactersViewModelProvider {
     let disposeBag = DisposeBag()
 
     public let nextPageTrigger = PublishRelay<Void>()
+//    public let filterTrigger = PublishRelay<Void>()
+    public let filterParams = PublishRelay<[APIParameters]>()
 
     // MARK: - VIEW MODELS
     lazy var viewModel: CharactersViewModel = {
@@ -101,9 +103,17 @@ class CharactersPresenter: CharactersViewModelProvider {
             .bind(to: interactor.getImage)
             .disposed(by: disposeBag)
 
-        interactor.responseImage
+        interactor.responseImage // TODO: isso tá feio
             .subscribe { [self] index, image in
                 updateCharacterCollectionViewModel(row: index, with: image)
             }.disposed(by: disposeBag)
+
+        viewModel.rightBarButtonItemTap
+            .bind(to: router.showFilter)
+            .disposed(by: disposeBag)
+
+        filterParams
+            .bind(to: interactor.requestFilterData)
+            .disposed(by: disposeBag)
     }
 }

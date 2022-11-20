@@ -19,11 +19,11 @@ class CharactersInteractor {
     let requestPageData = PublishRelay<PageURL>()
     let responsePageData = PublishSubject<DataInfo<Character>>()
 
-
     let getImage = PublishRelay<(Int, PageURL)>()
-    let responseImage = PublishRelay<(Int, UIImage)>()
+    let responseImage = PublishRelay<(Int, UIImage)>() // TODO: esses nomes aqui
 
-
+    let requestFilterData = PublishRelay<[APIParameters]>()
+    let responseFilterData = PublishSubject<DataInfo<Character>>()
 
     let webService: CharactersWebService
     let cache: ImageCache
@@ -59,6 +59,18 @@ class CharactersInteractor {
         }
     }
 
+    private func fetchFilterData(parameters params: [APIParameters]) {
+
+        webService.getCharacters(parameters: params) { [self] result in
+            switch result {
+            case .success(let dataInfo):
+                responsePageData.onNext(dataInfo)
+            case .failure(let error):
+                responsePageData.onError(error)
+            }
+        }
+    }
+
     func bind() {
         requestPageData
             .subscribe { [self] urlString in
@@ -68,6 +80,11 @@ class CharactersInteractor {
         getImage
             .subscribe { [self] position, urlString in
                 fetchImage(byString: urlString, index: position)
+            }.disposed(by: disposeBag)
+
+        requestFilterData
+            .subscribe { [self] params in
+                fetchFilterData(parameters: params)
             }.disposed(by: disposeBag)
     }
 }

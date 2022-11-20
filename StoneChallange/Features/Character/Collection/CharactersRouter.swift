@@ -17,6 +17,7 @@ class CharactersRouter {
     let disposeBag = DisposeBag()
 
     public let showDetail = PublishRelay<Character>()
+    public let showFilter = PublishRelay<Void>()
 
     let viewControllerFactory: UserDependencyContainer
     let navigationController: UINavigationController
@@ -28,15 +29,24 @@ class CharactersRouter {
     }
 
     private func bind() {
-
         showDetail
             .subscribe { [self] character in
                 showDetail(character: character)
+            }.disposed(by: disposeBag)
+
+        showFilter
+            .subscribe { [self] _ in
+                showFilter(as: "asa") // TODO: corrigir isso
             }.disposed(by: disposeBag)
     }
 
     func showDetail(character: Character) {
         let viewController = viewControllerFactory.characterViewControllerFactory(character: character)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+
+    func showFilter(as: String) {
+        let viewController = viewControllerFactory.filterViewControllerFactory()
         navigationController.pushViewController(viewController, animated: true)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  CharactersViewController.swift
+//  CharactersViewControllerFactory.swift
 //  StoneChallange
 //
 //  Created by Neylor Bagagi on 15/11/22.

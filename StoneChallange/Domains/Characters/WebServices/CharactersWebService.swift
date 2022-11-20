@@ -21,6 +21,26 @@ class CharactersWebService: WebService<DataInfo<Character>> {
         }
     }
 
+    func getCharacters(parameters params: [APIParameters], completion: @escaping (Result<DataInfo<Character>, Error>) -> Void) {
+
+        guard let url = URL(string: "https://rickandmortyapi.com/api/character") else {
+            return // TODO: botar um erro aqui
+        }
+
+        var request = URLRequest.init(
+            url: url,
+            cachePolicy: .returnCacheDataElseLoad,
+            timeoutInterval: timeoutInterval)
+
+        for param in params {
+            request.addValue(param.describe(), forHTTPHeaderField: param.getValue())
+        }
+
+        execute(request: request) { result in
+            completion(result)
+        }
+    }
+
     @available(*, deprecated, message: "Use getCharacters(byPage stringUrl: String, completion:)")
     func getCharacters(byPage id: Int, completion: @escaping (Result<DataInfo<Character>, Error>) -> Void) {
 
