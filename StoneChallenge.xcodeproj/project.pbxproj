@@ -280,9 +280,9 @@
 			isa = PBXGroup;
 			children = (
 				F07737452929B0F800A6D0F7 /* Extensions */,
-				F019FF46292419010077BD42 /* Previews */,
 				F08EB0072922C7D200DB049F /* Domains */,
 				F08EB0052922C79600DB049F /* Features */,
+				F019FF46292419010077BD42 /* Previews */,
 				F08EAFC22922B3D800DB049F /* AppDelegate.swift */,
 				F08EAFC42922B3D800DB049F /* SceneDelegate.swift */,
 				F08EAFCB2922B3DA00DB049F /* Assets.xcassets */,
@@ -803,7 +803,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDU3U6PS84;
-				INFOPLIST_FILE = StoneChallangeTests/Info.plist;
+				INFOPLIST_FILE = StoneChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -825,7 +825,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDU3U6PS84;
-				INFOPLIST_FILE = StoneChallangeTests/Info.plist;
+				INFOPLIST_FILE = StoneChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
