@@ -898,7 +898,7 @@
 		};
 		F08EAFED2922B3DB00DB049F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4CE04CE0D2F61B569FE92F0 /* Pods-StoneChallengeTests.debug.xcconfig */;
+			baseConfigurationReference = 23245D373D41EEB44F792BA7 /* Pods-StoneChallenge.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -944,6 +944,7 @@
 		};
 		F08EAFF02922B3DB00DB049F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23245D373D41EEB44F792BA7 /* Pods-StoneChallenge.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

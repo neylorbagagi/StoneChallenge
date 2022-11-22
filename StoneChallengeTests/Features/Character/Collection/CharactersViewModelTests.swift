@@ -6,8 +6,8 @@
 //
 
 import XCTest
-@testable import StoneChallange
 import RxRelay
+@testable import StoneChallenge
 
 class CharactersViewModelTests: XCTestCase {
 
@@ -16,11 +16,13 @@ class CharactersViewModelTests: XCTestCase {
         let cellViewModels: BehaviorRelay<[CharacterCollectionViewModel]> = .init(value: [])
         let navigationLogoImage: UIImage = .init()
         let backgroundColor: UIColor = .init()
+        let rightBarButtonItemTitle: String = .init()
 
         let viewModel = CharactersViewModel(
             cellViewModels: cellViewModels.value,
             navigationLogoImage: navigationLogoImage,
-            backgroundColor: backgroundColor
+            backgroundColor: backgroundColor,
+            rightBarButtonItemTitle: rightBarButtonItemTitle
         )
 
 //        XCTAssertEqual(viewModel.cellViewModels.value, cellViewModels.value)
