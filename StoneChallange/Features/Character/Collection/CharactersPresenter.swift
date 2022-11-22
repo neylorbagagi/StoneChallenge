@@ -10,17 +10,10 @@ import UIKit
 import RxSwift
 import RxRelay
 
-public struct FilterCallBack {
-    var data: DataInfo<Character>
-    var parameters: [APIParameters]?
-}
-
 class CharactersPresenter: CharactersViewModelProvider {
 
-    let disposeBag = DisposeBag()
-
+    // MARK: - SUBJECTS
     public let nextPageTrigger = PublishRelay<Void>()
-//    public let filterCallBack = PublishSubject<DataInfo<Character>>()
     public let filterCallBack = PublishSubject<FilterCallBack>()
 
     // MARK: - VIEW MODELS
@@ -28,18 +21,26 @@ class CharactersPresenter: CharactersViewModelProvider {
         var viewModel = CharactersViewModel(
             cellViewModels: cellViewModels(characterList),
             navigationLogoImage: navigationLogoImage(),
-            backgroundColor: .white
+            backgroundColor: .white,
+            rightBarButtonItemTitle: NSLocalizedString(
+                "characters_view_controller_rightBarButtonItem_title",
+                comment: ""
+            )
         )
         return viewModel
     }()
 
-    private var pagination = DataInfo<Character>.Info()
+    // MARK: - PRIVATE PROPERTIES
+    private var pagination = DataInfo<Character>.Info(next: "https://rickandmortyapi.com/api/character")
     private var filterParams: [APIParameters]?
+    private let disposeBag = DisposeBag()
 
+    // MARK: - INJECTED PROPERTIES
     let interactor: CharactersInteractor
     let router: CharactersRouter
-    var characterList: [Character] // TODO: Should it to be a var ?
+    var characterList: [Character]
 
+    // MARK: - CONSTRUCTORS
     init(interactor: CharactersInteractor,
          router: CharactersRouter,
          characterList: [Character]) {
@@ -56,40 +57,40 @@ class CharactersPresenter: CharactersViewModelProvider {
         characterList.map { CharacterCollectionViewModel(name: $0.name, image: UIImage()) }
     }
 
-    private func updateViewModel(_ characters: [Character]) {
+    private func updateWithDataFromNextPage(_ characters: [Character]) {
         characterList.append(contentsOf: characters)
         let viewModelList = cellViewModels(characters)
-
         viewModel.cellViewModels.accept(viewModel.cellViewModels.value + viewModelList)
     }
 
-    // TODO: esse metodo e o updateViewModel(_ characters:) podem ser um só,
-    // ou podem ser duas onde uma trabalha com nextPageData e uma traz inicia a Data
-    private func updateWithFilterData(_ characters: [Character]) {
+    private func updateWithDataFromFilter(_ characters: [Character]) {
         characterList = characters
         let viewModelList = cellViewModels(characters)
-
         viewModel.cellViewModels.accept(viewModelList)
     }
 
-    func updateCharacterCollectionViewModel(row: Int, with: UIImage) {
+    private func updateCharacterCollectionViewModel(row: Int, with image: UIImage) {
         let test = viewModel.cellViewModels.value[row]
-        test.image.accept(with)
+        test.image.accept(image)
     }
 
-    func navigationLogoImage() -> UIImage {
+    private func navigationLogoImage() -> UIImage {
         UIImage(named: "logo") ?? UIImage()
     }
 
     // MARK: - BIND
     private func bind() {
-
-        // TODO: Do I really need this guy?
         interactor.responsePageData
-            .subscribe(onNext: { [self] dataInfo in
-                pagination = dataInfo.info
-                updateViewModel(dataInfo.results)
-            }).disposed(by: disposeBag)
+            .subscribe(onNext: { [self] result in
+                switch result {
+                case .success(let data):
+                    pagination = data.info
+                    updateWithDataFromNextPage(data.results)
+                case .failure:
+                    break
+                }
+            })
+            .disposed(by: disposeBag)
 
         viewModel.viewDidLoad
             .bind(to: nextPageTrigger)
@@ -109,12 +110,12 @@ class CharactersPresenter: CharactersViewModelProvider {
             .bind(to: router.showDetail)
             .disposed(by: disposeBag)
 
-        viewModel.requestImage
+        viewModel.willConfigCell
             .map { [self] in ($0, characterList[$0].image) }
-            .bind(to: interactor.getImage)
+            .bind(to: interactor.requestImageData)
             .disposed(by: disposeBag)
 
-        interactor.responseImage // TODO: isso tá feio
+        interactor.responseImageData
             .subscribe { [self] index, image in
                 updateCharacterCollectionViewModel(row: index, with: image)
             }.disposed(by: disposeBag)
@@ -128,7 +129,7 @@ class CharactersPresenter: CharactersViewModelProvider {
             .subscribe(onNext: { [self] response in
                 pagination = response.data.info
                 filterParams = response.parameters
-                updateWithFilterData(response.data.results)
+                updateWithDataFromFilter(response.data.results)
             }).disposed(by: disposeBag)
     }
 }

@@ -10,5 +10,7 @@
 "filter_presenter_textField_prompt_text" = "Insert ther character's name that you are looking for";
 "filter_presenter_nameLabel_text" = "character's name";
 "filter_presenter_segmentedControl_prompt_text" = "Character's Status";
+"filter_presenter_not_found_error" = "No character found on multiverse. \n “Wubba Lubba Dub Dub!”";
 "filter_view_controller_applyFilter_button" = "APPLY FILTER";
 "filter_view_controller_resetFilter_button" = "RESET FILTER";
+"characters_view_controller_rightBarButtonItem_title" = "FILTER";

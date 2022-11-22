@@ -13,21 +13,23 @@ import UIKit
 class CharactersInteractor {
 
     typealias PageURL = String
+    typealias Position = Int
 
-    let disposeBag = DisposeBag()
-
+    // MARK: - SUBJECTS
     let requestPageData = PublishRelay<PageURL>()
-    let responsePageData = PublishSubject<DataInfo<Character>>()
+    let responsePageData = PublishRelay<Result<DataInfo<Character>, Error>>()
 
-    let getImage = PublishRelay<(Int, PageURL)>()
-    let responseImage = PublishRelay<(Int, UIImage)>() // TODO: esses nomes aqui
+    let requestImageData = PublishRelay<(Position, PageURL)>()
+    let responseImageData = PublishRelay<(Position, UIImage)>()
 
-    let requestFilterData = PublishRelay<[APIParameters]>()
-    let responseFilterData = PublishSubject<DataInfo<Character>>()
+    // MARK: - PRIVATE PROPERTIES
+    private let disposeBag = DisposeBag()
 
+    // MARK: - INJECTED PROPERTIES
     let webService: CharactersWebService
     let cache: ImageCache
 
+    // MARK: - CONSTRUCTORS
     init(webService: CharactersWebService,
          cache: ImageCache) {
         self.webService = webService
@@ -35,56 +37,35 @@ class CharactersInteractor {
         bind()
     }
 
+    // MARK: - PRIVATE FUNCTIONS
     private func fetchPageData(byString urlString: String) {
-
         webService.getCharacters(byPage: urlString) { [self] result in
-            switch result {
-            case .success(let dataInfo):
-                responsePageData.onNext(dataInfo)
-            case .failure(let error):
-                responsePageData.onError(error)
-            }
+            responsePageData.accept(result)
         }
     }
 
     private func fetchImage(byString urlString: String, index: Int) {
-
         guard let url = NSURL(string: urlString) else { return }
         cache.load(url: url) { [self] image in
             if let image = image {
-                return responseImage.accept((index, image))
+                return responseImageData.accept((index, image))
             } else {
-                return responseImage.accept((index, cache.placeholderImage))
+                return responseImageData.accept((index, cache.placeholderImage))
             }
         }
     }
 
-    private func fetchFilterData(parameters params: [APIParameters]) {
-
-        webService.getCharacters(parameters: params) { [self] result in
-            switch result {
-            case .success(let dataInfo):
-                responsePageData.onNext(dataInfo)
-            case .failure(let error):
-                responsePageData.onError(error)
-            }
-        }
-    }
-
+    // MARK: - BIND
     func bind() {
         requestPageData
             .subscribe { [self] urlString in
                 fetchPageData(byString: urlString)
             }.disposed(by: disposeBag)
 
-        getImage
+        requestImageData
             .subscribe { [self] position, urlString in
                 fetchImage(byString: urlString, index: position)
             }.disposed(by: disposeBag)
 
-        requestFilterData
-            .subscribe { [self] params in
-                fetchFilterData(parameters: params)
-            }.disposed(by: disposeBag)
     }
 }

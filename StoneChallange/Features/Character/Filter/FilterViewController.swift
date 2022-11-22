@@ -11,15 +11,13 @@ import RxCocoa
 
 class FilterViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
-
     // MARK: - VIEWS
     // In a normal situation all views should be created/configurated
     // by a viewModel, like, TextViewModel, ButtonViewModel
-    private lazy var textFieldPrompt: UILabel = {
+    private lazy var textFieldPromptLabel: UILabel = {
         let label = UILabel()
-        textField.translatesAutoresizingMaskIntoConstraints = false
         label.text = viewModel.textFieldPromptText
+        label.numberOfLines = 2
         return label
     }()
 
@@ -32,9 +30,8 @@ class FilterViewController: UIViewController {
         return textField
     }()
 
-   private lazy var segmentedControlPrompt: UILabel = {
+    private lazy var segmentedControlPromptLabel: UILabel = {
         let label = UILabel()
-        textField.translatesAutoresizingMaskIntoConstraints = false
         label.text = viewModel.segmentedControlPrompt
         return label
     }()
@@ -50,11 +47,7 @@ class FilterViewController: UIViewController {
     private lazy var applyFilterButton: UIButton = {
         let applyFilterButton = UIButton()
         applyFilterButton.translatesAutoresizingMaskIntoConstraints = false
-        applyFilterButton.isUserInteractionEnabled = true
-        applyFilterButton.setTitle(
-            NSLocalizedString("filter_view_controller_applyFilter_button", comment: ""), // TODO: passar para presenter
-            for: .normal
-        )
+        applyFilterButton.setTitle(viewModel.applyFilterButtonTitle, for: .normal)
         applyFilterButton.setTitleColor(#colorLiteral(red: 0.03137254902, green: 0.03137254902, blue: 0.03137254902, alpha: 1), for: .normal)
         applyFilterButton.backgroundColor = #colorLiteral(red: 0.7412293553, green: 1, blue: 0.631372549, alpha: 1)
         return applyFilterButton
@@ -63,15 +56,25 @@ class FilterViewController: UIViewController {
     private lazy var resetFilterButton: UIButton = {
         let resetFilterButton = UIButton()
         resetFilterButton.translatesAutoresizingMaskIntoConstraints = false
-        applyFilterButton.isUserInteractionEnabled = true
         resetFilterButton.setTitle(
-            NSLocalizedString("filter_view_controller_resetFilter_button", comment: ""), // TODO: passar para presenter
+            viewModel.resetFilterButtonTitle,
             for: .normal
         )
         resetFilterButton.setTitleColor(#colorLiteral(red: 0.03137254902, green: 0.03137254902, blue: 0.03137254902, alpha: 1), for: .normal)
         resetFilterButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         return resetFilterButton
     }()
+
+    private lazy var errorLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .red
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        return label
+    }()
+
+    // MARK: - PRIVATE PROPERTIES
+    private let disposeBag = DisposeBag()
 
     // MARK: - INJECTED PROPERTIES
     let viewModelProvider: FilterViewModelProvider
@@ -104,9 +107,9 @@ class FilterViewController: UIViewController {
             arrangedSubviews: [
                 UIStackView(
                     arrangedSubviews: [
-                        textFieldPrompt,
+                        textFieldPromptLabel,
                         textField,
-                        segmentedControlPrompt,
+                        segmentedControlPromptLabel,
                         segmentedControl
                     ],
                     axis: .vertical,
@@ -115,6 +118,7 @@ class FilterViewController: UIViewController {
                 UIStackView(
                     arrangedSubviews: [
                         UIView(),
+                        errorLabel,
                         resetFilterButton,
                         applyFilterButton
                     ],
@@ -145,21 +149,17 @@ class FilterViewController: UIViewController {
 
         applyFilterButton.rx.tap
             .subscribe { [self] _ in
-                // TODO: ISSO AQUI TA ASSUSTADOR
                 var param: [APIParameters] = []
 
                 if let text = textField.text {
                     param.append(APIParameters.name(text))
                 }
 
-                if segmentedControl.selectedSegmentIndex != -1 {
-                    guard let statusName = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)
-                    else { return }
-
-                    guard let statusOption = APIParameters.Status.init(rawValue: statusName) else { return }
-
-                    param.append(APIParameters.status(statusOption))
+                if let label = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex) {
+                    let paramStatus = APIParameters.status(APIParameters.Status(rawValue: label))
+                    param.append(paramStatus)
                 }
+
                 viewModel.applyFilterButtonTap.accept(param)
             }.disposed(by: disposeBag)
 
@@ -167,8 +167,14 @@ class FilterViewController: UIViewController {
             .subscribe { [self] _ in
                 textField.text = ""
                 segmentedControl.selectedSegmentIndex = -1
+                errorLabel.text = ""
                 viewModel.resetFilterButtonTap.accept([])
             }
+            .disposed(by: disposeBag)
+
+        viewModel.errorText
+            .compactMap { $0 }
+            .bind(to: errorLabel.rx.text)
             .disposed(by: disposeBag)
     }
 }

@@ -11,8 +11,6 @@ import RxCocoa
 
 class CharactersViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
-
     // MARK: - VIEWS
     private lazy var collectionView: UICollectionView = {
         let collectionLayout = UICollectionViewFlowLayout()
@@ -37,7 +35,7 @@ class CharactersViewController: UIViewController {
 
     private lazy var rightBarButtonItem: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(
-            title: "filter",
+            title: viewModel.rightBarButtonItemTitle,
             style: UIBarButtonItem.Style.plain,
             target: nil,
             action: nil
@@ -45,6 +43,8 @@ class CharactersViewController: UIViewController {
         return barButtonItem
     }()
 
+    // MARK: - PRIVATE PROPERTIES
+    private let disposeBag = DisposeBag()
 
     // MARK: - INJECTED PROPERTIES
     let viewModelProvider: CharactersViewModelProvider
@@ -54,7 +54,6 @@ class CharactersViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         viewModel.viewDidLoad.accept(())
-
         configureNavigation()
     }
 
@@ -85,9 +84,7 @@ class CharactersViewController: UIViewController {
     private func configureNavigation() {
         imageView.image = viewModel.navigationLogoImage
         navigationItem.titleView = imageView
-
         navigationItem.rightBarButtonItem = rightBarButtonItem
-
     }
 
     // MARK: - BIND
@@ -96,11 +93,10 @@ class CharactersViewController: UIViewController {
             .bind(to: collectionView.rx.items(
                     cellIdentifier: CharacterCollectionViewCell.reuseIdentifier,
                     cellType: CharacterCollectionViewCell.self)) { row, viewModel, cell in
-                self.viewModel.requestImage.accept(row) // TODO: arrumar isso nome deve ser algo como cellwillconfigure
+                self.viewModel.willConfigCell.accept(row)
                 return cell.configure(viewModel: viewModel)
             }.disposed(by: disposeBag)
 
-        // TODO: melhorar isso que tá triste
         collectionView.rx.willDisplayCell
             .subscribe { [self] _, indexPath in
                 if viewModel.cellViewModels.value.count - 1 == indexPath.row {
@@ -170,7 +166,6 @@ extension CharactersViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: collectionView.frame.width, height: self.footerInSectionSize)
     }
 }
-// TODO: da pra trazer isso do presenter
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI

@@ -12,24 +12,28 @@ import RxSwift
 
 class FilterRouter {
 
-    let disposeBag = DisposeBag()
+    // MARK: - SUBJECTS
+    public let pop = PublishRelay<Void>()
 
-    let pop = PublishRelay<Void>()
+    // MARK: - PRIVATE PROPERTIES
+    private let disposeBag = DisposeBag()
 
+    // MARK: - INJECTED PROPERTIES
     let viewControllerFactory: UserDependencyContainer
     let navigationController: UINavigationController
 
-     init(viewControllerFactory: UserDependencyContainer) {
+    // MARK: - CONSTRUCTORS
+    init(viewControllerFactory: UserDependencyContainer) {
         self.viewControllerFactory = viewControllerFactory
         self.navigationController = viewControllerFactory.navigationController
         bind()
     }
 
-    // MARK - BIND
+    // MARK: - BIND
     private func bind() {
         pop
             .observe(on: MainScheduler.instance)
-            .subscribe { [self] _ in // TODO: put it on a superclass
+            .subscribe { [self] _ in
                 navigationController.popViewController(animated: true)
         }.disposed(by: disposeBag)
     }

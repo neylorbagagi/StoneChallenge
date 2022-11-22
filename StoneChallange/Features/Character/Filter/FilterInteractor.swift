@@ -11,31 +11,31 @@ import RxRelay
 
 class FilterInteractor {
 
-    let disposeBag = DisposeBag()
+    // MARK: - PRIVATE PROPERTIES
+    private let disposeBag = DisposeBag()
 
+    // MARK: - SUBJECTS
     let requestFilterData = PublishRelay<[APIParameters]>()
-    let responseFilterData = PublishSubject<DataInfo<Character>>()
+    let responseFilterData = PublishRelay<Result<DataInfo<Character>, Error>>()
 
+    // MARK: - INJECTED PROPERTIES
     let webService: CharactersWebService
 
+    // MARK: - CONSTRUCTORS
     init(webService: CharactersWebService) {
         self.webService = webService
         bind()
     }
 
+    // MARK: - PRIVATE FUNCTIONS
     private func fetchFilterData(parameters params: [APIParameters]) {
-
         webService.getCharacters(parameters: params) { [self] result in
-            switch result {
-            case .success(let dataInfo):
-                responseFilterData.onNext(dataInfo)
-            case .failure(let error):
-                responseFilterData.onError(error)
-            }
+            responseFilterData.accept(result)
         }
     }
 
-    func bind() {
+    // MARK: - BIND
+    private func bind() {
         requestFilterData
             .subscribe { [self] params in
                 fetchFilterData(parameters: params)

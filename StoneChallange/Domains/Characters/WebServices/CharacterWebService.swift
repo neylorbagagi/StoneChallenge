@@ -7,14 +7,16 @@
 
 import Foundation
 
-#warning ("Add RxSwift to this process")
-
 class CharacterWebService: WebService<Character> {
 
     func getCharacter(byID id: Int, completion: @escaping (Result<Character, Error>) -> Void) {
 
+        guard let url = URL(string: "https://rickandmortyapi.com/api/character/\(id)") else {
+            fatalError("Invalid Url")
+        }
+
         let request = URLRequest.init(
-            url: URL(string: "https://rickandmortyapi.com/api/character/\(id)")!, // TODO: remover esse force
+            url: url,
             cachePolicy: .returnCacheDataElseLoad,
             timeoutInterval: timeoutInterval)
 

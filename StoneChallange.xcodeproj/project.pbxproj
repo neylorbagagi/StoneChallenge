@@ -27,6 +27,7 @@
 		F07737592929D4DF00A6D0F7 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07737582929D4DF00A6D0F7 /* Status.swift */; };
 		F077375E2929D4F000A6D0F7 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077375D2929D4F000A6D0F7 /* Gender.swift */; };
 		F077376C292AC68100A6D0F7 /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077376B292AC68100A6D0F7 /* CharactersViewModelTests.swift */; };
+		F0773862292B19D200A6D0F7 /* FilterCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0773861292B19D200A6D0F7 /* FilterCallBack.swift */; };
 		F08A1D12292980B8008EF437 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D11292980B8008EF437 /* FilterViewModel.swift */; };
 		F08A1D172929835F008EF437 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D162929835F008EF437 /* FilterViewController.swift */; };
 		F08A1D1C29298606008EF437 /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A1D1B29298606008EF437 /* FilterPresenter.swift */; };
@@ -94,6 +95,7 @@
 		F07737582929D4DF00A6D0F7 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		F077375D2929D4F000A6D0F7 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		F077376B292AC68100A6D0F7 /* CharactersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelTests.swift; sourceTree = "<group>"; };
+		F0773861292B19D200A6D0F7 /* FilterCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCallBack.swift; sourceTree = "<group>"; };
 		F08A1D11292980B8008EF437 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		F08A1D162929835F008EF437 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		F08A1D1B29298606008EF437 /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				F08EB00B2922CAC700DB049F /* Character.swift */,
 				F08EB0102922CBD900DB049F /* Location.swift */,
+				F0773861292B19D200A6D0F7 /* FilterCallBack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				F077375E2929D4F000A6D0F7 /* Gender.swift in Sources */,
 				F07737592929D4DF00A6D0F7 /* Status.swift in Sources */,
 				F019FF3F29240F6B0077BD42 /* CharacterCollectionViewModel.swift in Sources */,
+				F0773862292B19D200A6D0F7 /* FilterCallBack.swift in Sources */,
 				F019FF042923F84B0077BD42 /* CharactersWebService.swift in Sources */,
 				F08A1D21292987B8008EF437 /* FilterInteractor.swift in Sources */,
 				F019FEFA2922D2D00077BD42 /* WebServiceType.swift in Sources */,

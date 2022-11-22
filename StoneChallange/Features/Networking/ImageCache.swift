@@ -9,15 +9,23 @@ import UIKit
 import Foundation
 public class ImageCache {
 
-//    public static let publicCache = ImageCache()
-    var placeholderImage = UIImage(named: "image_not_found")!
+    // MARK: - PRIVATE PROPERTIES
     private let cachedImages = NSCache<NSURL, UIImage>()
 
-    public final func image(url: NSURL) -> UIImage? {
+    // MARK: - PUBLIC PROPERTIES
+    var placeholderImage = UIImage(named: "image_not_found")!
+
+    /// Convenience function to check image cache
+    /// - Parameter url: valid path for image data
+    /// - Returns: returns cached image if it exists
+    private func image(url: NSURL) -> UIImage? {
         return cachedImages.object(forKey: url)
     }
 
-    // TODO: da pra melhorrar isso ?
+    /// Will check cache for images and if not found execute a data task
+    /// - Parameters:
+    ///   - url: valid path for image data
+    ///   - completion: returns a image if it exists
     final func load(url: NSURL, completion: @escaping (UIImage?) -> Void) {
         if let cachedImage = image(url: url) {
             DispatchQueue.main.async {

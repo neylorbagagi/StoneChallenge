@@ -16,11 +16,11 @@ extension DataInfo {
         var next: String?
         let prev: String?
 
-        init() {
-            self.count = 0
-            self.pages = 0
-            self.next = "https://rickandmortyapi.com/api/character" // TODO: parece meio errado esse valor estar aqui
-            self.prev = nil
+        init(count: Int = 0, pages: Int = 0, next: String? = nil, prev: String? = nil) {
+            self.count = count
+            self.pages = pages
+            self.next = next
+            self.prev = prev
         }
     }
 }

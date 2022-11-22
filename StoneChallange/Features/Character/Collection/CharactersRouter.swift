@@ -10,25 +10,28 @@ import UIKit
 import RxSwift
 import RxRelay
 
-// TODO: CREATE A ROUTER PROTOCOL with navigationController
-
 class CharactersRouter {
 
-    let disposeBag = DisposeBag()
-
+    // MARK: - SUBJECTES
     public let showDetail = PublishRelay<Character>()
     public let showFilter = PublishRelay<(callback: PublishSubject<FilterCallBack>,
                                           params: [APIParameters]?)>()
 
+    // MARK: - PRIVATE PROPERTIES
+    private let disposeBag = DisposeBag()
+
+    // MARK: - INJECTED PROPERTIES
     let viewControllerFactory: UserDependencyContainer
     let navigationController: UINavigationController
 
-     init(viewControllerFactory: UserDependencyContainer) {
+    init(viewControllerFactory: UserDependencyContainer) {
         self.viewControllerFactory = viewControllerFactory
         self.navigationController = viewControllerFactory.navigationController
+
         bind()
     }
 
+    // MARK: - BIND
     private func bind() {
         showDetail
             .subscribe { [self] character in
@@ -36,12 +39,12 @@ class CharactersRouter {
             }.disposed(by: disposeBag)
 
         showFilter
-            .subscribe { [self] tuple in // TODO: fazer do modo RX usar onNext
-                guard let (callback, params) = tuple.element else { return }
-                showFilter(using: callback, with: params)
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { [self] filter in
+                showFilter(using: filter.callback, with: filter.params)
+            }).disposed(by: disposeBag)
     }
 
+    // MARK: - PRIVATE FUNCTIONS
     private func showDetail(character: Character) {
         let viewController = viewControllerFactory.characterViewControllerFactory(character: character)
         navigationController.pushViewController(viewController, animated: true)

@@ -18,20 +18,24 @@ class FilterViewModel {
     // MARK: - PUBLIC PROPERTIES
     let title: String
     let backgroundColor: UIColor
+
     let textFieldPromptText: String
     let placeholderText: String
     let textFieldText: String?
+
     let segmentedControlPrompt: String
     let segmentedControlItemsText: [String]
     let segmentSelectedIndex: Int
+
+    let applyFilterButtonTitle: String
+    let resetFilterButtonTitle: String
+
+    let errorText: BehaviorRelay<String?>
 
     // MARK: - EVENTS
     let viewDidLoad = PublishRelay<Void>()
     let applyFilterButtonTap = PublishRelay<[APIParameters]>()
     let resetFilterButtonTap = PublishRelay<[APIParameters]>()
-
-    // TODO: TEST RIDUCILO mudar esse nome
-    let requestImage = PublishRelay<Int>()
 
     // MARK: - COSNTRUCTORS
     init(title: String,
@@ -41,14 +45,24 @@ class FilterViewModel {
          textFieldText: String?,
          segmentedControlPrompt: String,
          segmentOptionListText: [String],
-         segmentSelectedIndex: Int) {
+         segmentSelectedIndex: Int,
+         applyFilterButtonTitle: String,
+         resetFilterButtonTitle: String,
+         errorText: String?) {
         self.title = title
         self.backgroundColor = backgroundColor
+
         self.textFieldPromptText = textFieldPromptText
         self.placeholderText = placeholderText
         self.textFieldText = textFieldText
+
         self.segmentedControlPrompt = segmentedControlPrompt
         self.segmentedControlItemsText = segmentOptionListText
         self.segmentSelectedIndex = segmentSelectedIndex
+
+        self.applyFilterButtonTitle = applyFilterButtonTitle
+        self.resetFilterButtonTitle = resetFilterButtonTitle
+
+        self.errorText = BehaviorRelay<String?>.init(value: errorText)
     }
 }

@@ -12,7 +12,7 @@ import RxRelay
 
 class CharacterPresenter: CharacterViewModelProvider {
 
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     // MARK: - VIEW MODELS
     lazy var viewModel: CharacterViewModel = {

@@ -7,17 +7,15 @@
 
 import UIKit
 import RxSwift
-
-// TODO: re orientar a tela quando rotacionado
+import RxCocoa
 
 class CharacterViewController: UIViewController {
-
-    let disposeBag = DisposeBag()
 
     // MARK: - VIEWS
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
@@ -28,6 +26,11 @@ class CharacterViewController: UIViewController {
         textView.text = viewModel.description
         return textView
     }()
+
+    private var stackView: UIStackView = .init()
+
+    // MARK: - PRIVATE PROPERTIES
+    private let disposeBag = DisposeBag()
 
     // MARK: - INJECTED PROPERTIES
     let viewModelProvider: CharacterViewModelProvider
@@ -56,23 +59,53 @@ class CharacterViewController: UIViewController {
         viewModel.image
             .bind(to: imageView.rx.image)
             .disposed(by: disposeBag)
+
+        // TODO: Have to kill this one
+        NotificationCenter.default.rx
+            .notification(UIDevice.orientationDidChangeNotification)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [self] _ in
+                configureStackViewOrientation()
+            }).disposed(by: disposeBag)
     }
 
     // MARK: - PRIVATE FUNCTIONS
+    private func configureStackViewOrientation() {
+        if UIDevice.current.orientation.isLandscape {
+            stackView.axis = .horizontal
+        } else {
+            stackView.axis = .vertical
+        }
+    }
+
     private func configure() {
         view.backgroundColor = viewModel.backgroundColor
         title = viewModel.title
 
-        view.addSubview(imageView)
-        view.addSubview(textView)
+        stackView = UIStackView(
+            arrangedSubviews: [
+                imageView,
+                textView
+            ],
+            axis: .vertical,
+            spacing: 16
+        )
+
+        configureStackViewOrientation()
+
+        view.addSubview(stackView)
 
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            textView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
-            textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            stackView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor,
+                constant: 16
+            ),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            stackView.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                constant: -16
+            )
         ])
     }
 }

@@ -9,7 +9,6 @@ import Foundation
 import RxRelay
 import UIKit
 
-// TODO: FAZER UMA SPLASH SCREEN LEGAL COM O LOGO DA STONE
 protocol CharactersViewModelProvider {
     var viewModel: CharactersViewModel { get }
 }
@@ -20,22 +19,23 @@ class CharactersViewModel {
     var cellViewModels: BehaviorRelay<[CharacterCollectionViewModel]>
     let navigationLogoImage: UIImage
     let backgroundColor: UIColor
+    let rightBarButtonItemTitle: String
 
     // MARK: - EVENTS
     let viewDidLoad = PublishRelay<Void>()
     let collectionViewDidHitBottom = PublishRelay<Void>()
     let collectionViewDidSelectItem = PublishRelay<Int>()
     let rightBarButtonItemTap = PublishRelay<Void>()
-
-    // TODO: TEST RIDUCILO mudar esse nome
-    let requestImage = PublishRelay<Int>()
+    let willConfigCell = PublishRelay<Int>()
 
     // MARK: - COSNTRUCTORS
     init(cellViewModels: [CharacterCollectionViewModel],
          navigationLogoImage: UIImage,
-         backgroundColor: UIColor) {
+         backgroundColor: UIColor,
+         rightBarButtonItemTitle: String) {
         self.cellViewModels = BehaviorRelay<[CharacterCollectionViewModel]>.init(value: cellViewModels)
         self.navigationLogoImage = navigationLogoImage
         self.backgroundColor = backgroundColor
+        self.rightBarButtonItemTitle = rightBarButtonItemTitle
     }
 }

@@ -14,19 +14,24 @@ class CharacterInteractor {
 
     typealias ImageURL = String
 
-    let disposeBag = DisposeBag()
+    // MARK: - PRIVATE PROPERTIES
+    private let disposeBag = DisposeBag()
 
+    // MARK: - SUBJECTS
     let requestImageData = PublishRelay<ImageURL>()
     let responseImageData = PublishSubject<UIImage>()
 
+    // MARK: - INJECTED PROPERTIES
     let cache: ImageCache
 
+    // MARK: - CONSTRUCTORS
     init(cache: ImageCache) {
         self.cache = cache
         bind()
     }
 
-    func fetchImage(byString urlString: String) {
+    // MARK: - PRIVATE FUNCTIONS
+    private func fetchImage(byString urlString: String) {
         guard let url = NSURL(string: urlString) else { return }
         cache.load(url: url) { [self] image in
             if let image = image {
@@ -37,7 +42,8 @@ class CharacterInteractor {
         }
     }
 
-    func bind() {
+    // MARK: - BIND
+    private func bind() {
         requestImageData
             .subscribe { [self] urlString in
                 fetchImage(byString: urlString)
