@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F08EAFBE2922B3D800DB049F"
-               BuildableName = "StoneChallange.app"
-               BlueprintName = "StoneChallange"
-               ReferencedContainer = "container:StoneChallange.xcodeproj">
+               BuildableName = "StoneChallenge.app"
+               BlueprintName = "StoneChallenge"
+               ReferencedContainer = "container:StoneChallenge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F08EAFD42922B3DB00DB049F"
-               BuildableName = "StoneChallangeTests.xctest"
-               BlueprintName = "StoneChallangeTests"
-               ReferencedContainer = "container:StoneChallange.xcodeproj">
+               BuildableName = "StoneChallengeTests.xctest"
+               BlueprintName = "StoneChallengeTests"
+               ReferencedContainer = "container:StoneChallenge.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F08EAFDF2922B3DB00DB049F"
-               BuildableName = "StoneChallangeUITests.xctest"
-               BlueprintName = "StoneChallangeUITests"
-               ReferencedContainer = "container:StoneChallange.xcodeproj">
+               BuildableName = "StoneChallengeUITests.xctest"
+               BlueprintName = "StoneChallengeUITests"
+               ReferencedContainer = "container:StoneChallenge.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F08EAFBE2922B3D800DB049F"
-            BuildableName = "StoneChallange.app"
-            BlueprintName = "StoneChallange"
-            ReferencedContainer = "container:StoneChallange.xcodeproj">
+            BuildableName = "StoneChallenge.app"
+            BlueprintName = "StoneChallenge"
+            ReferencedContainer = "container:StoneChallenge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F08EAFBE2922B3D800DB049F"
-            BuildableName = "StoneChallange.app"
-            BlueprintName = "StoneChallange"
-            ReferencedContainer = "container:StoneChallange.xcodeproj">
+            BuildableName = "StoneChallenge.app"
+            BlueprintName = "StoneChallenge"
+            ReferencedContainer = "container:StoneChallenge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

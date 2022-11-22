@@ -102,16 +102,16 @@
 		F08A1D20292987B8008EF437 /* FilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractor.swift; sourceTree = "<group>"; };
 		F08A1D25292987DB008EF437 /* FilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
 		F08A1D2A29298841008EF437 /* FilterViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewControllerFactory.swift; sourceTree = "<group>"; };
-		F08EAFBF2922B3D800DB049F /* StoneChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoneChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08EAFBF2922B3D800DB049F /* StoneChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoneChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFC22922B3D800DB049F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08EAFC42922B3D800DB049F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F08EAFC62922B3D800DB049F /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		F08EAFCB2922B3DA00DB049F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F08EAFCE2922B3DA00DB049F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F08EAFD02922B3DA00DB049F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F08EAFD52922B3DB00DB049F /* StoneChallangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneChallangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08EAFD52922B3DB00DB049F /* StoneChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFDB2922B3DB00DB049F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F08EAFE02922B3DB00DB049F /* StoneChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneChallangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08EAFE02922B3DB00DB049F /* StoneChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoneChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08EAFE42922B3DB00DB049F /* StoneChallangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneChallangeUITests.swift; sourceTree = "<group>"; };
 		F08EAFE62922B3DB00DB049F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F08EB00B2922CAC700DB049F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -258,9 +258,9 @@
 		F08EAFB62922B3D800DB049F = {
 			isa = PBXGroup;
 			children = (
-				F08EAFC12922B3D800DB049F /* StoneChallange */,
-				F08EAFD82922B3DB00DB049F /* StoneChallangeTests */,
-				F08EAFE32922B3DB00DB049F /* StoneChallangeUITests */,
+				F08EAFC12922B3D800DB049F /* StoneChallenge */,
+				F08EAFD82922B3DB00DB049F /* StoneChallengeTests */,
+				F08EAFE32922B3DB00DB049F /* StoneChallengeUITests */,
 				F08EAFC02922B3D800DB049F /* Products */,
 				F0773776292ACCBC00A6D0F7 /* Frameworks */,
 			);
@@ -269,14 +269,14 @@
 		F08EAFC02922B3D800DB049F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F08EAFBF2922B3D800DB049F /* StoneChallange.app */,
-				F08EAFD52922B3DB00DB049F /* StoneChallangeTests.xctest */,
-				F08EAFE02922B3DB00DB049F /* StoneChallangeUITests.xctest */,
+				F08EAFBF2922B3D800DB049F /* StoneChallenge.app */,
+				F08EAFD52922B3DB00DB049F /* StoneChallengeTests.xctest */,
+				F08EAFE02922B3DB00DB049F /* StoneChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F08EAFC12922B3D800DB049F /* StoneChallange */ = {
+		F08EAFC12922B3D800DB049F /* StoneChallenge */ = {
 			isa = PBXGroup;
 			children = (
 				F07737452929B0F800A6D0F7 /* Extensions */,
@@ -290,25 +290,25 @@
 				F08EAFD02922B3DA00DB049F /* Info.plist */,
 				F077374E2929BE3C00A6D0F7 /* Localizable.strings */,
 			);
-			path = StoneChallange;
+			path = StoneChallenge;
 			sourceTree = "<group>";
 		};
-		F08EAFD82922B3DB00DB049F /* StoneChallangeTests */ = {
+		F08EAFD82922B3DB00DB049F /* StoneChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
 				F0773768292AC63200A6D0F7 /* Features */,
 				F08EAFDB2922B3DB00DB049F /* Info.plist */,
 			);
-			path = StoneChallangeTests;
+			path = StoneChallengeTests;
 			sourceTree = "<group>";
 		};
-		F08EAFE32922B3DB00DB049F /* StoneChallangeUITests */ = {
+		F08EAFE32922B3DB00DB049F /* StoneChallengeUITests */ = {
 			isa = PBXGroup;
 			children = (
 				F08EAFE42922B3DB00DB049F /* StoneChallangeUITests.swift */,
 				F08EAFE62922B3DB00DB049F /* Info.plist */,
 			);
-			path = StoneChallangeUITests;
+			path = StoneChallengeUITests;
 			sourceTree = "<group>";
 		};
 		F08EB0052922C79600DB049F /* Features */ = {
@@ -398,9 +398,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F08EAFBE2922B3D800DB049F /* StoneChallange */ = {
+		F08EAFBE2922B3D800DB049F /* StoneChallenge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F08EAFE92922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallange" */;
+			buildConfigurationList = F08EAFE92922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallenge" */;
 			buildPhases = (
 				F08EAFFB2922BFFF00DB049F /* ShellScript */,
 				F08EAFBB2922B3D800DB049F /* Sources */,
@@ -411,19 +411,19 @@
 			);
 			dependencies = (
 			);
-			name = StoneChallange;
+			name = StoneChallenge;
 			packageProductDependencies = (
 				F0C35BA729251C1A00F85183 /* RxSwift */,
 				F0C35BAB29251C1A00F85183 /* RxRelay */,
 				F0C35BAD29251C1A00F85183 /* RxCocoa */,
 			);
 			productName = StoneChallange;
-			productReference = F08EAFBF2922B3D800DB049F /* StoneChallange.app */;
+			productReference = F08EAFBF2922B3D800DB049F /* StoneChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F08EAFD42922B3DB00DB049F /* StoneChallangeTests */ = {
+		F08EAFD42922B3DB00DB049F /* StoneChallengeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F08EAFEC2922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallangeTests" */;
+			buildConfigurationList = F08EAFEC2922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallengeTests" */;
 			buildPhases = (
 				F08EAFD12922B3DB00DB049F /* Sources */,
 				F08EAFD22922B3DB00DB049F /* Frameworks */,
@@ -434,18 +434,18 @@
 			dependencies = (
 				F08EAFD72922B3DB00DB049F /* PBXTargetDependency */,
 			);
-			name = StoneChallangeTests;
+			name = StoneChallengeTests;
 			packageProductDependencies = (
 				F0C35BA929251C1A00F85183 /* RxTest */,
 				F0C35BAF29251C1A00F85183 /* RxBlocking */,
 			);
 			productName = StoneChallangeTests;
-			productReference = F08EAFD52922B3DB00DB049F /* StoneChallangeTests.xctest */;
+			productReference = F08EAFD52922B3DB00DB049F /* StoneChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F08EAFDF2922B3DB00DB049F /* StoneChallangeUITests */ = {
+		F08EAFDF2922B3DB00DB049F /* StoneChallengeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F08EAFEF2922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallangeUITests" */;
+			buildConfigurationList = F08EAFEF2922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallengeUITests" */;
 			buildPhases = (
 				F08EAFDC2922B3DB00DB049F /* Sources */,
 				F08EAFDD2922B3DB00DB049F /* Frameworks */,
@@ -456,9 +456,9 @@
 			dependencies = (
 				F08EAFE22922B3DB00DB049F /* PBXTargetDependency */,
 			);
-			name = StoneChallangeUITests;
+			name = StoneChallengeUITests;
 			productName = StoneChallangeUITests;
-			productReference = F08EAFE02922B3DB00DB049F /* StoneChallangeUITests.xctest */;
+			productReference = F08EAFE02922B3DB00DB049F /* StoneChallengeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -483,7 +483,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F08EAFBA2922B3D800DB049F /* Build configuration list for PBXProject "StoneChallange" */;
+			buildConfigurationList = F08EAFBA2922B3D800DB049F /* Build configuration list for PBXProject "StoneChallenge" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -499,9 +499,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F08EAFBE2922B3D800DB049F /* StoneChallange */,
-				F08EAFD42922B3DB00DB049F /* StoneChallangeTests */,
-				F08EAFDF2922B3DB00DB049F /* StoneChallangeUITests */,
+				F08EAFBE2922B3D800DB049F /* StoneChallenge */,
+				F08EAFD42922B3DB00DB049F /* StoneChallengeTests */,
+				F08EAFDF2922B3DB00DB049F /* StoneChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -620,12 +620,12 @@
 /* Begin PBXTargetDependency section */
 		F08EAFD72922B3DB00DB049F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F08EAFBE2922B3D800DB049F /* StoneChallange */;
+			target = F08EAFBE2922B3D800DB049F /* StoneChallenge */;
 			targetProxy = F08EAFD62922B3DB00DB049F /* PBXContainerItemProxy */;
 		};
 		F08EAFE22922B3DB00DB049F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F08EAFBE2922B3D800DB049F /* StoneChallange */;
+			target = F08EAFBE2922B3D800DB049F /* StoneChallenge */;
 			targetProxy = F08EAFE12922B3DB00DB049F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -765,12 +765,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDU3U6PS84;
-				INFOPLIST_FILE = StoneChallange/Info.plist;
+				INFOPLIST_FILE = StoneChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nu.cya.StoneChallange;
+				PRODUCT_BUNDLE_IDENTIFIER = nu.cya.StoneChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -784,12 +784,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDU3U6PS84;
-				INFOPLIST_FILE = StoneChallange/Info.plist;
+				INFOPLIST_FILE = StoneChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nu.cya.StoneChallange;
+				PRODUCT_BUNDLE_IDENTIFIER = nu.cya.StoneChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -814,7 +814,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoneChallange.app/StoneChallange";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoneChallenge.app/StoneChallenge";
 			};
 			name = Debug;
 		};
@@ -836,7 +836,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoneChallange.app/StoneChallange";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoneChallenge.app/StoneChallenge";
 			};
 			name = Release;
 		};
@@ -883,7 +883,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F08EAFBA2922B3D800DB049F /* Build configuration list for PBXProject "StoneChallange" */ = {
+		F08EAFBA2922B3D800DB049F /* Build configuration list for PBXProject "StoneChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F08EAFE72922B3DB00DB049F /* Debug */,
@@ -892,7 +892,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F08EAFE92922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallange" */ = {
+		F08EAFE92922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F08EAFEA2922B3DB00DB049F /* Debug */,
@@ -901,7 +901,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F08EAFEC2922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallangeTests" */ = {
+		F08EAFEC2922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallengeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F08EAFED2922B3DB00DB049F /* Debug */,
@@ -910,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F08EAFEF2922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallangeUITests" */ = {
+		F08EAFEF2922B3DB00DB049F /* Build configuration list for PBXNativeTarget "StoneChallengeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F08EAFF02922B3DB00DB049F /* Debug */,
