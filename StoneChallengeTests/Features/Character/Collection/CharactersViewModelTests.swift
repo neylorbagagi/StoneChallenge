@@ -15,7 +15,7 @@ class CharactersViewModelTests: XCTestCase {
 
         let cellViewModels: BehaviorRelay<[CharacterCollectionViewModel]> = .init(value: [])
         let navigationLogoImage: UIImage = .init()
-        let backgroundColor: UIColor = .init()
+        let backgroundColor: UIColor = .green
         let rightBarButtonItemTitle: String = .init()
 
         let viewModel = CharactersViewModel(
@@ -28,6 +28,7 @@ class CharactersViewModelTests: XCTestCase {
 //        XCTAssertEqual(viewModel.cellViewModels.value, cellViewModels.value)
         XCTAssertEqual(viewModel.navigationLogoImage, navigationLogoImage)
         XCTAssertEqual(viewModel.backgroundColor, backgroundColor)
+        XCTAssertEqual(viewModel.rightBarButtonItemTitle, rightBarButtonItemTitle)
     }
 
 }
