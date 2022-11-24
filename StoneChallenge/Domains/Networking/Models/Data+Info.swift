@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - DataInfo
-struct DataInfo<T: Codable>: Codable {
+public struct DataInfo<T: Codable>: Codable {
     let info: Info
     let results: [T]
 }

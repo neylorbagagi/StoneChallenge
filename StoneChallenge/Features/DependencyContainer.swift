@@ -8,8 +8,10 @@
 import Foundation
 import UIKit
 
-class UserDependencyContainer {
+public class UserDependencyContainer {
     var navigationController = UINavigationController()
     let imageCache = ImageCache()
     static var shared = UserDependencyContainer()
+
+    public init() {}
 }

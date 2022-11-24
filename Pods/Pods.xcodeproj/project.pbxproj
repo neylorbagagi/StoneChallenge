@@ -103,10 +103,10 @@
 		43E187B87D7DC0248E5EEA70F63A0E61 /* AnyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BB7E480E27FDD61F3605149F83B49 /* AnyObserver.swift */; };
 		45F6BA1117D64D98B32E0C77670EF906 /* RxCocoaRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 86E5A5E60F831A6ADBBDB3A0680A754D /* RxCocoaRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47D3FBF90386DABCAB70AA2CA176C8EB /* ControlEvent+Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8738A4C174C91B0D71A72530E3CA3BBD /* ControlEvent+Driver.swift */; };
-		4AB8BCAA640BCCE5CDC8C56378F67DDC /* Pods-StoneChallengeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E8193B0C498D44EBC288DD703A7CFE /* Pods-StoneChallengeTests-dummy.m */; };
 		4AC5119E3A7D44E3B56A32F1DED81025 /* GroupBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F94577C96E51B6FA4C0A2631F5162A3 /* GroupBy.swift */; };
 		4BD3A749C865968127DF1F6F4FCEF841 /* SubscriptionDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412A3E948E1E1718AB1D86AC60499DE /* SubscriptionDisposable.swift */; };
 		4C667F8ED0DF6075955EF2E98C599889 /* AnonymousDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426389B5523F9F3BA6F426493BF0B3F /* AnonymousDisposable.swift */; };
+		4D8EECF6B46746ADE6C9EA2A193B4B64 /* Pods-StoneChallenge-StoneChallengeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 574714F8457D0728BE0432F7662FD753 /* Pods-StoneChallenge-StoneChallengeTests-dummy.m */; };
 		4F315C18FC854325DD5D062DD7A363D5 /* ObservableConvertibleType+SharedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE99C4C14D877EFC107109ABA7BBBAB7 /* ObservableConvertibleType+SharedSequence.swift */; };
 		4FCF52DBBECD370E4C1B8E681BED4CFF /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF32E59D270765E3AA0F69411E16CD50 /* Map.swift */; };
 		4FD01080609C91354F412B9348A12725 /* BooleanDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015BCD41EA7A2E39B4110A983F4C64E /* BooleanDisposable.swift */; };
@@ -128,6 +128,7 @@
 		5A39F3F258372FA025F08ECAFFFCF71D /* NSTextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60393F8140D560226F5461CD3C5C95C2 /* NSTextField+Rx.swift */; };
 		5A3DE5038C0E8C2BAFC3316589D0F918 /* NotificationCenter+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2B3A82FB75C23151D2B3FEFF82537F /* NotificationCenter+Rx.swift */; };
 		5A6853DFF3BFA54454C540BB29AA4CA2 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D715BAF9A6F461018599D4DF0A03BCE5 /* Concat.swift */; };
+		5AF76F99D0916A179A913B386D7EBBE4 /* Pods-StoneChallenge-StoneChallengeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CBDEE7FFB256C2E35AC5801C7DE36A /* Pods-StoneChallenge-StoneChallengeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C9D2EE113BA5ED9B7A7026E8BF5343E /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF2C69E4C704E7B4F4E54BF544A4C /* Disposable.swift */; };
 		5D4938303BB3E46F4606F9BFC55E4B10 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51271711E8420CB6E276A8B345D175 /* Utils.swift */; };
 		5DAF59E03E66BBBEC68BC895EF370333 /* BehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7E955584CD99F0E8BB3E6952F6F4D /* BehaviorSubject.swift */; };
@@ -155,6 +156,7 @@
 		6E1D8B591C9DC5E7E69FD0700E2382D5 /* Recorded+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4977D150FE8B1213CE5EA3C7D428C /* Recorded+Event.swift */; };
 		6E2AEBF1B8AD2DD358D563E019BE6E66 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355893C61BD63760D661DABDB58B48F9 /* Event.swift */; };
 		6E6A9F76D2EB2939E8F70FE06CC15172 /* SerialDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD46EF42DFF149EFFB807ECD8512BBDD /* SerialDispatchQueueScheduler.swift */; };
+		6E6E3F12786FAF993AC0445BF598FB15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		6F3AAFBB2B79A211D5E7D835BEFCA505 /* RxTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F48A8977BCAE2C410AB38441213FACC6 /* RxTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F803B4767FE50C12E3F0402DC0A3BE5 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687B85CE15D05BCB4E736E7B2223E8A /* PriorityQueue.swift */; };
 		7139F121A35E931819AEF64EE3284927 /* HistoricalScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720D923032F1B2B6D2EF3C8E4AD6E69B /* HistoricalScheduler.swift */; };
@@ -165,7 +167,6 @@
 		768A33DCEB41CBC5C7ECF5F0220B1A97 /* SharedSequence+Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FE2AC090C61472C9944E8BC12274E /* SharedSequence+Concurrency.swift */; };
 		782082D9F5529E63F249E8811BA6FD10 /* RxPickerViewDataSourceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BB2190C6C6E74D45027DD7C1649C14 /* RxPickerViewDataSourceProxy.swift */; };
 		782D8E4BE67E79D8C5645E90C58307E1 /* SubjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90766DEF7AFB3DA836F15B17194E6556 /* SubjectType.swift */; };
-		78B55EF0EFB1DC177A821742BB259ED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		7900CE05440A99A1481E38D87B35C185 /* CombineLatest+arity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C1A7A4B54B0F0B707B1B2CF2EEA2F2 /* CombineLatest+arity.swift */; };
 		79760800BDED1C2892BA6947B52837A4 /* RecursiveLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FA12B45408152A103D4A9CFFF4B0A4 /* RecursiveLock.swift */; };
 		7A314CDFDA08804932E2FF2B0EEA1B5B /* TestScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC3CD09FE22F636326DAEA8EFAFC08E /* TestScheduler.swift */; };
@@ -204,7 +205,7 @@
 		9D1698D10FD073BC082993CFC26510A6 /* HistoricalSchedulerTimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDBFAC1317282FAF3C3A30C6D375EB /* HistoricalSchedulerTimeConverter.swift */; };
 		9D5E1E9BFA5D056F7EB8BF72CC04272E /* TakeLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F686A88F33AE46B081F642B084B646 /* TakeLast.swift */; };
 		9DC09311B8E61F815AF8AA94AA3A6F5A /* RecursiveLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79F35AEBD03CA2EE89C1BDC348F13FD /* RecursiveLock.swift */; };
-		9E07EAD6500F89A68E52B233DDF18DA1 /* Pods-StoneChallenge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6818855AFC3BA68821E42FF3F059B4 /* Pods-StoneChallenge-dummy.m */; };
+		9E07EAD6500F89A68E52B233DDF18DA1 /* Pods-StoneChallenge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 679A4447D38BB277CDFC573F39DD9329 /* Pods-StoneChallenge-dummy.m */; };
 		9E8BA4FB802EDCD492DAF618CA7BFCE8 /* SharedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCD77CF28AC3D2E4B66F1536BF6255E /* SharedSequence.swift */; };
 		9F370B3928A333AD7E41680A29B1F051 /* RxCollectionViewReactiveArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADF7D7F20FD4620B89518666414A782 /* RxCollectionViewReactiveArrayDataSource.swift */; };
 		9F520B0538691D2AF74730145F481C11 /* RxBlocking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD46492926EEBF01316D1B765E784DAC /* RxBlocking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -259,7 +260,6 @@
 		C378AC3DF57A41F6F16D01BBD7A1BB02 /* UIActivityIndicatorView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C790DEE51618BBFEF9AB8BE70F87FC /* UIActivityIndicatorView+Rx.swift */; };
 		C4E95126C75769CD9E0670C6FED7BE28 /* RxRelay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD76960181990505BCC5F872753D8054 /* RxRelay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4EDE254E9713D6F617D7D63386510D9 /* AtomicInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883F4B08D49B56535EF35D03D8D3707 /* AtomicInt.swift */; };
-		C556B944554110E35FC7BA70364F12BF /* Pods-StoneChallengeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C824976D4743AC880E0E28FA6564A63 /* Pods-StoneChallengeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6A1AF1239CD2F0D4745BAA097E1E63F /* RxCollectionViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393A663B26384F26FD9AC857F4057E7 /* RxCollectionViewDelegateProxy.swift */; };
 		C74EDDB9C32F2DFC7552017A020BA35A /* RecursiveLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7142136778A884C32BECC3BF6ED111DD /* RecursiveLock.swift */; };
 		C784A7AAD94DD830A9EB5ADDEE6DE1BB /* KVORepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085B0404B85EAAE3C2A8C8BCB8F74D36 /* KVORepresentable.swift */; };
@@ -290,7 +290,7 @@
 		D7F2880820C2DEB2606690557DAB548B /* ObservableType+PrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226FF3DAEA20FF8A6CBB5B39F324FEE6 /* ObservableType+PrimitiveSequence.swift */; };
 		DA28A30676B76DB75127DBC08EC15423 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E687C9CD72FF2361E164984BED940 /* Filter.swift */; };
 		DAB26A9999CD54D7E67A0A5ED6A07EB2 /* Platform.Darwin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79658EA5C23612C869E282779DED764 /* Platform.Darwin.swift */; };
-		DB3520A04ACB0986A3CA5686581E2752 /* Pods-StoneChallenge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62347FE3E359514BC64BB199303B0922 /* Pods-StoneChallenge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB3520A04ACB0986A3CA5686581E2752 /* Pods-StoneChallenge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 722F602005FB6BE4385D7B346487775F /* Pods-StoneChallenge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DBDC86CE43D5A7BD00BC442DA33DC1D2 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590FBAAF986E964BC2B7B56D49FC7C4 /* Reactive.swift */; };
 		DD653BA988E66D39505D4011BE570C37 /* ObservableConvertibleType+Blocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F023444E15CF6F7D894FDD8BF4F1A7 /* ObservableConvertibleType+Blocking.swift */; };
 		DE71610B229DF6E2B65A8574BAF21414 /* SectionedViewDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9CEB107A566C4237629DC9CEF065F /* SectionedViewDataSourceType.swift */; };
@@ -343,13 +343,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0BDDE8680B9B980FFFBA1B9F0B7BF48B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F243B36381C0CE83CCFF789AC38F0D36;
-			remoteInfo = RxBlocking;
-		};
 		0E35E0DD929EE869762D3633406E480B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -357,12 +350,26 @@
 			remoteGlobalIDString = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6;
 			remoteInfo = RxCocoa;
 		};
-		32ADE5161BEC43F674F12D9BDD2B57AA /* PBXContainerItemProxy */ = {
+		302966336AA40FAFBD81C49F7BB9E7ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
 			remoteInfo = RxSwift;
+		};
+		48C76A368C0082C21F2CA7E816DAF595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F243B36381C0CE83CCFF789AC38F0D36;
+			remoteInfo = RxBlocking;
+		};
+		5047592CC6ED8BE857354E4630AA2650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4622BFEF3DC16E8BD15EEFC30D4D0084;
+			remoteInfo = RxRelay;
 		};
 		62DB914EBA1F8FBDF23200AF1186A32E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -392,19 +399,26 @@
 			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
 			remoteInfo = RxSwift;
 		};
+		9144B01677AADD45DA2A602F95E5B894 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8D93C508E21FFD4EE60D335DD6C22E3;
+			remoteInfo = RxTest;
+		};
+		9785B28C4282F0D03547499071ED98B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6;
+			remoteInfo = RxCocoa;
+		};
 		B1153C9711E29E5AA24D6BF05525C98D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
 			remoteInfo = RxSwift;
-		};
-		B56008C58D352334949F473C35501682 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C8D93C508E21FFD4EE60D335DD6C22E3;
-			remoteInfo = RxTest;
 		};
 		E91DC8C2718DE8E699A6AC6AE85F8E66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -426,7 +440,6 @@
 		001AE09DA3B2B282B6D3DE07BAAB9244 /* Skip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Skip.swift; path = RxSwift/Observables/Skip.swift; sourceTree = "<group>"; };
 		01BA61E0FC03420ABB91800679B29C01 /* Bag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bag.swift; path = Platform/DataStructures/Bag.swift; sourceTree = "<group>"; };
 		025F921CD7435A2B111B27D3FCD776BF /* KVORepresentable+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "KVORepresentable+Swift.swift"; path = "RxCocoa/Foundation/KVORepresentable+Swift.swift"; sourceTree = "<group>"; };
-		028F9C35A427CC225F04DA29A6A2E009 /* Pods-StoneChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoneChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		02B4C99D5EE63A4509D8823F4C8A259A /* _RXKVOObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _RXKVOObserver.h; path = RxCocoa/Runtime/include/_RXKVOObserver.h; sourceTree = "<group>"; };
 		031893FD3D882E436EC541DF783B1276 /* RxTest */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxTest; path = RxTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		034C19B7A03879E1C2BE8C0302A9DED6 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = RxSwift/Observables/Window.swift; sourceTree = "<group>"; };
@@ -442,11 +455,13 @@
 		082216F72E94A13D5B0F9DB5335C5F02 /* RxTableViewReactiveArrayDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTableViewReactiveArrayDataSource.swift; path = RxCocoa/iOS/DataSources/RxTableViewReactiveArrayDataSource.swift; sourceTree = "<group>"; };
 		085B0404B85EAAE3C2A8C8BCB8F74D36 /* KVORepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KVORepresentable.swift; path = RxCocoa/Foundation/KVORepresentable.swift; sourceTree = "<group>"; };
 		0883F4B08D49B56535EF35D03D8D3707 /* AtomicInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AtomicInt.swift; path = Platform/AtomicInt.swift; sourceTree = "<group>"; };
+		098AD0A4365A65906A01DC4E7EC39E8B /* Pods-StoneChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoneChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		0AE9F445AED608ED0F5F70BDC5CB1A4E /* Platform.Linux.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Linux.swift; path = Platform/Platform.Linux.swift; sourceTree = "<group>"; };
 		0B3964A4863E6765D3D7B767A425BDC2 /* _RXDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _RXDelegateProxy.m; path = RxCocoa/Runtime/_RXDelegateProxy.m; sourceTree = "<group>"; };
 		0C463909DAFE67663FAC55B52BCBB4FA /* RxWKNavigationDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxWKNavigationDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxWKNavigationDelegateProxy.swift; sourceTree = "<group>"; };
 		0C4770B19C844E0599EDD52FF83D9DE3 /* RxTest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxTest-prefix.pch"; sourceTree = "<group>"; };
 		0C5AC7DDFD0657ACE94B4AD330FC99EE /* ReplaySubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaySubject.swift; path = RxSwift/Subjects/ReplaySubject.swift; sourceTree = "<group>"; };
+		0D5B6B524F0053CDC8F75D619BFAEE42 /* Pods-StoneChallenge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StoneChallenge-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0D61A2449119A868CB5A6AFDC606D5D3 /* AddRef.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddRef.swift; path = RxSwift/Observables/AddRef.swift; sourceTree = "<group>"; };
 		0DFA6AACB01F5F7794A1D9238EB0E98F /* RxNavigationControllerDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxNavigationControllerDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxNavigationControllerDelegateProxy.swift; sourceTree = "<group>"; };
 		0E68EA9A69DBAD63B31D78FCFC24AB15 /* CombineLatest+Collection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CombineLatest+Collection.swift"; path = "RxSwift/Observables/CombineLatest+Collection.swift"; sourceTree = "<group>"; };
@@ -458,13 +473,13 @@
 		13B59C94A8C94537A64AE6F4DAFFF2BE /* RxCollectionViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewDataSourceType.swift; path = RxCocoa/iOS/Protocols/RxCollectionViewDataSourceType.swift; sourceTree = "<group>"; };
 		13E129487650D7F262CD9AAAC9B2A7BC /* _RXObjCRuntime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _RXObjCRuntime.m; path = RxCocoa/Runtime/_RXObjCRuntime.m; sourceTree = "<group>"; };
 		146C6DAB9D152D9F1328DC95A0C378B8 /* _RX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _RX.m; path = RxCocoa/Runtime/_RX.m; sourceTree = "<group>"; };
-		14AED7605E1BC17B732A53C23098B66A /* Pods-StoneChallenge-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StoneChallenge-frameworks.sh"; sourceTree = "<group>"; };
 		14B37E95A4B1A6A9A421F79A50879ED3 /* ShareReplayScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShareReplayScope.swift; path = RxSwift/Observables/ShareReplayScope.swift; sourceTree = "<group>"; };
-		15A51FA94F24184AD039640599848CA7 /* Pods-StoneChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoneChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		16EF4DCC34113FCB49D2F32A4B61F925 /* PriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PriorityQueue.swift; path = Platform/DataStructures/PriorityQueue.swift; sourceTree = "<group>"; };
 		16FD675A1FFDA0921C115D701735EE56 /* Signal+Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Signal+Subscription.swift"; path = "RxCocoa/Traits/Signal/Signal+Subscription.swift"; sourceTree = "<group>"; };
 		178D9459D7B77319314670097F3F9DAE /* RxCocoa.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCocoa.swift; path = RxCocoa/RxCocoa.swift; sourceTree = "<group>"; };
+		1935FAAAD43D8561166CAA69EEFB1130 /* Pods-StoneChallenge-StoneChallengeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StoneChallenge-StoneChallengeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		199BB7E480E27FDD61F3605149F83B49 /* AnyObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyObserver.swift; path = RxSwift/AnyObserver.swift; sourceTree = "<group>"; };
+		1A37E92972E2C4DFD6CAA2643309A259 /* Pods-StoneChallenge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoneChallenge-acknowledgements.plist"; sourceTree = "<group>"; };
 		1A4B850F33153F9E5559B4A301903DC9 /* UIButton+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Rx.swift"; path = "RxCocoa/iOS/UIButton+Rx.swift"; sourceTree = "<group>"; };
 		1B9BB8001BAAD3C5A202959000334CD8 /* NSView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSView+Rx.swift"; path = "RxCocoa/macOS/NSView+Rx.swift"; sourceTree = "<group>"; };
 		1D28BFB1544F60E39792845E026926BD /* UISlider+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+Rx.swift"; path = "RxCocoa/iOS/UISlider+Rx.swift"; sourceTree = "<group>"; };
@@ -472,6 +487,7 @@
 		1DA26314E0E54FBBA0F93FDC5F8DD866 /* ElementAt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementAt.swift; path = RxSwift/Observables/ElementAt.swift; sourceTree = "<group>"; };
 		1DA39A2B71B9D09593EE1DDB0F6A1E96 /* RxTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RxTest.modulemap; sourceTree = "<group>"; };
 		1E24B88A8CCCD3E7D298E8FF8E63EFE2 /* Multicast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multicast.swift; path = RxSwift/Observables/Multicast.swift; sourceTree = "<group>"; };
+		1EC8288B2523EA793FA6079B157835A3 /* Pods-StoneChallenge-StoneChallengeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StoneChallenge-StoneChallengeTests-frameworks.sh"; sourceTree = "<group>"; };
 		1F2E2A7B165EE89920684BA8025A8124 /* SkipWhile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkipWhile.swift; path = RxSwift/Observables/SkipWhile.swift; sourceTree = "<group>"; };
 		1FE68AE43834665984E31746DD532B71 /* ObserverType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObserverType.swift; path = RxSwift/ObserverType.swift; sourceTree = "<group>"; };
 		1FE7303CABAC7F8C4C91C499EFE18FA9 /* Do.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Do.swift; path = RxSwift/Observables/Do.swift; sourceTree = "<group>"; };
@@ -483,23 +499,25 @@
 		22BAEC548064B0C65C1DA12DFAAFFB96 /* UIPickerView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPickerView+Rx.swift"; path = "RxCocoa/iOS/UIPickerView+Rx.swift"; sourceTree = "<group>"; };
 		22D5879CEBD99ECFFB470963A7431FDC /* Infallible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Infallible.swift; path = RxSwift/Traits/Infallible/Infallible.swift; sourceTree = "<group>"; };
 		239344248C11DCADDBE8CDC9CDB9BCDD /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableType+Extensions.swift"; path = "RxSwift/ObservableType+Extensions.swift"; sourceTree = "<group>"; };
-		24FC797B4D90695B500D52AC7ECFB893 /* Pods-StoneChallenge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoneChallenge-Info.plist"; sourceTree = "<group>"; };
 		25A2BE77464A6DD080CAE7681142C47F /* Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signal.swift; path = RxCocoa/Traits/Signal/Signal.swift; sourceTree = "<group>"; };
 		25B821CE97D725A2831DAFA358E5907F /* Completable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Completable.swift; path = RxSwift/Traits/PrimitiveSequence/Completable.swift; sourceTree = "<group>"; };
 		25F63A531105CD4E1E4CCF5B918C5494 /* RxBlocking */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxBlocking; path = RxBlocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		273206A77B373EBCEDA2219D2276D750 /* OperationQueueScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperationQueueScheduler.swift; path = RxSwift/Schedulers/OperationQueueScheduler.swift; sourceTree = "<group>"; };
-		290AB646DD2AA0A90D2ADA7C282F9358 /* Pods-StoneChallenge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StoneChallenge-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2A6CFDE6C64ECFD5B20CBB829182DE6D /* RxBlocking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RxBlocking-dummy.m"; sourceTree = "<group>"; };
 		2A99BDC97F94E8AFAF74EDCFA8659260 /* RxCollectionViewDataSourceProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewDataSourceProxy.swift; path = RxCocoa/iOS/Proxies/RxCollectionViewDataSourceProxy.swift; sourceTree = "<group>"; };
 		2C250F8138DECBDA22DE0B828314DC56 /* Enumerated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enumerated.swift; path = RxSwift/Observables/Enumerated.swift; sourceTree = "<group>"; };
 		2C9EBA4F5B8BA7F3B297BD2796B93255 /* SchedulerType+SharedSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SchedulerType+SharedSequence.swift"; path = "RxCocoa/Traits/SharedSequence/SchedulerType+SharedSequence.swift"; sourceTree = "<group>"; };
 		2D06965DF1015524D0A7D0345E8A091A /* DelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxy.swift; path = RxCocoa/Common/DelegateProxy.swift; sourceTree = "<group>"; };
+		2D2BED065109546927388238B2F3081C /* Pods-StoneChallenge-StoneChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoneChallenge-StoneChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F95D7044B31191EB6CF4125BD31CDBA /* Pods-StoneChallenge-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StoneChallenge-frameworks.sh"; sourceTree = "<group>"; };
+		2FA5864834761FA1B169A32BA597FE43 /* Pods-StoneChallenge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoneChallenge-Info.plist"; sourceTree = "<group>"; };
 		302FE2AC090C61472C9944E8BC12274E /* SharedSequence+Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SharedSequence+Concurrency.swift"; path = "RxCocoa/Traits/SharedSequence/SharedSequence+Concurrency.swift"; sourceTree = "<group>"; };
 		30B1ECB4093D63731423CC142691324C /* URLSession+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSession+Rx.swift"; path = "RxCocoa/Foundation/URLSession+Rx.swift"; sourceTree = "<group>"; };
 		3252C7ACE56140B8F09601024474665C /* UITableView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Rx.swift"; path = "RxCocoa/iOS/UITableView+Rx.swift"; sourceTree = "<group>"; };
 		338C62CE6AD4ABA7F5820C6FD18FED6D /* Pods-StoneChallenge */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-StoneChallenge"; path = Pods_StoneChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33945EF869E444D007D4C3AE3FC35D57 /* AsMaybe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsMaybe.swift; path = RxSwift/Observables/AsMaybe.swift; sourceTree = "<group>"; };
 		355893C61BD63760D661DABDB58B48F9 /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Event.swift; path = RxSwift/Event.swift; sourceTree = "<group>"; };
+		359F3EB2D182E39DA4255155CFEDB90B /* Pods-StoneChallenge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StoneChallenge.modulemap"; sourceTree = "<group>"; };
 		35AFA7D003F1F4F0D7EB3903EC5B12CD /* RxSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RxSwift.modulemap; sourceTree = "<group>"; };
 		35D5274725CC0875EC17B50F25A9EF1C /* SynchronizedDisposeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedDisposeType.swift; path = RxSwift/Concurrency/SynchronizedDisposeType.swift; sourceTree = "<group>"; };
 		364A9E359658ABA283CB002A3D3DD984 /* RxTextViewDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTextViewDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxTextViewDelegateProxy.swift; sourceTree = "<group>"; };
@@ -512,7 +530,6 @@
 		3E9550805B229A00D00C0EB043ECAC6D /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = RxSwift/Errors.swift; sourceTree = "<group>"; };
 		3EA37764B9736CF4CD39C502364D8844 /* RxTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTarget.swift; path = RxCocoa/Common/RxTarget.swift; sourceTree = "<group>"; };
 		3EC02FCA34626B466A59F195B1A2A249 /* RxTest-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RxTest-Info.plist"; sourceTree = "<group>"; };
-		3F4CF8A2BFBEF2E1B67040E83A1F9000 /* Pods-StoneChallenge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoneChallenge-acknowledgements.plist"; sourceTree = "<group>"; };
 		3F65D771F9E5AB7AB9EB09D913CEC622 /* RxCocoaObjCRuntimeError+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RxCocoaObjCRuntimeError+Extensions.swift"; path = "RxCocoa/Common/RxCocoaObjCRuntimeError+Extensions.swift"; sourceTree = "<group>"; };
 		3F8D47D0350E49172DA9E489DDA908BB /* RxCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxCocoa.debug.xcconfig; sourceTree = "<group>"; };
 		3F94577C96E51B6FA4C0A2631F5162A3 /* GroupBy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupBy.swift; path = RxSwift/Observables/GroupBy.swift; sourceTree = "<group>"; };
@@ -521,6 +538,7 @@
 		40401FBE66C96172F7820CEDB8E45B40 /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Range.swift; path = RxSwift/Observables/Range.swift; sourceTree = "<group>"; };
 		4220DE5230DE3500596B39C6B36D4FD5 /* RxTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxTest.release.xcconfig; sourceTree = "<group>"; };
 		424E800CC804B117951E2B8F585D4D8B /* Any+Equatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Any+Equatable.swift"; path = "RxTest/Any+Equatable.swift"; sourceTree = "<group>"; };
+		435D94CE90B45A5E225CD9816EA1E4E8 /* Pods-StoneChallenge-StoneChallengeTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-StoneChallenge-StoneChallengeTests"; path = Pods_StoneChallenge_StoneChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4374EB1584FCAF0BDF4BE0199C6F87CA /* InvocableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvocableType.swift; path = RxSwift/Schedulers/Internal/InvocableType.swift; sourceTree = "<group>"; };
 		44CE204289FA6006A9AEEDB9EC4FF9CC /* NSObject+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Rx.swift"; path = "RxCocoa/Foundation/NSObject+Rx.swift"; sourceTree = "<group>"; };
 		45490A5DA7149CA7B1324913C167ABD5 /* NSTextStorage+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextStorage+Rx.swift"; path = "RxCocoa/iOS/NSTextStorage+Rx.swift"; sourceTree = "<group>"; };
@@ -530,7 +548,6 @@
 		478A1534023D3331EC5327A6A32C005D /* WithLatestFrom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WithLatestFrom.swift; path = RxSwift/Observables/WithLatestFrom.swift; sourceTree = "<group>"; };
 		47E8327ADE6F6F0F2433A78952FC9CAF /* BinaryDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryDisposable.swift; path = RxSwift/Disposables/BinaryDisposable.swift; sourceTree = "<group>"; };
 		4905269E03E47EFCB4F317CEC4EC84F1 /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Rx.swift"; path = "RxCocoa/iOS/UINavigationController+Rx.swift"; sourceTree = "<group>"; };
-		492B73CB6AB136FBC76798272C0D33B7 /* Pods-StoneChallengeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StoneChallengeTests.modulemap"; sourceTree = "<group>"; };
 		498BB7B13961113E4E19783A6431162E /* ObservableConvertibleType+Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+Signal.swift"; path = "RxCocoa/Traits/Signal/ObservableConvertibleType+Signal.swift"; sourceTree = "<group>"; };
 		49B12F05CB18906B87BF0A54EE453A99 /* RxRelay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RxRelay.modulemap; sourceTree = "<group>"; };
 		4A6FCE9F16F004E269610B7EDDBEF342 /* Platform.Linux.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Linux.swift; path = Platform/Platform.Linux.swift; sourceTree = "<group>"; };
@@ -541,12 +558,12 @@
 		4F1714DF7069E4E2DFA73839A89FFB52 /* RecursiveScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveScheduler.swift; path = RxSwift/Schedulers/RecursiveScheduler.swift; sourceTree = "<group>"; };
 		51C1A7A4B54B0F0B707B1B2CF2EEA2F2 /* CombineLatest+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CombineLatest+arity.swift"; path = "RxSwift/Observables/CombineLatest+arity.swift"; sourceTree = "<group>"; };
 		51C8FB66CBD1E24ED675334D4B4601EE /* ColdObservable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColdObservable.swift; path = RxTest/ColdObservable.swift; sourceTree = "<group>"; };
-		524FBA0D4785E921B9927A8688687598 /* Pods-StoneChallengeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoneChallengeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		52764CA468EE977191C42C2192F2A9DD /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Platform/DataStructures/Queue.swift; sourceTree = "<group>"; };
 		547BC48E0126772A9E278A6EFE04AB0B /* NSSlider+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSSlider+Rx.swift"; path = "RxCocoa/macOS/NSSlider+Rx.swift"; sourceTree = "<group>"; };
 		5495AA5F3252E53FBF9F0A2528F39B0C /* CurrentThreadScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrentThreadScheduler.swift; path = RxSwift/Schedulers/CurrentThreadScheduler.swift; sourceTree = "<group>"; };
 		55A01F09BB697C239BC38FCD86FAF58B /* SharedSequence+Operators+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SharedSequence+Operators+arity.swift"; path = "RxCocoa/Traits/SharedSequence/SharedSequence+Operators+arity.swift"; sourceTree = "<group>"; };
 		55F686A88F33AE46B081F642B084B646 /* TakeLast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TakeLast.swift; path = RxSwift/Observables/TakeLast.swift; sourceTree = "<group>"; };
+		574714F8457D0728BE0432F7662FD753 /* Pods-StoneChallenge-StoneChallengeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StoneChallenge-StoneChallengeTests-dummy.m"; sourceTree = "<group>"; };
 		584FF4CEF7F83C5C4D3C6B7AFB3193D6 /* Take.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Take.swift; path = RxSwift/Observables/Take.swift; sourceTree = "<group>"; };
 		58C9CEB107A566C4237629DC9CEF065F /* SectionedViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionedViewDataSourceType.swift; path = RxCocoa/Common/SectionedViewDataSourceType.swift; sourceTree = "<group>"; };
 		5968DAC76B60BFD82839A98730305C75 /* Resources.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resources.swift; path = RxBlocking/Resources.swift; sourceTree = "<group>"; };
@@ -557,22 +574,23 @@
 		5B205D7077B52E4B5A519A57F7876A69 /* ScheduledItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScheduledItem.swift; path = RxSwift/Schedulers/Internal/ScheduledItem.swift; sourceTree = "<group>"; };
 		5BCD77CF28AC3D2E4B66F1536BF6255E /* SharedSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharedSequence.swift; path = RxCocoa/Traits/SharedSequence/SharedSequence.swift; sourceTree = "<group>"; };
 		5CCD79D6468E77C819C210EA5362BD7D /* RxTableViewDataSourceProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTableViewDataSourceProxy.swift; path = RxCocoa/iOS/Proxies/RxTableViewDataSourceProxy.swift; sourceTree = "<group>"; };
-		5D7CB59518B66F466ECED52F5FA6D0DD /* Pods-StoneChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoneChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCFD125F46A70AAC496B8FC889F8AD7 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = RxSwift/Observables/Error.swift; sourceTree = "<group>"; };
 		5E4B27C2296F361A0B88EB35E8682221 /* AsyncLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncLock.swift; path = RxSwift/Concurrency/AsyncLock.swift; sourceTree = "<group>"; };
 		5EBC8F300895E39EA0DF6D6B2B5E6BCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5F4BCF5B86B7E5DE5742307DB2DADCEA /* UITextField+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Rx.swift"; path = "RxCocoa/iOS/UITextField+Rx.swift"; sourceTree = "<group>"; };
 		60393F8140D560226F5461CD3C5C95C2 /* NSTextField+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextField+Rx.swift"; path = "RxCocoa/macOS/NSTextField+Rx.swift"; sourceTree = "<group>"; };
 		6176682E90ADD4716329F130ABCED880 /* ControlTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlTarget.swift; path = RxCocoa/Common/ControlTarget.swift; sourceTree = "<group>"; };
-		62347FE3E359514BC64BB199303B0922 /* Pods-StoneChallenge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StoneChallenge-umbrella.h"; sourceTree = "<group>"; };
+		61CBDEE7FFB256C2E35AC5801C7DE36A /* Pods-StoneChallenge-StoneChallengeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StoneChallenge-StoneChallengeTests-umbrella.h"; sourceTree = "<group>"; };
 		62BF79C656A8CC5603251247A6C2C6EE /* ReplayRelay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplayRelay.swift; path = RxRelay/ReplayRelay.swift; sourceTree = "<group>"; };
 		632C66283F176FD953CC2E69A5CE05C6 /* RxTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTest.swift; path = RxTest/RxTest.swift; sourceTree = "<group>"; };
+		63E589B8E1765F95B1A419F197E2135B /* Pods-StoneChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoneChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		6590FBAAF986E964BC2B7B56D49FC7C4 /* Reactive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reactive.swift; path = RxSwift/Reactive.swift; sourceTree = "<group>"; };
 		65F023444E15CF6F7D894FDD8BF4F1A7 /* ObservableConvertibleType+Blocking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+Blocking.swift"; path = "RxBlocking/ObservableConvertibleType+Blocking.swift"; sourceTree = "<group>"; };
 		66328973AC204AC5E2E523599069D099 /* PrimitiveSequence+Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PrimitiveSequence+Concurrency.swift"; path = "RxSwift/Traits/PrimitiveSequence/PrimitiveSequence+Concurrency.swift"; sourceTree = "<group>"; };
 		6639FF69EEBD62646C88F0019EE54920 /* UIApplication+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Rx.swift"; path = "RxCocoa/iOS/UIApplication+Rx.swift"; sourceTree = "<group>"; };
 		66C0D8030AB6AF769B30A7E271C75EB8 /* NSObject+Rx+KVORepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Rx+KVORepresentable.swift"; path = "RxCocoa/Foundation/NSObject+Rx+KVORepresentable.swift"; sourceTree = "<group>"; };
 		6770DAA47DFBCCFFB2A1D594B06F44D1 /* RxCocoa.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RxCocoa.modulemap; sourceTree = "<group>"; };
+		679A4447D38BB277CDFC573F39DD9329 /* Pods-StoneChallenge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StoneChallenge-dummy.m"; sourceTree = "<group>"; };
 		67B2B0CA4C0D921AF3FDF0E5FBDE1C77 /* ObservableConvertibleType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObservableConvertibleType.swift; path = RxSwift/ObservableConvertibleType.swift; sourceTree = "<group>"; };
 		68E8BC4850E09ABAC6B768BDE854DE80 /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
 		6990BFA64925FD34248188D52005EFCD /* Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delay.swift; path = RxSwift/Observables/Delay.swift; sourceTree = "<group>"; };
@@ -584,6 +602,7 @@
 		6D057D8D54EC7ED4CAE83529FB0CDB61 /* First.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = First.swift; path = RxSwift/Observables/First.swift; sourceTree = "<group>"; };
 		6D21AEED01E571EAA93EB3C899029CAE /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = RxSwift/Observables/Optional.swift; sourceTree = "<group>"; };
 		6D2B3A82FB75C23151D2B3FEFF82537F /* NotificationCenter+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NotificationCenter+Rx.swift"; path = "RxCocoa/Foundation/NotificationCenter+Rx.swift"; sourceTree = "<group>"; };
+		6DE1A518F15F89DB5B4472DD12631191 /* Pods-StoneChallenge-StoneChallengeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoneChallenge-StoneChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		6EB054826D011685F44F9CA4D7238052 /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
 		6FCAB77203134EB8752067ACBAA5FF88 /* RxCocoa-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RxCocoa-dummy.m"; sourceTree = "<group>"; };
 		70477F1F61A4C272EF5AEF206BF43E5B /* Amb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Amb.swift; path = RxSwift/Observables/Amb.swift; sourceTree = "<group>"; };
@@ -593,7 +612,7 @@
 		7142136778A884C32BECC3BF6ED111DD /* RecursiveLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveLock.swift; path = Platform/RecursiveLock.swift; sourceTree = "<group>"; };
 		720D923032F1B2B6D2EF3C8E4AD6E69B /* HistoricalScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HistoricalScheduler.swift; path = RxSwift/Schedulers/HistoricalScheduler.swift; sourceTree = "<group>"; };
 		722A27976691FC59DC8E419180EE95ED /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Rx.swift"; path = "RxCocoa/iOS/UICollectionView+Rx.swift"; sourceTree = "<group>"; };
-		725EC029D995DDF58E1C70E3E24C2C0B /* Pods-StoneChallenge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StoneChallenge.modulemap"; sourceTree = "<group>"; };
+		722F602005FB6BE4385D7B346487775F /* Pods-StoneChallenge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StoneChallenge-umbrella.h"; sourceTree = "<group>"; };
 		739E82405D7F9BDEF655FD192AFC189C /* ConnectableObservableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectableObservableType.swift; path = RxSwift/ConnectableObservableType.swift; sourceTree = "<group>"; };
 		7405684CEE814003664A9E0D76E74F3A /* Scan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scan.swift; path = RxSwift/Observables/Scan.swift; sourceTree = "<group>"; };
 		7522999EAEA3CEE2F566460CA8991C15 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extensions.swift"; path = "Platform/DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
@@ -609,7 +628,6 @@
 		7B6A2AACB50767A2F3E0BF533B509325 /* GroupedObservable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupedObservable.swift; path = RxSwift/GroupedObservable.swift; sourceTree = "<group>"; };
 		7C0AC1495FFBF81287F05304B5D8880D /* BlockingObservable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockingObservable.swift; path = RxBlocking/BlockingObservable.swift; sourceTree = "<group>"; };
 		7C1EDB64EF0873F1756725925D54785A /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Platform/DataStructures/Queue.swift; sourceTree = "<group>"; };
-		7C824976D4743AC880E0E28FA6564A63 /* Pods-StoneChallengeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StoneChallengeTests-umbrella.h"; sourceTree = "<group>"; };
 		7CDF5F69BC83FC29B1CB8DAB0507859E /* RecursiveLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveLock.swift; path = Platform/RecursiveLock.swift; sourceTree = "<group>"; };
 		7D2105B802C6BDEE58DB37D150FB61C6 /* Maybe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Maybe.swift; path = RxSwift/Traits/PrimitiveSequence/Maybe.swift; sourceTree = "<group>"; };
 		7D5C79EC96CB913C6AF04F4B02193CB8 /* ControlProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlProperty.swift; path = RxCocoa/Traits/ControlProperty.swift; sourceTree = "<group>"; };
@@ -633,7 +651,6 @@
 		8738A4C174C91B0D71A72530E3CA3BBD /* ControlEvent+Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ControlEvent+Driver.swift"; path = "RxCocoa/Traits/Driver/ControlEvent+Driver.swift"; sourceTree = "<group>"; };
 		8918D9CDDE2677DA1EA3A3C7468EFEA5 /* UIRefreshControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIRefreshControl+Rx.swift"; path = "RxCocoa/iOS/UIRefreshControl+Rx.swift"; sourceTree = "<group>"; };
 		8AF9AACFB12F1A62D633C6B1020115CD /* ConcurrentMainScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcurrentMainScheduler.swift; path = RxSwift/Schedulers/ConcurrentMainScheduler.swift; sourceTree = "<group>"; };
-		8B4A443B7447F35EF21A9B1CF8F47AFA /* Pods-StoneChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoneChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		8C9765108A8A9D83877F6F1026BEEC3F /* WKWebView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+Rx.swift"; path = "RxCocoa/iOS/WKWebView+Rx.swift"; sourceTree = "<group>"; };
 		8DCFB7C11DB56B6EE8B77F8EB3BC2F99 /* ItemEvents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemEvents.swift; path = RxCocoa/iOS/Events/ItemEvents.swift; sourceTree = "<group>"; };
 		8E4E08CE93A61E8FBB994CBAC895925A /* Timer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = RxSwift/Observables/Timer.swift; sourceTree = "<group>"; };
@@ -646,6 +663,7 @@
 		923AE320AEB7BA72D8F9F0B6ABF3D1B8 /* Event+Equatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Event+Equatable.swift"; path = "RxTest/Event+Equatable.swift"; sourceTree = "<group>"; };
 		92ED1F34BD8B5E0B9D0D662A1908A4E1 /* Zip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zip.swift; path = RxSwift/Observables/Zip.swift; sourceTree = "<group>"; };
 		930C7B666D7FD3B7CA352800111A365D /* PrimitiveSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrimitiveSequence.swift; path = RxSwift/Traits/PrimitiveSequence/PrimitiveSequence.swift; sourceTree = "<group>"; };
+		933B1E2B8BB4A94EDA3C36F55103AD5A /* Pods-StoneChallenge-StoneChallengeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StoneChallenge-StoneChallengeTests.modulemap"; sourceTree = "<group>"; };
 		93CBD51B4177B3586D7F75E72233F9FD /* Debug.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = RxSwift/Observables/Debug.swift; sourceTree = "<group>"; };
 		93D5FD3E7AEE4C2908C74F78E8B34685 /* RxSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxSwift-umbrella.h"; sourceTree = "<group>"; };
 		94ED0E5635FFB4C21A5AD4D220CDB31E /* RxCocoa-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxCocoa-prefix.pch"; sourceTree = "<group>"; };
@@ -660,7 +678,6 @@
 		99948C209FC57ACBF328E61093E2AE61 /* PublishSubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublishSubject.swift; path = RxSwift/Subjects/PublishSubject.swift; sourceTree = "<group>"; };
 		9997382263C4F31D986321BFDD714202 /* Recorded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Recorded.swift; path = RxTest/Recorded.swift; sourceTree = "<group>"; };
 		9B0A06FE92B84694201C0241CC2F6026 /* ControlEvent+Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ControlEvent+Signal.swift"; path = "RxCocoa/Traits/Signal/ControlEvent+Signal.swift"; sourceTree = "<group>"; };
-		9C03171F5A496A1869AEDE4758539E2D /* Pods-StoneChallengeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StoneChallengeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9C0762790BE8E7C650ECB19EC48A9E5D /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extensions.swift"; path = "Platform/DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
 		9C35EDF76E0B7976E0DE224C0BFA4038 /* NSButton+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Rx.swift"; path = "RxCocoa/macOS/NSButton+Rx.swift"; sourceTree = "<group>"; };
 		9CB492ECE4EA27DB450FD279D0CC8F3E /* PublishRelay+Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PublishRelay+Signal.swift"; path = "RxCocoa/Traits/Signal/PublishRelay+Signal.swift"; sourceTree = "<group>"; };
@@ -678,12 +695,10 @@
 		A79F35AEBD03CA2EE89C1BDC348F13FD /* RecursiveLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveLock.swift; path = Platform/RecursiveLock.swift; sourceTree = "<group>"; };
 		A7C790DEE51618BBFEF9AB8BE70F87FC /* UIActivityIndicatorView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIActivityIndicatorView+Rx.swift"; path = "RxCocoa/iOS/UIActivityIndicatorView+Rx.swift"; sourceTree = "<group>"; };
 		A7DE8BA07171F8F4849CC20A1FBDB29F /* Single.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Single.swift; path = RxSwift/Traits/PrimitiveSequence/Single.swift; sourceTree = "<group>"; };
-		AA6818855AFC3BA68821E42FF3F059B4 /* Pods-StoneChallenge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StoneChallenge-dummy.m"; sourceTree = "<group>"; };
 		AA6DA0D867C9FB7E570B548FC2791135 /* XCTest+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "XCTest+Rx.swift"; path = "RxTest/XCTest+Rx.swift"; sourceTree = "<group>"; };
 		AADF7D7F20FD4620B89518666414A782 /* RxCollectionViewReactiveArrayDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewReactiveArrayDataSource.swift; path = RxCocoa/iOS/DataSources/RxCollectionViewReactiveArrayDataSource.swift; sourceTree = "<group>"; };
 		AAF5FC5A2582B5D97AC7C8A751837888 /* RxBlocking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxBlocking.release.xcconfig; sourceTree = "<group>"; };
 		AB7728D97492859659B655FAC6B11C06 /* BlockingObservable+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BlockingObservable+Operators.swift"; path = "RxBlocking/BlockingObservable+Operators.swift"; sourceTree = "<group>"; };
-		AC86461C89B18BF65E1CB9F3395A8850 /* Pods-StoneChallengeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StoneChallengeTests-frameworks.sh"; sourceTree = "<group>"; };
 		ACC2D2F3B46BF6B02DA26134ABA1F314 /* RxRelay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxRelay.debug.xcconfig; sourceTree = "<group>"; };
 		AE3585E7F4E38175058C4E0009FDE64E /* Cancelable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cancelable.swift; path = RxSwift/Cancelable.swift; sourceTree = "<group>"; };
 		AF1B3025AD0E64C76ACEC0ABEBA972CD /* RxTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxTest.debug.xcconfig; sourceTree = "<group>"; };
@@ -691,7 +706,6 @@
 		AF32E59D270765E3AA0F69411E16CD50 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = RxSwift/Observables/Map.swift; sourceTree = "<group>"; };
 		B06A0DA5BDBF5EDCE6EE8F49382624D3 /* RxTableViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTableViewDataSourceType.swift; path = RxCocoa/iOS/Protocols/RxTableViewDataSourceType.swift; sourceTree = "<group>"; };
 		B0A3ACE3537E1CADE32D879380662F49 /* Throttle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Throttle.swift; path = RxSwift/Observables/Throttle.swift; sourceTree = "<group>"; };
-		B0E8193B0C498D44EBC288DD703A7CFE /* Pods-StoneChallengeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StoneChallengeTests-dummy.m"; sourceTree = "<group>"; };
 		B10823F91A874573401B1A47C129D174 /* RxPickerViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxPickerViewDataSourceType.swift; path = RxCocoa/iOS/Protocols/RxPickerViewDataSourceType.swift; sourceTree = "<group>"; };
 		B126CD95012BA31B7097FDEB1E9367D9 /* RxCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxCocoa.release.xcconfig; sourceTree = "<group>"; };
 		B2C87BE75CCC97FC981F798D843A7384 /* SynchronizedOnType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedOnType.swift; path = RxSwift/Concurrency/SynchronizedOnType.swift; sourceTree = "<group>"; };
@@ -715,7 +729,6 @@
 		BC2BD37F4FF23B4C6C5C647710EE938E /* ObservableConvertibleType+Infallible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+Infallible.swift"; path = "RxSwift/Traits/Infallible/ObservableConvertibleType+Infallible.swift"; sourceTree = "<group>"; };
 		BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxCocoa; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE689BD680F389EAE0AC70B59D03E611 /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
-		BED7F47E756045B834E880F9B594A5B9 /* Pods-StoneChallengeTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoneChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		C0F30266B29FDC4850DEDD00E4AC06C8 /* SkipUntil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkipUntil.swift; path = RxSwift/Observables/SkipUntil.swift; sourceTree = "<group>"; };
 		C4165D475A123390CE39B6B14DAAFD05 /* SingleAsync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleAsync.swift; path = RxSwift/Observables/SingleAsync.swift; sourceTree = "<group>"; };
 		C53A478CB7F5BD3A4D1DE058809E2CC5 /* RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxSwift.release.xcconfig; sourceTree = "<group>"; };
@@ -755,6 +768,7 @@
 		D74526C087AB5E8E4F479F3569F08D9F /* DistinctUntilChanged.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistinctUntilChanged.swift; path = RxSwift/Observables/DistinctUntilChanged.swift; sourceTree = "<group>"; };
 		D810325954530754572A28EBFC460185 /* BehaviorRelay+Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BehaviorRelay+Driver.swift"; path = "RxCocoa/Traits/Driver/BehaviorRelay+Driver.swift"; sourceTree = "<group>"; };
 		D8F71DB7BBB9FAFFFBD46665D20BEECF /* Observable+Bind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Observable+Bind.swift"; path = "RxRelay/Observable+Bind.swift"; sourceTree = "<group>"; };
+		D905FAE221B476FFAA6CE8611B2D4BCB /* Pods-StoneChallenge-StoneChallengeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoneChallenge-StoneChallengeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D951F61CFD21C298B820488B9B52C73B /* UIDatePicker+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDatePicker+Rx.swift"; path = "RxCocoa/iOS/UIDatePicker+Rx.swift"; sourceTree = "<group>"; };
 		DB25E8371DB3197C6DF01924928F9432 /* DispatchQueueConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchQueueConfiguration.swift; path = RxSwift/Schedulers/Internal/DispatchQueueConfiguration.swift; sourceTree = "<group>"; };
 		DBC3CD09FE22F636326DAEA8EFAFC08E /* TestScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestScheduler.swift; path = RxTest/Schedulers/TestScheduler.swift; sourceTree = "<group>"; };
@@ -791,8 +805,8 @@
 		F565D040331AEA5CB7A06CFB8CABD74B /* Platform.Linux.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Linux.swift; path = Platform/Platform.Linux.swift; sourceTree = "<group>"; };
 		F5704A2FDFB4F5A2AABA5B7A00AFFF0C /* Infallible+Bind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Infallible+Bind.swift"; path = "RxCocoa/Common/Infallible+Bind.swift"; sourceTree = "<group>"; };
 		F6125DD8A7FC30437F1EFF12DC890AF3 /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = RxTest/Subscription.swift; sourceTree = "<group>"; };
+		F616869154EDE49D04C4F35BFFB737E4 /* Pods-StoneChallenge-StoneChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoneChallenge-StoneChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7A62C43B444117C0C22DABCE5DC22F6 /* Platform.Darwin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Darwin.swift; path = Platform/Platform.Darwin.swift; sourceTree = "<group>"; };
-		F9E676DA5A1B1D0DED180FB551EA31A0 /* Pods-StoneChallengeTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-StoneChallengeTests"; path = Pods_StoneChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD46EF42DFF149EFFB807ECD8512BBDD /* SerialDispatchQueueScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerialDispatchQueueScheduler.swift; path = RxSwift/Schedulers/SerialDispatchQueueScheduler.swift; sourceTree = "<group>"; };
 		FE99C4C14D877EFC107109ABA7BBBAB7 /* ObservableConvertibleType+SharedSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+SharedSequence.swift"; path = "RxCocoa/Traits/SharedSequence/ObservableConvertibleType+SharedSequence.swift"; sourceTree = "<group>"; };
 		FF681F3258A82A553083AD35C123E49A /* RxSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RxSwift-dummy.m"; sourceTree = "<group>"; };
@@ -808,11 +822,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		546DD694011EA51D7C9C74645082AAE3 /* Frameworks */ = {
+		6ABAF555A64041C8227C80CF3D9AC26D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78B55EF0EFB1DC177A821742BB259ED5 /* Foundation.framework in Frameworks */,
+				6E6E3F12786FAF993AC0445BF598FB15 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,15 +889,6 @@
 			path = "../Target Support Files/RxSwift";
 			sourceTree = "<group>";
 		};
-		0DB3AC9ABE543D8630EEC25CBF04F3F5 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F497694EFF351CF5D7EEBAE48130B809 /* Pods-StoneChallenge */,
-				1F6E0B044975208D43726466B44E1326 /* Pods-StoneChallengeTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -906,21 +911,21 @@
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
-		1F6E0B044975208D43726466B44E1326 /* Pods-StoneChallengeTests */ = {
+		1C30DE61DC9B986C03FFC16597A80FC6 /* Pods-StoneChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				492B73CB6AB136FBC76798272C0D33B7 /* Pods-StoneChallengeTests.modulemap */,
-				9C03171F5A496A1869AEDE4758539E2D /* Pods-StoneChallengeTests-acknowledgements.markdown */,
-				524FBA0D4785E921B9927A8688687598 /* Pods-StoneChallengeTests-acknowledgements.plist */,
-				B0E8193B0C498D44EBC288DD703A7CFE /* Pods-StoneChallengeTests-dummy.m */,
-				AC86461C89B18BF65E1CB9F3395A8850 /* Pods-StoneChallengeTests-frameworks.sh */,
-				BED7F47E756045B834E880F9B594A5B9 /* Pods-StoneChallengeTests-Info.plist */,
-				7C824976D4743AC880E0E28FA6564A63 /* Pods-StoneChallengeTests-umbrella.h */,
-				028F9C35A427CC225F04DA29A6A2E009 /* Pods-StoneChallengeTests.debug.xcconfig */,
-				15A51FA94F24184AD039640599848CA7 /* Pods-StoneChallengeTests.release.xcconfig */,
+				359F3EB2D182E39DA4255155CFEDB90B /* Pods-StoneChallenge.modulemap */,
+				0D5B6B524F0053CDC8F75D619BFAEE42 /* Pods-StoneChallenge-acknowledgements.markdown */,
+				1A37E92972E2C4DFD6CAA2643309A259 /* Pods-StoneChallenge-acknowledgements.plist */,
+				679A4447D38BB277CDFC573F39DD9329 /* Pods-StoneChallenge-dummy.m */,
+				2F95D7044B31191EB6CF4125BD31CDBA /* Pods-StoneChallenge-frameworks.sh */,
+				2FA5864834761FA1B169A32BA597FE43 /* Pods-StoneChallenge-Info.plist */,
+				722F602005FB6BE4385D7B346487775F /* Pods-StoneChallenge-umbrella.h */,
+				63E589B8E1765F95B1A419F197E2135B /* Pods-StoneChallenge.debug.xcconfig */,
+				098AD0A4365A65906A01DC4E7EC39E8B /* Pods-StoneChallenge.release.xcconfig */,
 			);
-			name = "Pods-StoneChallengeTests";
-			path = "Target Support Files/Pods-StoneChallengeTests";
+			name = "Pods-StoneChallenge";
+			path = "Target Support Files/Pods-StoneChallenge";
 			sourceTree = "<group>";
 		};
 		2198A3BE674CD0876673F63F341FC96E /* RxSwift */ = {
@@ -1104,6 +1109,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6F013E8F6F694E6BD4AE8DA884E898CE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C30DE61DC9B986C03FFC16597A80FC6 /* Pods-StoneChallenge */,
+				D7C8D703D224856019AD6C6E0C4DF7CE /* Pods-StoneChallenge-StoneChallengeTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		86F1B5AF20D7E0127D7E30AA11E57C81 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1117,6 +1131,20 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RxCocoa";
+			sourceTree = "<group>";
+		};
+		8955792AEA8218D7C79149E7B0D309CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338C62CE6AD4ABA7F5820C6FD18FED6D /* Pods-StoneChallenge */,
+				435D94CE90B45A5E225CD9816EA1E4E8 /* Pods-StoneChallenge-StoneChallengeTests */,
+				25F63A531105CD4E1E4CCF5B918C5494 /* RxBlocking */,
+				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa */,
+				FF8B264DFE802855D5D67E7CDDABFC3C /* RxRelay */,
+				809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift */,
+				031893FD3D882E436EC541DF783B1276 /* RxTest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		96905E2FDD114ED1DA81C3EE6DF0D858 /* RxBlocking */ = {
@@ -1164,20 +1192,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RxBlocking";
-			sourceTree = "<group>";
-		};
-		AB790E67F9BB7BE80C411AE9222DB457 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				338C62CE6AD4ABA7F5820C6FD18FED6D /* Pods-StoneChallenge */,
-				F9E676DA5A1B1D0DED180FB551EA31A0 /* Pods-StoneChallengeTests */,
-				25F63A531105CD4E1E4CCF5B918C5494 /* RxBlocking */,
-				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa */,
-				FF8B264DFE802855D5D67E7CDDABFC3C /* RxRelay */,
-				809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift */,
-				031893FD3D882E436EC541DF783B1276 /* RxTest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		AB7BBCD876A683C84FB9A92034BED929 /* Support Files */ = {
@@ -1320,8 +1334,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				6C4A4C69BC86B6B5C32E9470075FAA3D /* Pods */,
-				AB790E67F9BB7BE80C411AE9222DB457 /* Products */,
-				0DB3AC9ABE543D8630EEC25CBF04F3F5 /* Targets Support Files */,
+				8955792AEA8218D7C79149E7B0D309CA /* Products */,
+				6F013E8F6F694E6BD4AE8DA884E898CE /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1356,6 +1370,23 @@
 			path = RxTest;
 			sourceTree = "<group>";
 		};
+		D7C8D703D224856019AD6C6E0C4DF7CE /* Pods-StoneChallenge-StoneChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				933B1E2B8BB4A94EDA3C36F55103AD5A /* Pods-StoneChallenge-StoneChallengeTests.modulemap */,
+				1935FAAAD43D8561166CAA69EEFB1130 /* Pods-StoneChallenge-StoneChallengeTests-acknowledgements.markdown */,
+				D905FAE221B476FFAA6CE8611B2D4BCB /* Pods-StoneChallenge-StoneChallengeTests-acknowledgements.plist */,
+				574714F8457D0728BE0432F7662FD753 /* Pods-StoneChallenge-StoneChallengeTests-dummy.m */,
+				1EC8288B2523EA793FA6079B157835A3 /* Pods-StoneChallenge-StoneChallengeTests-frameworks.sh */,
+				6DE1A518F15F89DB5B4472DD12631191 /* Pods-StoneChallenge-StoneChallengeTests-Info.plist */,
+				61CBDEE7FFB256C2E35AC5801C7DE36A /* Pods-StoneChallenge-StoneChallengeTests-umbrella.h */,
+				F616869154EDE49D04C4F35BFFB737E4 /* Pods-StoneChallenge-StoneChallengeTests.debug.xcconfig */,
+				2D2BED065109546927388238B2F3081C /* Pods-StoneChallenge-StoneChallengeTests.release.xcconfig */,
+			);
+			name = "Pods-StoneChallenge-StoneChallengeTests";
+			path = "Target Support Files/Pods-StoneChallenge-StoneChallengeTests";
+			sourceTree = "<group>";
+		};
 		E0F206902AEA7AF9BE9C9B4E435E9E01 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1369,23 +1400,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RxRelay";
-			sourceTree = "<group>";
-		};
-		F497694EFF351CF5D7EEBAE48130B809 /* Pods-StoneChallenge */ = {
-			isa = PBXGroup;
-			children = (
-				725EC029D995DDF58E1C70E3E24C2C0B /* Pods-StoneChallenge.modulemap */,
-				290AB646DD2AA0A90D2ADA7C282F9358 /* Pods-StoneChallenge-acknowledgements.markdown */,
-				3F4CF8A2BFBEF2E1B67040E83A1F9000 /* Pods-StoneChallenge-acknowledgements.plist */,
-				AA6818855AFC3BA68821E42FF3F059B4 /* Pods-StoneChallenge-dummy.m */,
-				14AED7605E1BC17B732A53C23098B66A /* Pods-StoneChallenge-frameworks.sh */,
-				24FC797B4D90695B500D52AC7ECFB893 /* Pods-StoneChallenge-Info.plist */,
-				62347FE3E359514BC64BB199303B0922 /* Pods-StoneChallenge-umbrella.h */,
-				5D7CB59518B66F466ECED52F5FA6D0DD /* Pods-StoneChallenge.debug.xcconfig */,
-				8B4A443B7447F35EF21A9B1CF8F47AFA /* Pods-StoneChallenge.release.xcconfig */,
-			);
-			name = "Pods-StoneChallenge";
-			path = "Target Support Files/Pods-StoneChallenge";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1437,11 +1451,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABA1BCA505D87412568482D20D7120D2 /* Headers */ = {
+		B9E49F6953BE60D0C9CCCEAD0717D81E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C556B944554110E35FC7BA70364F12BF /* Pods-StoneChallengeTests-umbrella.h in Headers */,
+				5AF76F99D0916A179A913B386D7EBBE4 /* Pods-StoneChallenge-StoneChallengeTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1456,27 +1470,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		365787B90C8CADDA5599B65F6DC6DDEE /* Pods-StoneChallengeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E2EB279D9E4D61E5E6B8FC6F26C770F1 /* Build configuration list for PBXNativeTarget "Pods-StoneChallengeTests" */;
-			buildPhases = (
-				ABA1BCA505D87412568482D20D7120D2 /* Headers */,
-				175EE687873488AE2768E1E7521C72C4 /* Sources */,
-				546DD694011EA51D7C9C74645082AAE3 /* Frameworks */,
-				DA55D1A54FE299A3EB6A7D49A8822905 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				898D2D0AFD48A621C9E422909099686D /* PBXTargetDependency */,
-				10B9A02272BCCB52F8826A08B4210BDC /* PBXTargetDependency */,
-				A07D1997C6CE3D27E0684221F2675148 /* PBXTargetDependency */,
-			);
-			name = "Pods-StoneChallengeTests";
-			productName = Pods_StoneChallengeTests;
-			productReference = F9E676DA5A1B1D0DED180FB551EA31A0 /* Pods-StoneChallengeTests */;
-			productType = "com.apple.product-type.framework";
-		};
 		4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EC846DF23BF6222E5FC8DB56FF98B68 /* Build configuration list for PBXNativeTarget "RxRelay" */;
@@ -1535,6 +1528,29 @@
 			name = "Pods-StoneChallenge";
 			productName = Pods_StoneChallenge;
 			productReference = 338C62CE6AD4ABA7F5820C6FD18FED6D /* Pods-StoneChallenge */;
+			productType = "com.apple.product-type.framework";
+		};
+		C443AB018511AB2F820EE79EA6F32E45 /* Pods-StoneChallenge-StoneChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDD5872751DE0E0E2BCA72D4B6F99659 /* Build configuration list for PBXNativeTarget "Pods-StoneChallenge-StoneChallengeTests" */;
+			buildPhases = (
+				B9E49F6953BE60D0C9CCCEAD0717D81E /* Headers */,
+				941A787F61FF37CBDA4535B3227C4ED7 /* Sources */,
+				6ABAF555A64041C8227C80CF3D9AC26D /* Frameworks */,
+				955B3BCD333D2FB08702CFB6B4A7E453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				067C089FE0D2950337FC31DE297D2EE2 /* PBXTargetDependency */,
+				20C2A8F80EC745E09A6EE3C17DF011A7 /* PBXTargetDependency */,
+				FD696AE8C89ACDB5C60FACAA1A2D7D16 /* PBXTargetDependency */,
+				C3CAA4C9244B344B362417F125ECC7FD /* PBXTargetDependency */,
+				A4240D54DDBE21F6E1A2A2BF484D2608 /* PBXTargetDependency */,
+			);
+			name = "Pods-StoneChallenge-StoneChallengeTests";
+			productName = Pods_StoneChallenge_StoneChallengeTests;
+			productReference = 435D94CE90B45A5E225CD9816EA1E4E8 /* Pods-StoneChallenge-StoneChallengeTests */;
 			productType = "com.apple.product-type.framework";
 		};
 		C8D93C508E21FFD4EE60D335DD6C22E3 /* RxTest */ = {
@@ -1611,12 +1627,12 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = AB790E67F9BB7BE80C411AE9222DB457 /* Products */;
+			productRefGroup = 8955792AEA8218D7C79149E7B0D309CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9F5BB2E3CED785915E4F6256CE162DA6 /* Pods-StoneChallenge */,
-				365787B90C8CADDA5599B65F6DC6DDEE /* Pods-StoneChallengeTests */,
+				C443AB018511AB2F820EE79EA6F32E45 /* Pods-StoneChallenge-StoneChallengeTests */,
 				F243B36381C0CE83CCFF789AC38F0D36 /* RxBlocking */,
 				7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */,
 				4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */,
@@ -1628,6 +1644,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		5D4809C72FC4B366B262906F436A3EF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		955B3BCD333D2FB08702CFB6B4A7E453 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1662,13 +1685,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA55D1A54FE299A3EB6A7D49A8822905 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EA62E6399B5CC65F8FF5163CDA7AB90E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1679,14 +1695,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		175EE687873488AE2768E1E7521C72C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4AB8BCAA640BCCE5CDC8C56378F67DDC /* Pods-StoneChallengeTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3DA8F71AF3BF41150950832BA8D64BFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1817,6 +1825,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E07EAD6500F89A68E52B233DDF18DA1 /* Pods-StoneChallenge-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		941A787F61FF37CBDA4535B3227C4ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8EECF6B46746ADE6C9EA2A193B4B64 /* Pods-StoneChallenge-StoneChallengeTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2043,6 +2059,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		067C089FE0D2950337FC31DE297D2EE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxBlocking;
+			target = F243B36381C0CE83CCFF789AC38F0D36 /* RxBlocking */;
+			targetProxy = 48C76A368C0082C21F2CA7E816DAF595 /* PBXContainerItemProxy */;
+		};
 		0BE5CF4BDFD0A1257E5F368DC4CCEEB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxRelay;
@@ -2055,11 +2077,11 @@
 			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
 			targetProxy = B1153C9711E29E5AA24D6BF05525C98D /* PBXContainerItemProxy */;
 		};
-		10B9A02272BCCB52F8826A08B4210BDC /* PBXTargetDependency */ = {
+		20C2A8F80EC745E09A6EE3C17DF011A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RxSwift;
-			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
-			targetProxy = 32ADE5161BEC43F674F12D9BDD2B57AA /* PBXContainerItemProxy */;
+			name = RxCocoa;
+			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
+			targetProxy = 9785B28C4282F0D03547499071ED98B4 /* PBXContainerItemProxy */;
 		};
 		3B953CF36C09B966EF5A1A736FE1E081 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2079,23 +2101,23 @@
 			target = 4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */;
 			targetProxy = 88DD5E91F5296E4DBBBAD65B4AD9BE34 /* PBXContainerItemProxy */;
 		};
-		898D2D0AFD48A621C9E422909099686D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RxBlocking;
-			target = F243B36381C0CE83CCFF789AC38F0D36 /* RxBlocking */;
-			targetProxy = 0BDDE8680B9B980FFFBA1B9F0B7BF48B /* PBXContainerItemProxy */;
-		};
 		9803CBCBCAB49F23FA1080CB689031FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwift;
 			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
 			targetProxy = E91DC8C2718DE8E699A6AC6AE85F8E66 /* PBXContainerItemProxy */;
 		};
-		A07D1997C6CE3D27E0684221F2675148 /* PBXTargetDependency */ = {
+		A4240D54DDBE21F6E1A2A2BF484D2608 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxTest;
 			target = C8D93C508E21FFD4EE60D335DD6C22E3 /* RxTest */;
-			targetProxy = B56008C58D352334949F473C35501682 /* PBXContainerItemProxy */;
+			targetProxy = 9144B01677AADD45DA2A602F95E5B894 /* PBXContainerItemProxy */;
+		};
+		C3CAA4C9244B344B362417F125ECC7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxSwift;
+			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
+			targetProxy = 302966336AA40FAFBD81C49F7BB9E7ED /* PBXContainerItemProxy */;
 		};
 		D3FF3C0817575CFB0F0A930A0A8020D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2108,6 +2130,12 @@
 			name = RxCocoa;
 			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
 			targetProxy = 0E35E0DD929EE869762D3633406E480B /* PBXContainerItemProxy */;
+		};
+		FD696AE8C89ACDB5C60FACAA1A2D7D16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxRelay;
+			target = 4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */;
+			targetProxy = 5047592CC6ED8BE857354E4630AA2650 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2140,43 +2168,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0F51F850471D6C42AD64A27BF79DFA07 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 028F9C35A427CC225F04DA29A6A2E009 /* Pods-StoneChallengeTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-StoneChallengeTests/Pods-StoneChallengeTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StoneChallengeTests/Pods-StoneChallengeTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2220,7 +2211,7 @@
 		};
 		23CD6606AF8EC5491C1B587CCD22B940 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B4A443B7447F35EF21A9B1CF8F47AFA /* Pods-StoneChallenge.release.xcconfig */;
+			baseConfigurationReference = 098AD0A4365A65906A01DC4E7EC39E8B /* Pods-StoneChallenge.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2242,44 +2233,6 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-StoneChallenge/Pods-StoneChallenge.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		302BC1FFE1A4388DAF60A9FC818991B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15A51FA94F24184AD039640599848CA7 /* Pods-StoneChallengeTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-StoneChallengeTests/Pods-StoneChallengeTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StoneChallengeTests/Pods-StoneChallengeTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2428,7 +2381,7 @@
 		};
 		8531E894B1BA5829D1E3B4AC76CC0C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D7CB59518B66F466ECED52F5FA6D0DD /* Pods-StoneChallenge.debug.xcconfig */;
+			baseConfigurationReference = 63E589B8E1765F95B1A419F197E2135B /* Pods-StoneChallenge.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2598,6 +2551,43 @@
 			};
 			name = Debug;
 		};
+		BE7A467A9669B766006666D3AF3A0CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F616869154EDE49D04C4F35BFFB737E4 /* Pods-StoneChallenge-StoneChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StoneChallenge-StoneChallengeTests/Pods-StoneChallenge-StoneChallengeTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StoneChallenge-StoneChallengeTests/Pods-StoneChallenge-StoneChallengeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		C12D9C5CC8F2071662A98F549A9E6FB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F8D47D0350E49172DA9E489DDA908BB /* RxCocoa.debug.xcconfig */;
@@ -2701,6 +2691,44 @@
 			};
 			name = Debug;
 		};
+		FC8844ECE1BA9F19C371DDC716029EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D2BED065109546927388238B2F3081C /* Pods-StoneChallenge-StoneChallengeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StoneChallenge-StoneChallengeTests/Pods-StoneChallenge-StoneChallengeTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StoneChallenge-StoneChallengeTests/Pods-StoneChallenge-StoneChallengeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		FED117DD1893843FCC35A5F0DB6444F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40300A75C1ABE05E2C6A78A5B56D44AD /* RxBlocking.debug.xcconfig */;
@@ -2801,11 +2829,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2EB279D9E4D61E5E6B8FC6F26C770F1 /* Build configuration list for PBXNativeTarget "Pods-StoneChallengeTests" */ = {
+		FDD5872751DE0E0E2BCA72D4B6F99659 /* Build configuration list for PBXNativeTarget "Pods-StoneChallenge-StoneChallengeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F51F850471D6C42AD64A27BF79DFA07 /* Debug */,
-				302BC1FFE1A4388DAF60A9FC818991B1 /* Release */,
+				BE7A467A9669B766006666D3AF3A0CE6 /* Debug */,
+				FC8844ECE1BA9F19C371DDC716029EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

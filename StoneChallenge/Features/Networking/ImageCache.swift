@@ -49,4 +49,6 @@ public class ImageCache {
             self.cachedImages.setObject(image, forKey: url, cost: responseData.count)
         }.resume()
     }
+
+    public init() {}
 }

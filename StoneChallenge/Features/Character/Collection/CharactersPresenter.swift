@@ -70,8 +70,8 @@ class CharactersPresenter: CharactersViewModelProvider {
     }
 
     private func updateCharacterCollectionViewModel(row: Int, with image: UIImage) {
-        let test = viewModel.cellViewModels.value[row]
-        test.image.accept(image)
+        let cellViewModel = viewModel.cellViewModels.value[row]
+        cellViewModel.image.accept(image)
     }
 
     private func navigationLogoImage() -> UIImage {
@@ -80,17 +80,6 @@ class CharactersPresenter: CharactersViewModelProvider {
 
     // MARK: - BIND
     private func bind() {
-        interactor.responsePageData
-            .subscribe(onNext: { [self] result in
-                switch result {
-                case .success(let data):
-                    pagination = data.info
-                    updateWithDataFromNextPage(data.results)
-                case .failure:
-                    break
-                }
-            })
-            .disposed(by: disposeBag)
 
         viewModel.viewDidLoad
             .bind(to: nextPageTrigger)
@@ -98,11 +87,6 @@ class CharactersPresenter: CharactersViewModelProvider {
 
         viewModel.collectionViewDidHitBottom
             .bind(to: nextPageTrigger)
-            .disposed(by: disposeBag)
-
-        nextPageTrigger
-            .compactMap { [self] in pagination.next }
-            .bind(to: interactor.requestPageData)
             .disposed(by: disposeBag)
 
         viewModel.collectionViewDidSelectItem
@@ -115,14 +99,28 @@ class CharactersPresenter: CharactersViewModelProvider {
             .bind(to: interactor.requestImageData)
             .disposed(by: disposeBag)
 
+        viewModel.rightBarButtonItemTap
+            .map { [self] in (filterCallBack, filterParams) }
+            .bind(to: router.showFilter)
+            .disposed(by: disposeBag)
+
+        nextPageTrigger
+            .compactMap { [self] in pagination.next }
+            .bind(to: interactor.requestPageData)
+            .disposed(by: disposeBag)
+
         interactor.responseImageData
             .subscribe { [self] index, image in
                 updateCharacterCollectionViewModel(row: index, with: image)
             }.disposed(by: disposeBag)
 
-        viewModel.rightBarButtonItemTap
-            .map { [self] in (filterCallBack, filterParams) }
-            .bind(to: router.showFilter)
+        interactor.responsePageData
+            .subscribe(onNext: { [self] result in
+                if case let .success(data) = result {
+                    pagination = data.info
+                    updateWithDataFromNextPage(data.results)
+                }
+            })
             .disposed(by: disposeBag)
 
         filterCallBack

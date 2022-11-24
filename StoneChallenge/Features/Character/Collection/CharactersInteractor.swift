@@ -12,15 +12,15 @@ import UIKit
 
 class CharactersInteractor {
 
-    typealias PageURL = String
-    typealias Position = Int
+    public typealias PageURL = String
+    public typealias Position = Int
 
     // MARK: - SUBJECTS
-    let requestPageData = PublishRelay<PageURL>()
-    let responsePageData = PublishRelay<Result<DataInfo<Character>, Error>>()
+    public let requestPageData = PublishRelay<PageURL>()
+    public let responsePageData = PublishRelay<Result<DataInfo<Character>, Error>>()
 
-    let requestImageData = PublishRelay<(Position, PageURL)>()
-    let responseImageData = PublishRelay<(Position, UIImage)>()
+    public let requestImageData = PublishRelay<(Position, PageURL)>()
+    public let responseImageData = PublishRelay<(Position, UIImage)>()
 
     // MARK: - PRIVATE PROPERTIES
     private let disposeBag = DisposeBag()
@@ -47,11 +47,7 @@ class CharactersInteractor {
     private func fetchImage(byString urlString: String, index: Int) {
         guard let url = NSURL(string: urlString) else { return }
         cache.load(url: url) { [self] image in
-            if let image = image {
-                return responseImageData.accept((index, image))
-            } else {
-                return responseImageData.accept((index, cache.placeholderImage))
-            }
+            return responseImageData.accept((index, image ?? cache.placeholderImage))
         }
     }
 

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_StoneChallengeTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_StoneChallengeTestsVersionString[];
+FOUNDATION_EXPORT double Pods_StoneChallenge_StoneChallengeTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_StoneChallenge_StoneChallengeTestsVersionString[];
 

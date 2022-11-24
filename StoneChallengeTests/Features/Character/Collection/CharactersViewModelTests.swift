@@ -6,29 +6,29 @@
 //
 
 import XCTest
-import RxRelay
+import RxSwift
+
 @testable import StoneChallenge
 
 class CharactersViewModelTests: XCTestCase {
 
-    func testCharactersViewModelInitialization() throws {
+    func test_characters_viewModel_init() throws {
 
-        let cellViewModels: BehaviorRelay<[CharacterCollectionViewModel]> = .init(value: [])
+        let cellViewModels: [CharacterCollectionViewModel] = []
         let navigationLogoImage: UIImage = .init()
         let backgroundColor: UIColor = .green
         let rightBarButtonItemTitle: String = .init()
 
         let viewModel = CharactersViewModel(
-            cellViewModels: cellViewModels.value,
+            cellViewModels: cellViewModels,
             navigationLogoImage: navigationLogoImage,
             backgroundColor: backgroundColor,
             rightBarButtonItemTitle: rightBarButtonItemTitle
         )
 
-//        XCTAssertEqual(viewModel.cellViewModels.value, cellViewModels.value)
+        XCTAssertEqual(viewModel.cellViewModels.value, cellViewModels)
         XCTAssertEqual(viewModel.navigationLogoImage, navigationLogoImage)
         XCTAssertEqual(viewModel.backgroundColor, backgroundColor)
         XCTAssertEqual(viewModel.rightBarButtonItemTitle, rightBarButtonItemTitle)
     }
-
 }

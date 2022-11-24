@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CharactersWebService: WebService<DataInfo<Character>> {
+public class CharactersWebService: WebService<DataInfo<Character>> {
 
     private let characterUrlString = "https://rickandmortyapi.com/api/character"
 
@@ -55,4 +55,6 @@ class CharactersWebService: WebService<DataInfo<Character>> {
             completion(result)
         }
     }
+
+    public override init() {}
 }
