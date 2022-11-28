@@ -10,10 +10,6 @@ import XCTest
 
 class CharacterViewControllerTests: XCTestCase {
 
-    func test_character_viewController() throws {
-        #warning("test_character_viewController")
-    }
-
     func test_character_viewController_coder_init() throws {
         XCTAssertNil(CharacterViewController(coder: NSCoder()))
     }

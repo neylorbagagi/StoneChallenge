@@ -20,7 +20,6 @@ class CharactersInteractorTests: XCTestCase {
 
         // Arrange
         let webService: CharactersWebServiceStub = .init()
-        let cache: ImageCache = .init()
         let cache: ImageCacheStub = .init()
 
         // Act
