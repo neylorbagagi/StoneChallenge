@@ -37,7 +37,7 @@ class FilterViewController: UIViewController {
     }()
 
     private lazy var segmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: viewModel.segmentedControlItemsText)
+        let segmentedControl = UISegmentedControl(items: viewModel.segmentOptionListText)
         segmentedControl.selectedSegmentIndex = viewModel.segmentSelectedIndex
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         segmentedControl.selectedSegmentTintColor = #colorLiteral(red: 0.7412293553, green: 1, blue: 0.631372549, alpha: 1)

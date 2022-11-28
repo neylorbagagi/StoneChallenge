@@ -10,9 +10,11 @@ import UIKit
 
 class CharacterRouter {
 
+    let viewControllerFactory: UserDependencyContainer
     let navigationController: UINavigationController
 
-     init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+     init(viewControllerFactory: UserDependencyContainer) {
+        self.viewControllerFactory = viewControllerFactory
+        self.navigationController = viewControllerFactory.navigationController
     }
 }

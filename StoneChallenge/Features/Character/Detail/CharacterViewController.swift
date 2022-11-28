@@ -120,7 +120,9 @@ struct CharacterViewController_Previews: PreviewProvider {
                     interactor: CharacterInteractor(
                         cache: ImageCache()
                     ),
-                    router: CharacterRouter(navigationController: UINavigationController()),
+                    router: CharacterRouter(
+                        viewControllerFactory: UserDependencyContainer()
+                    ),
                     character: Character(
                         id: 2,
                         name: "Morty Smith",

@@ -26,11 +26,11 @@ class CharactersInteractor {
     private let disposeBag = DisposeBag()
 
     // MARK: - INJECTED PROPERTIES
-    let webService: CharactersWebService
+    let webService: CharactersWebServiceType
     let cache: ImageCache
 
     // MARK: - CONSTRUCTORS
-    init(webService: CharactersWebService,
+    init(webService: CharactersWebServiceType,
          cache: ImageCache) {
         self.webService = webService
         self.cache = cache

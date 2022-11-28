@@ -20,7 +20,7 @@ class CharactersPresenter: CharactersViewModelProvider {
     lazy var viewModel: CharactersViewModel = {
         var viewModel = CharactersViewModel(
             cellViewModels: cellViewModels(characterList),
-            navigationLogoImage: navigationLogoImage(),
+            navigationLogoImage: UIImage(named: "logo") ?? UIImage(),
             backgroundColor: .white,
             rightBarButtonItemTitle: NSLocalizedString(
                 "characters_view_controller_rightBarButtonItem_title",
@@ -72,10 +72,6 @@ class CharactersPresenter: CharactersViewModelProvider {
     private func updateCharacterCollectionViewModel(row: Int, with image: UIImage) {
         let cellViewModel = viewModel.cellViewModels.value[row]
         cellViewModel.image.accept(image)
-    }
-
-    private func navigationLogoImage() -> UIImage {
-        UIImage(named: "logo") ?? UIImage()
     }
 
     // MARK: - BIND

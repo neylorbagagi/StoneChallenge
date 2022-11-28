@@ -7,9 +7,23 @@
 
 import Foundation
 
-public class CharactersWebService: WebService<DataInfo<Character>> {
+protocol CharactersWebServiceType {
+    var characterUrlString: String { get }
 
-    private let characterUrlString = "https://rickandmortyapi.com/api/character"
+    func getCharacters(
+        byPage urlString: String,
+        completion: @escaping (Result<DataInfo<Character>, Error>
+    ) -> Void)
+
+    func getCharacters(
+        parameters params: [APIParameters],
+        completion: @escaping (Result<DataInfo<Character>, Error>
+    ) -> Void)
+}
+
+public class CharactersWebService: WebService<DataInfo<Character>>, CharactersWebServiceType {
+
+    public let characterUrlString = "https://rickandmortyapi.com/api/character"
 
     /// Get all characters, you can access the list of characters by using the /character endpoint.
     /// - Parameters:

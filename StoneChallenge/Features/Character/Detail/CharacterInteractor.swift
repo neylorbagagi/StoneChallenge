@@ -22,10 +22,10 @@ class CharacterInteractor {
     let responseImageData = PublishSubject<UIImage>()
 
     // MARK: - INJECTED PROPERTIES
-    let cache: ImageCache
+    let cache: ImageCacheProtocol
 
     // MARK: - CONSTRUCTORS
-    init(cache: ImageCache) {
+    init(cache: ImageCacheProtocol) {
         self.cache = cache
         bind()
     }

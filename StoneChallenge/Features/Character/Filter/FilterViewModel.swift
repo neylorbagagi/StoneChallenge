@@ -24,7 +24,7 @@ class FilterViewModel {
     let textFieldText: String?
 
     let segmentedControlPrompt: String
-    let segmentedControlItemsText: [String]
+    let segmentOptionListText: [String]
     let segmentSelectedIndex: Int
 
     let applyFilterButtonTitle: String
@@ -57,7 +57,7 @@ class FilterViewModel {
         self.textFieldText = textFieldText
 
         self.segmentedControlPrompt = segmentedControlPrompt
-        self.segmentedControlItemsText = segmentOptionListText
+        self.segmentOptionListText = segmentOptionListText
         self.segmentSelectedIndex = segmentSelectedIndex
 
         self.applyFilterButtonTitle = applyFilterButtonTitle

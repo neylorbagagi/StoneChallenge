@@ -9,6 +9,7 @@ import XCTest
 import RxSwift
 import RxTest
 import RxRelay
+
 @testable import StoneChallenge
 
 class CharactersInteractorTests: XCTestCase {
@@ -18,7 +19,7 @@ class CharactersInteractorTests: XCTestCase {
     func test_characters_interactor() throws {
 
         // Arrange
-        let webService: CharactersWebService = .init()
+        let webService: CharactersWebServiceStub = .init()
         let cache: ImageCache = .init()
 
         // Act
@@ -28,8 +29,8 @@ class CharactersInteractorTests: XCTestCase {
         )
 
         // Assert
-        XCTAssert(interactor.webService === CharactersWebService.self)
-        XCTAssert(interactor.cache === ImageCache.self)
+        XCTAssert(interactor.webService is CharactersWebServiceType)
+        XCTAssert(interactor.cache === cache.self)
     }
 
     func test_requestPageData() throws {
@@ -37,7 +38,7 @@ class CharactersInteractorTests: XCTestCase {
         // Arrange
         let scheduler = TestScheduler(initialClock: 0)
 
-        let webService: CharactersWebService = .init()
+        let webService: CharactersWebServiceStub = .init()
         let cache: ImageCache = .init()
 
         let interactor = CharactersInteractor(
@@ -49,15 +50,7 @@ class CharactersInteractorTests: XCTestCase {
 
             // Arrange
             let monitor = scheduler.createObserver(Result<DataInfo<Character>, Error>.self)
-
-            scheduler.createColdObservable([
-                .init(
-                    time: 0,
-                    value: .next(
-                        PublishRelay<Result<DataInfo<Character>, Error>>.just(.success(DataInfo.mock()))
-                    )
-                )
-            ])
+            webService.response = .success(DataInfo<Character>.mock())
 
             // Act
             interactor.responsePageData
@@ -66,25 +59,39 @@ class CharactersInteractorTests: XCTestCase {
 
             interactor.requestPageData.accept(String())
 
-            scheduler.start()
-            // Assert
-            XCTAssertEqual(monitor.events.count, 1)
+            let monitorResponse = monitor.events.first?.value.element
+            switch monitorResponse {
+            case .failure:
+                XCTFail("XCTFail")
+            case .success:
+                XCTAssertTrue(true)
+            case .none:
+                XCTFail("XCTFail")
+            }
         }
 
-        XCTContext.runActivity(named: "failure with valid url") { _ -> Void in
+        XCTContext.runActivity(named: "failure with invalid url") { _ -> Void in
 
             // Arrange
             let monitor = scheduler.createObserver(Result<DataInfo<Character>, Error>.self)
+            webService.response = .failure(NSError.init())
 
             // Act
             interactor.responsePageData
                 .bind(to: monitor)
                 .disposed(by: disposeBag)
 
-            interactor.requestPageData.accept("google.com")
+            interactor.requestPageData.accept(String())
 
-            // Assert
-            XCTAssertEqual(monitor.events.count, 0)
+            let monitorResponse = monitor.events.first?.value.element
+            switch monitorResponse {
+            case .failure:
+                XCTAssertTrue(true)
+            case .success:
+                XCTFail("XCTFail")
+            case .none:
+                XCTFail("XCTFail")
+            }
         }
     }
 }
