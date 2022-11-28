@@ -60,7 +60,6 @@ class CharacterViewController: UIViewController {
             .bind(to: imageView.rx.image)
             .disposed(by: disposeBag)
 
-        // TODO: Have to kill this one
         NotificationCenter.default.rx
             .notification(UIDevice.orientationDidChangeNotification)
             .observe(on: MainScheduler.instance)

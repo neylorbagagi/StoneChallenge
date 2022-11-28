@@ -52,7 +52,7 @@ class CharactersRouterTests: XCTestCase {
         )
 
         // Act
-        router.showFilter.accept((PublishSubject<FilterCallBack>.init(),[]))
+        router.showFilter.accept((PublishSubject<FilterCallBack>.init(), []))
 
         // Assert
         XCTAssert(router.navigationController.topViewController is FilterViewController)

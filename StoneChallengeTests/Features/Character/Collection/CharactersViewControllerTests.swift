@@ -10,27 +10,6 @@ import XCTest
 
 class CharactersViewControllerTests: XCTestCase {
 
-    // TODO: Fix this one
-//    func test_characters_viewController_init() throws {
-//
-//        let viewModelProvider = CharactersPresenter(
-//            interactor: CharactersInteractor(
-//                webService: CharactersWebService(),
-//                cache: ImageCache()
-//            ),
-//            router: CharactersRouter(
-//                viewControllerFactory: UserDependencyContainer()
-//            ),
-//            characterList: []
-//        )
-//
-//        let viewController = CharactersViewController(
-//            viewModelProvider: viewModelProvider
-//        )
-//
-//        XCTAssert(viewController.viewModelProvider.self === CharactersViewModelProvider)
-//    }
-
     func test_characters_viewController_coder_init() throws {
         XCTAssertNil(CharactersViewController(coder: NSCoder()))
     }

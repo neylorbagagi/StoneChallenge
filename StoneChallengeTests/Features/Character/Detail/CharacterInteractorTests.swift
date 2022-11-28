@@ -27,7 +27,7 @@ class CharacterInteractorTests: XCTestCase {
         )
 
         // Assert
-        XCTAssert(interactor.cache is ImageCacheProtocol)
+        XCTAssertNotNil(interactor.cache as? ImageCacheStub)
     }
 
     func test_requestImageData() throws {

@@ -21,6 +21,7 @@ class CharactersInteractorTests: XCTestCase {
         // Arrange
         let webService: CharactersWebServiceStub = .init()
         let cache: ImageCache = .init()
+        let cache: ImageCacheStub = .init()
 
         // Act
         let interactor = CharactersInteractor(
@@ -29,8 +30,8 @@ class CharactersInteractorTests: XCTestCase {
         )
 
         // Assert
-        XCTAssert(interactor.webService is CharactersWebServiceType)
-        XCTAssert(interactor.cache is ImageCacheProtocol)
+        XCTAssertNotNil(interactor.webService as? CharactersWebServiceStub)
+        XCTAssertNotNil(interactor.cache as? ImageCacheStub)
     }
 
     func test_requestPageData() throws {

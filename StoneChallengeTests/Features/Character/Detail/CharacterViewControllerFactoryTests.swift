@@ -34,6 +34,6 @@ class CharacterViewControllerFactoryTests: XCTestCase {
         XCTAssertEqual(router.navigationController, factory.navigationController)
 
         let interactor = presenter.interactor
-        XCTAssert(interactor.cache is ImageCacheProtocol)
+        XCTAssertNotNil(interactor.cache as? ImageCache)
     }
 }

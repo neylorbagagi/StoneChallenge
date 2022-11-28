@@ -32,7 +32,7 @@ class CharactersViewControllerFactoryTests: XCTestCase {
         XCTAssertEqual(router.navigationController, factory.navigationController)
 
         let interactor = presenter.interactor
-        XCTAssert(interactor.webService is CharactersWebServiceType)
-        XCTAssert(interactor.cache is ImageCacheProtocol)
+        XCTAssertNotNil(interactor.webService as? CharactersWebService)
+        XCTAssertNotNil(interactor.cache as? ImageCache)
     }
 }
