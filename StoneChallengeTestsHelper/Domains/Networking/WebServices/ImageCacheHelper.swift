@@ -9,19 +9,22 @@ import Foundation
 import UIKit
 @testable import StoneChallenge
 
-class ImageCacheStub: ImageCacheProtocol {
+// TODO: Make TestsHelper as target to evoid make it public
+public class ImageCacheStub: ImageCacheProtocol {
 
     var response: UIImage?
 
-    var cachedImages = NSCache<NSURL, UIImage>()
+    public var cachedImages = NSCache<NSURL, UIImage>()
 
-    var placeholderImage: UIImage = UIImage(named: "image_not_found")!
+    public var placeholderImage: UIImage = UIImage(named: "image_not_found")!
 
-    func image(url: NSURL) -> UIImage? {
+    public func image(url: NSURL) -> UIImage? {
         return response
     }
 
-    func load(url: NSURL, completion: @escaping (UIImage?) -> Void) {
+    public func load(url: NSURL, completion: @escaping (UIImage?) -> Void) {
         completion(response)
     }
+
+    public init() {}
 }

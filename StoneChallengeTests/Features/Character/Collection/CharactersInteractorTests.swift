@@ -30,7 +30,7 @@ class CharactersInteractorTests: XCTestCase {
 
         // Assert
         XCTAssert(interactor.webService is CharactersWebServiceType)
-        XCTAssert(interactor.cache === cache.self)
+        XCTAssert(interactor.cache is ImageCacheProtocol)
     }
 
     func test_requestPageData() throws {

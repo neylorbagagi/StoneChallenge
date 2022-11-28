@@ -10,8 +10,8 @@ import Foundation
 
 extension CharactersInteractor {
     public static func mock(
-        webService: CharactersWebService = CharactersWebService(),
-        cache: ImageCache = ImageCache()
+        webService: CharactersWebServiceType = CharactersWebServiceStub(),
+        cache: ImageCacheProtocol = ImageCache()
     ) -> CharactersInteractor {
         .init(webService: webService, cache: cache)
     }

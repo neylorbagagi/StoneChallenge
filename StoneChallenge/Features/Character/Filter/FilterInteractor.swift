@@ -19,10 +19,10 @@ class FilterInteractor {
     let responseFilterData = PublishRelay<Result<DataInfo<Character>, Error>>()
 
     // MARK: - INJECTED PROPERTIES
-    let webService: CharactersWebService
+    let webService: CharactersWebServiceType
 
     // MARK: - CONSTRUCTORS
-    init(webService: CharactersWebService) {
+    init(webService: CharactersWebServiceType) {
         self.webService = webService
         bind()
     }

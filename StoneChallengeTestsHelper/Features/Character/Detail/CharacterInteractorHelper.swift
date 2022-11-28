@@ -10,7 +10,7 @@ import Foundation
 
 extension CharacterInteractor {
     public static func mock(
-        cache: ImageCache = ImageCache()
+        cache: ImageCacheProtocol = ImageCacheStub()
     ) -> CharacterInteractor {
         .init(cache: cache)
     }

@@ -69,6 +69,7 @@
 		F09C2EC6293159990063B2AC /* CharacterViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09C2EC5293159990063B2AC /* CharacterViewControllerFactoryTests.swift */; };
 		F09C2ECB29315C3F0063B2AC /* FilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09C2ECA29315C3F0063B2AC /* FilterViewModelTests.swift */; };
 		F09C2ED129315E8C0063B2AC /* FilterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09C2ED029315E8C0063B2AC /* FilterViewControllerTests.swift */; };
+		F09C2EE92934DC4C0063B2AC /* CharacterViewControllerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09C2EE82934DC4C0063B2AC /* CharacterViewControllerSnapshot.swift */; };
 		F0A078B2292D3601009FBED2 /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F077376B292AC68100A6D0F7 /* CharactersViewModelTests.swift */; };
 		F0C35B7F29245CE100F85183 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35B7E29245CE100F85183 /* DependencyContainer.swift */; };
 		F0C35BD7292801F300F85183 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BD6292801F300F85183 /* CharacterViewController.swift */; };
@@ -78,6 +79,11 @@
 		F0C35BEE292806C200F85183 /* CharacterViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BED292806C200F85183 /* CharacterViewControllerFactory.swift */; };
 		F0C35BFB29282F8000F85183 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35BCB2927FFBC00F85183 /* CharacterViewModel.swift */; };
 		F0C35C012928345C00F85183 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C35C002928345C00F85183 /* ImageCache.swift */; };
+		F0C9C3372935020E00F492C9 /* CharactersViewControllerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9C3362935020E00F492C9 /* CharactersViewControllerSnapshot.swift */; };
+		F0C9C33B2935056600F492C9 /* FilterViewControllerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9C33A2935056500F492C9 /* FilterViewControllerSnapshot.swift */; };
+		F0C9C3472935097B00F492C9 /* FilterPresenterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9C33F2935092600F492C9 /* FilterPresenterHelper.swift */; };
+		F0C9C34B29350ABF00F492C9 /* FilterInteractorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9C34A29350ABF00F492C9 /* FilterInteractorHelper.swift */; };
+		F0C9C34F29350CD600F492C9 /* FilterRouterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9C34E29350CD600F492C9 /* FilterRouterHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +191,7 @@
 		F09C2EC5293159990063B2AC /* CharacterViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewControllerFactoryTests.swift; sourceTree = "<group>"; };
 		F09C2ECA29315C3F0063B2AC /* FilterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModelTests.swift; sourceTree = "<group>"; };
 		F09C2ED029315E8C0063B2AC /* FilterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewControllerTests.swift; sourceTree = "<group>"; };
+		F09C2EE82934DC4C0063B2AC /* CharacterViewControllerSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewControllerSnapshot.swift; sourceTree = "<group>"; };
 		F0C35B7E29245CE100F85183 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		F0C35BCB2927FFBC00F85183 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		F0C35BD6292801F300F85183 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +200,11 @@
 		F0C35BE8292806A300F85183 /* CharacterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRouter.swift; sourceTree = "<group>"; };
 		F0C35BED292806C200F85183 /* CharacterViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewControllerFactory.swift; sourceTree = "<group>"; };
 		F0C35C002928345C00F85183 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F0C9C3362935020E00F492C9 /* CharactersViewControllerSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewControllerSnapshot.swift; sourceTree = "<group>"; };
+		F0C9C33A2935056500F492C9 /* FilterViewControllerSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewControllerSnapshot.swift; sourceTree = "<group>"; };
+		F0C9C33F2935092600F492C9 /* FilterPresenterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenterHelper.swift; sourceTree = "<group>"; };
+		F0C9C34A29350ABF00F492C9 /* FilterInteractorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractorHelper.swift; sourceTree = "<group>"; };
+		F0C9C34E29350CD600F492C9 /* FilterRouterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouterHelper.swift; sourceTree = "<group>"; };
 		F4CE04CE0D2F61B569FE92F0 /* Pods-StoneChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoneChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-StoneChallengeTests/Pods-StoneChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -341,6 +353,7 @@
 			children = (
 				F06D4047292E5C940008C5D8 /* Collection */,
 				F09C2EA129312F0F0063B2AC /* Detail */,
+				F0C9C33E2935086700F492C9 /* Filter */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -426,6 +439,7 @@
 				F06D4070292E9C5F0008C5D8 /* CharactersInteractorTests.swift */,
 				F06D40A02930F8950008C5D8 /* CharactersRouterTests.swift */,
 				F09C2E8E29311E720063B2AC /* charactersViewControllerFactoryTests.swift */,
+				F0C9C3362935020E00F492C9 /* CharactersViewControllerSnapshot.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -566,6 +580,7 @@
 				F09C2EB92931377D0063B2AC /* CharacterInteractorTests.swift */,
 				F09C2EC1293156DF0063B2AC /* CharacterRouterTests.swift */,
 				F09C2EC5293159990063B2AC /* CharacterViewControllerFactoryTests.swift */,
+				F09C2EE82934DC4C0063B2AC /* CharacterViewControllerSnapshot.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -585,6 +600,7 @@
 			children = (
 				F09C2ECA29315C3F0063B2AC /* FilterViewModelTests.swift */,
 				F09C2ED029315E8C0063B2AC /* FilterViewControllerTests.swift */,
+				F0C9C33A2935056500F492C9 /* FilterViewControllerSnapshot.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -614,6 +630,16 @@
 				F0C35BED292806C200F85183 /* CharacterViewControllerFactory.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		F0C9C33E2935086700F492C9 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				F0C9C33F2935092600F492C9 /* FilterPresenterHelper.swift */,
+				F0C9C34A29350ABF00F492C9 /* FilterInteractorHelper.swift */,
+				F0C9C34E29350CD600F492C9 /* FilterRouterHelper.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -696,6 +722,7 @@
 					};
 					F08EAFDF2922B3DB00DB049F = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = F08EAFBE2922B3D800DB049F;
 					};
 				};
@@ -905,17 +932,23 @@
 				F06D4060292E809A0008C5D8 /* CharactersRouterHelper.swift in Sources */,
 				F06D4084292ED2290008C5D8 /* CharactersPresenterTests.swift in Sources */,
 				F09C2EBE29314C420063B2AC /* ImageCacheHelper.swift in Sources */,
+				F09C2EE92934DC4C0063B2AC /* CharacterViewControllerSnapshot.swift in Sources */,
 				F06D4041292E5A070008C5D8 /* CharacterCollectionViewModelHelper.swift in Sources */,
 				F06D408A292EEEA90008C5D8 /* DataInfoHelper.swift in Sources */,
 				F06D404C292E622E0008C5D8 /* CharactersViewControllerTests.swift in Sources */,
 				F09C2E9429312A960063B2AC /* CharacterViewModelTests.swift in Sources */,
 				F09C2EB6293132100063B2AC /* CharacterPresenterHelper.swift in Sources */,
+				F0C9C33B2935056600F492C9 /* FilterViewControllerSnapshot.swift in Sources */,
+				F0C9C3372935020E00F492C9 /* CharactersViewControllerSnapshot.swift in Sources */,
 				F09C2EB32931320C0063B2AC /* CharacterInteractorHelper.swift in Sources */,
 				F09C2E9E29312DBC0063B2AC /* CharacterPresenterTests.swift in Sources */,
+				F0C9C3472935097B00F492C9 /* FilterPresenterHelper.swift in Sources */,
 				F06D4069292E90830008C5D8 /* CharacterHelper.swift in Sources */,
+				F0C9C34F29350CD600F492C9 /* FilterRouterHelper.swift in Sources */,
 				F09C2ECB29315C3F0063B2AC /* FilterViewModelTests.swift in Sources */,
 				F09C2EC6293159990063B2AC /* CharacterViewControllerFactoryTests.swift in Sources */,
 				F09C2EBA2931377D0063B2AC /* CharacterInteractorTests.swift in Sources */,
+				F0C9C34B29350ABF00F492C9 /* FilterInteractorHelper.swift in Sources */,
 				F06D4071292E9C5F0008C5D8 /* CharactersInteractorTests.swift in Sources */,
 				F09C2EC2293156DF0063B2AC /* CharacterRouterTests.swift in Sources */,
 				F09C2E9A29312CA50063B2AC /* CharacterViewControllerTests.swift in Sources */,
@@ -1166,6 +1199,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDU3U6PS84;
 				INFOPLIST_FILE = StoneChallengeUITests/Info.plist;
@@ -1177,6 +1211,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nu.cya.StoneChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = StoneChallenge;
@@ -1187,6 +1222,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDU3U6PS84;
 				INFOPLIST_FILE = StoneChallengeUITests/Info.plist;

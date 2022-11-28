@@ -27,11 +27,11 @@ class CharactersInteractor {
 
     // MARK: - INJECTED PROPERTIES
     let webService: CharactersWebServiceType
-    let cache: ImageCache
+    let cache: ImageCacheProtocol
 
     // MARK: - CONSTRUCTORS
     init(webService: CharactersWebServiceType,
-         cache: ImageCache) {
+         cache: ImageCacheProtocol) {
         self.webService = webService
         self.cache = cache
         bind()
