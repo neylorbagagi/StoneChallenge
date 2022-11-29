@@ -13,8 +13,8 @@ This option works perfectly with protocols and makes tests easy and scalable, de
 ### Networking
 
 #### Image and Request cache
-For concepts demonstration, I do make the option to use only native classes to manage ***REST*** requests and callbacks ***cache***. 
-Native request
+For concepts demonstration, I do make the option to use only native classes to manage ***REST*** requests and callbacks ***cache*** 
+[Native request](https://developer.apple.com/documentation/foundation/url_loading_system/accessing_cached_data).
 
 ---
 ### Reactive Programming
