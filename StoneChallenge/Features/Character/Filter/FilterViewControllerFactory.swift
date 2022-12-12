@@ -12,14 +12,14 @@ import RxSwift
 protocol FilterViewControllerFactoryProtocol {
     func filterViewControllerFactory(
         filterCallBack: PublishSubject<FilterCallBack>,
-        filterParameters: [APIParameters]?
+        filterParameters: [APIParameter]?
     ) -> UIViewController
 }
 
 extension UserDependencyContainer: FilterViewControllerFactoryProtocol {
     func filterViewControllerFactory(
         filterCallBack: PublishSubject<FilterCallBack>,
-        filterParameters: [APIParameters]?
+        filterParameters: [APIParameter]?
     ) -> UIViewController {
 
         let router = FilterRouter(viewControllerFactory: self)

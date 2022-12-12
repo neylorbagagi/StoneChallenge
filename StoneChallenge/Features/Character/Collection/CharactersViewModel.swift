@@ -9,7 +9,7 @@ import Foundation
 import RxRelay
 import UIKit
 
-protocol CharactersViewModelProvider {
+protocol CharactersViewModelProvider: AnyObject {
     var viewModel: CharactersViewModel { get }
 }
 

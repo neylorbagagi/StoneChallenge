@@ -10,7 +10,23 @@ import XCTest
 
 class CharactersViewControllerTests: XCTestCase {
 
-    func test_characters_viewController_coder_init() throws {
+    func testCharactersViewControllerInit() throws {
+
+        // Arrange
+        let presenter: CharactersPresenter = .mock()
+
+        // Act
+        let viewController = CharactersViewController(
+            viewModelProvider: presenter
+        )
+
+        // Assert
+        XCTAssert(viewController.viewModelProvider === presenter)
+        XCTAssert(viewController.viewModel === presenter.viewModel)
+    }
+
+    func testCharactersViewControllerCoderInit() throws {
+        // Assert
         XCTAssertNil(CharactersViewController(coder: NSCoder()))
     }
 }

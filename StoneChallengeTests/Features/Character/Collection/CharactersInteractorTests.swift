@@ -19,8 +19,8 @@ class CharactersInteractorTests: XCTestCase {
     func test_characters_interactor() throws {
 
         // Arrange
-        let webService: CharactersWebServiceStub = .init()
-        let cache: ImageCacheStub = .init()
+        let webService: CharactersWebService = .init()
+        let cache: ImageCache = .init()
 
         // Act
         let interactor = CharactersInteractor(
@@ -29,8 +29,8 @@ class CharactersInteractorTests: XCTestCase {
         )
 
         // Assert
-        XCTAssertNotNil(interactor.webService as? CharactersWebServiceStub)
-        XCTAssertNotNil(interactor.cache as? ImageCacheStub)
+        XCTAssert(interactor.webService === webService)
+        XCTAssert(interactor.cache === cache)
     }
 
     func test_requestPageData() throws {
@@ -68,6 +68,8 @@ class CharactersInteractorTests: XCTestCase {
             case .none:
                 XCTFail("XCTFail")
             }
+
+            //TODO: XCTAssertEqual(monitor.events.first?.value, webService.response)
         }
 
         XCTContext.runActivity(named: "failure with invalid url") { _ -> Void in

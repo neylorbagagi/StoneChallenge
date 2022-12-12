@@ -34,8 +34,8 @@ class FilterViewModel {
 
     // MARK: - EVENTS
     let viewDidLoad = PublishRelay<Void>()
-    let applyFilterButtonTap = PublishRelay<[APIParameters]>()
-    let resetFilterButtonTap = PublishRelay<[APIParameters]>()
+    let applyFilterButtonTap = PublishRelay<[APIParameter]>()
+    let resetFilterButtonTap = PublishRelay<[APIParameter]>()
 
     // MARK: - COSNTRUCTORS
     init(title: String,

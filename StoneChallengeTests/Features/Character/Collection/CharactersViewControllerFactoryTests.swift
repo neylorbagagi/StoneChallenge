@@ -1,5 +1,5 @@
 //
-//  charactersViewControllerFactoryTests.swift
+//  CharactersViewControllerFactoryTests.swift
 //  StoneChallengeTests
 //
 //  Created by Neylor Bagagi on 25/11/22.
@@ -33,6 +33,6 @@ class CharactersViewControllerFactoryTests: XCTestCase {
 
         let interactor = presenter.interactor
         XCTAssertNotNil(interactor.webService as? CharactersWebService)
-        XCTAssertNotNil(interactor.cache as? ImageCache)
+        XCTAssert(interactor.cache === factory.imageCache)
     }
 }

@@ -9,5 +9,5 @@ import Foundation
 
 public struct FilterCallBack {
     var data: DataInfo<Character> // TODO: change it to T type
-    var parameters: [APIParameters]?
+    var parameters: [APIParameter]?
 }

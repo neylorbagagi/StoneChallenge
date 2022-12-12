@@ -17,16 +17,19 @@ class CharactersPresenterTests: XCTestCase {
 
     func test_characters_presenter() throws {
 
+        // Arrange
         let interactor: CharactersInteractor = .mock()
         let router: CharactersRouter = .mock()
         let characterList: [Character] = []
 
+        // Act
         let presenter = CharactersPresenter(
             interactor: interactor,
             router: router,
             characterList: characterList
         )
 
+        // Assert
         XCTAssert(presenter.interactor === interactor)
         XCTAssert(presenter.router === router)
         XCTAssertEqual(presenter.characterList, characterList)
@@ -135,7 +138,7 @@ class CharactersPresenterTests: XCTestCase {
         // Arrange
         let scheduler = TestScheduler(initialClock: 0)
         let monitor = scheduler.createObserver(
-            (callback: PublishSubject<FilterCallBack>, params: [APIParameters]?).self
+            (callback: PublishSubject<FilterCallBack>, params: [APIParameter]?).self
         )
 
         let router = CharactersRouter.mock()
@@ -146,7 +149,7 @@ class CharactersPresenterTests: XCTestCase {
         // Act
         router.showFilter
             .map { _ in
-                (PublishSubject<FilterCallBack>(), [APIParameters.name(String())])
+                (PublishSubject<FilterCallBack>(), [APIParameter.name(String())])
             }
             .bind(to: monitor)
             .disposed(by: disposeBag)

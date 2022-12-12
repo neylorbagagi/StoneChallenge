@@ -7,7 +7,14 @@
 
 import Foundation
 
-class CharacterWebService: WebService<Character> {
+protocol CharacterWebServiceType: AnyObject {
+    func getCharacter(
+        byID id: Int,
+        completion: @escaping (Result<Character, Error>) -> Void
+    )
+}
+
+class CharacterWebService: WebService<Character>, CharacterWebServiceType {
 
     func getCharacter(byID id: Int, completion: @escaping (Result<Character, Error>) -> Void) {
 

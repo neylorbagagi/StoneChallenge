@@ -32,7 +32,7 @@ class CharactersPresenter: CharactersViewModelProvider {
 
     // MARK: - PRIVATE PROPERTIES
     private var pagination = DataInfo<Character>.Info(next: "https://rickandmortyapi.com/api/character")
-    private var filterParams: [APIParameters]?
+    private var filterParams: [APIParameter]?
     private let disposeBag = DisposeBag()
 
     // MARK: - INJECTED PROPERTIES

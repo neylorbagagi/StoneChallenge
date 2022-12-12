@@ -15,7 +15,7 @@ class CharactersRouter {
     // MARK: - SUBJECTES
     public let showDetail = PublishRelay<Character>()
     public let showFilter = PublishRelay<(callback: PublishSubject<FilterCallBack>,
-                                          params: [APIParameters]?)>()
+                                          params: [APIParameter]?)>()
 
     // MARK: - PRIVATE PROPERTIES
     private let disposeBag = DisposeBag()
@@ -51,7 +51,7 @@ class CharactersRouter {
     }
 
     private func showFilter(using callBack: PublishSubject<FilterCallBack>,
-                            with parameters: [APIParameters]?) {
+                            with parameters: [APIParameter]?) {
         let viewController = viewControllerFactory.filterViewControllerFactory(
             filterCallBack: callBack,
             filterParameters: parameters

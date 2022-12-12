@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxRelay
 
-protocol CharacterViewModelProvider {
+protocol CharacterViewModelProvider: AnyObject {
     var viewModel: CharacterViewModel { get }
 }
 

@@ -1,5 +1,5 @@
 //
-//  APIParameters.swift
+//  APIParameter.swift
 //  StoneChallange
 //
 //  Created by Neylor Bagagi on 19/11/22.
@@ -7,22 +7,23 @@
 
 import Foundation
 
-public enum APIParameters: CaseIterable {
+public enum APIParameter: CaseIterable {
 
-    public static var allCases: [APIParameters] {
-        return [.name(nil),
-                .status(nil),
-                .species(nil),
-                .type(nil),
-                .gender(nil)
+    public static var allCases: [APIParameter] {
+        return [
+            .name(nil),
+            .status(nil),
+            .species(nil),
+            .type(nil),
+            .gender(nil)
         ]
     }
 
     case name(String?)
-    case status(APIParameters.Status?)
+    case status(APIParameter.Status?)
     case species(String?)
     case type(String?)
-    case gender(APIParameters.Gender?)
+    case gender(APIParameter.Gender?)
 
     func describe() -> String {
         switch self {
@@ -54,7 +55,7 @@ public enum APIParameters: CaseIterable {
         }
     }
 
-    static func withLabel(_ label: String) -> APIParameters? {
+    static func withLabel(_ label: String) -> APIParameter? {
         return self.allCases.first { "\(String(describing: $0.getValue()))" == label }
     }
 }

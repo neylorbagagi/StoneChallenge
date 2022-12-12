@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension APIParameters {
+extension APIParameter {
 
     public enum Status: String, CaseIterable {
         case alive

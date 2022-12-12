@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-public protocol ImageCacheProtocol {
+public protocol ImageCacheProtocol: AnyObject {
     var cachedImages: NSCache<NSURL, UIImage> { get }
     var placeholderImage: UIImage { get }
 

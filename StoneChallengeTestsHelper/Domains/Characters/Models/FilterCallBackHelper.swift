@@ -12,7 +12,7 @@ extension FilterCallBack {
 
     public static func mock(
         data: DataInfo<Character> = .mock(), // TODO: change it to T
-        parameters: [APIParameters]? = .init()
+        parameters: [APIParameter]? = .init()
     ) -> FilterCallBack {
         .init(data: data, parameters: parameters)
     }

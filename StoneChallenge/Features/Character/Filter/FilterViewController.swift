@@ -149,14 +149,14 @@ class FilterViewController: UIViewController {
 
         applyFilterButton.rx.tap
             .subscribe { [self] _ in
-                var param: [APIParameters] = []
+                var param: [APIParameter] = []
 
                 if let text = textField.text {
-                    param.append(APIParameters.name(text))
+                    param.append(APIParameter.name(text))
                 }
 
                 if let label = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex) {
-                    let paramStatus = APIParameters.status(APIParameters.Status(rawValue: label))
+                    let paramStatus = APIParameter.status(APIParameter.Status(rawValue: label))
                     param.append(paramStatus)
                 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CharactersWebServiceType {
+protocol CharactersWebServiceType: AnyObject {
     var characterUrlString: String { get }
 
     func getCharacters(
@@ -16,7 +16,7 @@ protocol CharactersWebServiceType {
     ) -> Void)
 
     func getCharacters(
-        parameters params: [APIParameters],
+        parameters params: [APIParameter],
         completion: @escaping (Result<DataInfo<Character>, Error>
     ) -> Void)
 }
@@ -48,7 +48,7 @@ public class CharactersWebService: WebService<DataInfo<Character>>, CharactersWe
     /// - Parameters:
     ///   - params: [APIParameters]
     ///   - completion: Result<DataInfo<Character>, Error>
-    func getCharacters(parameters params: [APIParameters],
+    func getCharacters(parameters params: [APIParameter],
                        completion: @escaping (Result<DataInfo<Character>, Error>) -> Void) {
 
         guard var urlComponents = URLComponents(string: characterUrlString) else {

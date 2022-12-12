@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension APIParameters {
+extension APIParameter {
 
     public enum Gender: String, CaseIterable {
         case female

@@ -12,13 +12,15 @@ import RxSwift
 
 class CharactersViewModelTests: XCTestCase {
 
-    func test_characters_viewModel_init() throws {
+    func testCharactersViewModelInit() throws {
 
+        // Arrange
         let cellViewModels: [CharacterCollectionViewModel] = []
         let navigationLogoImage: UIImage = .init()
         let backgroundColor: UIColor = .green
         let rightBarButtonItemTitle: String = .init()
 
+        // Act
         let viewModel = CharactersViewModel(
             cellViewModels: cellViewModels,
             navigationLogoImage: navigationLogoImage,
@@ -26,6 +28,7 @@ class CharactersViewModelTests: XCTestCase {
             rightBarButtonItemTitle: rightBarButtonItemTitle
         )
 
+        // Assert
         XCTAssertEqual(viewModel.cellViewModels.value, cellViewModels)
         XCTAssertEqual(viewModel.navigationLogoImage, navigationLogoImage)
         XCTAssertEqual(viewModel.backgroundColor, backgroundColor)

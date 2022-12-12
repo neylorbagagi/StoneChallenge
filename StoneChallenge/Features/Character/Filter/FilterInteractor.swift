@@ -15,7 +15,7 @@ class FilterInteractor {
     private let disposeBag = DisposeBag()
 
     // MARK: - SUBJECTS
-    let requestFilterData = PublishRelay<[APIParameters]>()
+    let requestFilterData = PublishRelay<[APIParameter]>()
     let responseFilterData = PublishRelay<Result<DataInfo<Character>, Error>>()
 
     // MARK: - INJECTED PROPERTIES
@@ -28,7 +28,7 @@ class FilterInteractor {
     }
 
     // MARK: - PRIVATE FUNCTIONS
-    private func fetchFilterData(parameters params: [APIParameters]) {
+    private func fetchFilterData(parameters params: [APIParameter]) {
         webService.getCharacters(parameters: params) { [self] result in
             responseFilterData.accept(result)
         }

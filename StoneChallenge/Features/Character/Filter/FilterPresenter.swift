@@ -51,13 +51,13 @@ class FilterPresenter: FilterViewModelProvider {
 
     let interactor: FilterInteractor
     let router: FilterRouter
-    var filterParameters: [APIParameters]?
+    var filterParameters: [APIParameter]?
     let filterCallBack: PublishSubject<FilterCallBack>
 
     init(interactor: FilterInteractor,
          router: FilterRouter,
          filterCallBack: PublishSubject<FilterCallBack>,
-         filterParameters: [APIParameters]?) {
+         filterParameters: [APIParameter]?) {
 
         self.interactor = interactor
         self.router = router
@@ -69,7 +69,7 @@ class FilterPresenter: FilterViewModelProvider {
 
     // MARK: - PRIVATE FUNCTIONS
     private func segmentOptionListText() -> [String] {
-        APIParameters.Status.allCases.map { $0.rawValue }
+        APIParameter.Status.allCases.map { $0.rawValue }
     }
 
     private func textFieldText() -> String? {
@@ -78,7 +78,7 @@ class FilterPresenter: FilterViewModelProvider {
 
     private func segmentSelectedIndex() -> Int {
         guard let value = filterParameters?.first(where: { $0.describe() == "status" })?.getValue() else { return -1 }
-        return APIParameters.Status(rawValue: value)?.getPosition() ?? -1
+        return APIParameter.Status(rawValue: value)?.getPosition() ?? -1
     }
 
     // MARK: - BIND

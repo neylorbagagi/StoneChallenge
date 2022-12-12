@@ -22,7 +22,7 @@ public class CharactersWebServiceStub: CharactersWebServiceType {
     }
 
     public func getCharacters(
-        parameters params: [APIParameters],
+        parameters params: [APIParameter],
         completion: @escaping (Result<DataInfo<Character>, Error>
     ) -> Void) {
         completion(response)

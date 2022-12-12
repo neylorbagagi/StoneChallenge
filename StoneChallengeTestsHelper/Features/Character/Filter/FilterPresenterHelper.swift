@@ -14,7 +14,7 @@ extension FilterPresenter {
         interactor: FilterInteractor = .mock(),
         router: FilterRouter = .mock(),
         filterCallBack: PublishSubject<FilterCallBack> = .init(),
-        filterParameters: [APIParameters] = .init()
+        filterParameters: [APIParameter] = .init()
     ) -> FilterPresenter {
         .init(
             interactor: interactor,
